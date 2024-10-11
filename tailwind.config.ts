@@ -37,9 +37,9 @@ export default {
   theme: {
     extend: {
       fontSize: {
-        base: '0.9375rem', // Sets the base font size to 15px (between 14px and 16px)
-        sm: '0.8125rem',   // Small font size set to 13px (between 12px and 14px)
-        lg: '1.0625rem',   // Large font size set to 17px (between 16px and 18px)
+        base: '1.125rem',    // Sets the base font size to 18px
+        sm: '1rem',          // Small font size set to 16px
+        lg: '1.25rem', 
       },
       colors: {
         accent: "hsl(var(--theme-accent) / <alpha-value>)",
