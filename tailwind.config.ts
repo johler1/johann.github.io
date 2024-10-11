@@ -37,9 +37,9 @@ export default {
   theme: {
     extend: {
       fontSize: {
-        base: '1.125rem',    // Sets the base font size to 18px
-        sm: '1rem',          // Small font size set to 16px
-        lg: '1.25rem', 
+        base: '1.25rem',    // Sets the base font size to 20px for a more prominent look
+        sm: '1.125rem',     // Small font size set to 18px
+        lg: '1.375rem',     // Large font size set to 22px
       },
       colors: {
         accent: "hsl(var(--theme-accent) / <alpha-value>)",
@@ -54,15 +54,32 @@ export default {
         serif: ['IBM Plex Mono', ...fontFamily.serif],
         mono: ['IBM Plex Mono', ...fontFamily.mono],
       },
+      spacing: {
+        // Adjust default spacing to reduce padding/margins throughout the site
+        2: '0.25rem',   // Reduced spacing (default is 0.5rem)
+        4: '0.5rem',    // Smaller spacing (default is 1rem)
+        8: '1rem',      // Standard spacing, slightly reduced (default is 2rem)
+      },
+      container: {
+        center: true,
+        padding: '1rem', // Decrease container padding for a tighter layout
+        screens: {
+          sm: '100%',
+          md: '100%',
+          lg: '1124px',   // Larger width for large screens
+          xl: '1400px',   // Expand width for extra-large screens
+          '2xl': '1600px', // Ultra-wide screens
+        },
+      },
       transitionProperty: {
         height: "height",
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            fontSize: theme("fontSize.base"), // Apply the base font size globally in typography components
+            fontSize: theme("fontSize.base"), // Apply the base font size globally
             color: theme("colors.textColor"),
-            fontFamily: theme("fontFamily.sans").join(', '), // Set the default font family for typography
+            fontFamily: theme("fontFamily.sans").join(', '), // Set the default font family
             a: {
               "@apply cactus-link": "",
             },
@@ -110,3 +127,4 @@ export default {
     },
   },
 } satisfies Config;
+
