@@ -39,7 +39,7 @@ export default {
       fontSize: {
         base: '1.125rem',    // Sets the base font size to 18px
         sm: '1rem',          // Small font size set to 16px
-        lg: '1.25rem',      // Large font size set to 22px
+        lg: '1.25rem',       // Large font size set to 22px
       },
       colors: {
         accent: "hsl(var(--theme-accent) / <alpha-value>)",
