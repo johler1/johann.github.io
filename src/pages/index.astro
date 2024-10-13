@@ -54,15 +54,12 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 
 <PageLayout meta={{ title: "Home" }}>
 	<section class="mt-0git  flex flex-col sm:flex-row gap-8">
-	 <!-- Image with fixed width independent of text -->
-    <div class="flex justify-center">
-        <img 
-            src="/WEBSITE_MP.jpg" 
-            alt="Matteo Pograxha" 
-            class="w-64 h-auto rounded-lg object-cover"
-        />
-    </div>
-	<div>
+	<img 
+		src="/WEBSITE_MP.jpg" 
+		alt="Matteo Pograxha" 
+		class="w-full sm:w-1/5 lg:w-1/3 rounded-lg object-cover"
+	/>
+	<div class="flex-1">
 		<h1 class="title mb-4">About</h1>
 		<p class="mb-4">
 			I am a fourth-year PhD Candidate in Economics at Trinity College Dublin under the supervision of 
