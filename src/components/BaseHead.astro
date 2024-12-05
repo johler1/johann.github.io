@@ -1,5 +1,5 @@
 ---
-import { siteConfig } from "@/site-config";
+import { siteConfig } from "src/site.config";
 import type { SiteMeta } from "@/types";
 import "../styles/global.css";
 
@@ -43,7 +43,14 @@ const socialImageURL = new URL(ogImage ? ogImage : "/social-card-V2.png?v=1", As
 <meta content="" name="theme-color" />
 
 {/* IBM Plex Mono Font */}
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link
+	href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap"
+	rel="stylesheet"
+/>
+<link
+	href="https://fonts.googleapis.com/css2?family=Garamond:wght@400;700&display=swap"
+	rel="stylesheet"
+/>
 
 {/* Open Graph / Facebook */}
 <meta content={articleDate ? "article" : "website"} property="og:type" />

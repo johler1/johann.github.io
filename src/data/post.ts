@@ -1,5 +1,5 @@
 import { type CollectionEntry, getCollection } from "astro:content";
-import { siteConfig } from "@/site-config";
+import { siteConfig } from "src/site.config";
 
 /** filter out draft posts based on the environment */
 export async function getAllPosts() {

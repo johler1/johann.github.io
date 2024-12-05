@@ -1,0 +1,56 @@
+---
+import SocialList from "@/components/SocialList.astro";
+import PostPreview from "@/components/blog/PostPreview.astro";
+import { getAllPosts, sortMDByDate } from "@/data/post";
+import PageLayout from "@/layouts/Base.astro";
+
+const MAX_POSTS = 10;
+const allPosts = await getAllPosts();
+const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
+---
+
+<PageLayout meta={{ title: "Presentations" }}>
+	<section class="mt-16">
+		<h1 class="mb-2 text-lg font-bold">Upcoming Presentations</h1>
+		<ul>
+			<li class="flex items-start py-4">
+				<span class="w-1/3 text-sm">29th January 2025</span>
+				<div class="w-2/3">
+					<strong class="block"> LSE Demography Seminar </strong>
+					<p class="mt-1 text-[1.2rem]">
+						Build Back Better Health: Public Housing and the Mortality Transition.
+					</p>
+				</div>
+			</li>
+			<li class="flex items-start py-4">
+				<span class="w-1/3 text-sm">7th-8th Febuary 2025</span>
+				<div class="w-2/3">
+					<strong class="block"> CEPR Applied Micro History Workshop </strong>
+					<p class="mt-1 text-[1.2rem]">
+						Build Back Better Health: Public Housing and the Mortality Transition.
+					</p>
+				</div>
+			</li>
+			<li class="flex items-start py-4">
+				<span class="w-1/3 text-sm">27th Febuary 2025</span>
+				<div class="w-2/3">
+					<strong class="block">
+						LSE Seminar for Political Economy and Economic History (SPEECH)
+					</strong>
+					<p class="mt-1 text-[1.2rem]">
+						Representation and Organisational Performance: Evidence from the Trenches.
+					</p>
+				</div>
+			</li>
+			<li class="flex items-start py-4">
+				<span class="w-1/3 text-sm">11th March 2025</span>
+				<div class="w-2/3">
+					<strong class="block"> South Denmark University Economics Seminar </strong>
+					<p class="mt-1 text-[1.2rem]">
+						Build Back Better Health: Public Housing and the Mortality Transition.
+					</p>
+				</div>
+			</li>
+		</ul>
+	</section>
+</PageLayout>

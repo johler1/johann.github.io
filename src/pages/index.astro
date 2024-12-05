@@ -7,181 +7,222 @@ import PageLayout from "@/layouts/Base.astro";
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
-
-const cactusTech: { desc: string; href: string; title: string }[] = [
-	{
-		desc: "Build fast websites, faster.",
-		href: "https://astro.build",
-		title: "Astro",
-	},
-	{
-		desc: "Rapidly build modern websites without ever leaving your HTML.",
-		href: "https://tailwindcss.com",
-		title: "Tailwind CSS",
-	},
-	{
-		desc: "Simple and easy-to-use markup language.",
-		href: "https://www.markdownguide.org/",
-		title: "Markdown",
-	},
-	{
-		desc: "Markdown for the component era.",
-		href: "https://mdxjs.com/",
-		title: "MDX",
-	},
-	{
-		desc: "Generating png Open Graph images for blog posts.",
-		href: "https://github.com/vercel/satori",
-		title: "Satori",
-	},
-	{
-		desc: "A fully static search library.",
-		href: "https://pagefind.app/",
-		title: "Pagefind",
-	},
-	{
-		desc: "An easy to use Icon component for Astro.",
-		href: "https://github.com/natemoo-re/astro-icon#readme",
-		title: "Astro Icon",
-	},
-	{
-		desc: "Highly customisable source code & syntax highlighter",
-		href: "https://expressive-code.com/",
-		title: "Expressive Code",
-	},
-];
 ---
 
-<PageLayout meta={{ title: "Home" }}>
-	<section class="mt-0git  flex flex-col sm:flex-row gap-8">
-	<img 
-		src="/WEBSITE_MP.jpg" 
-		alt="Matteo Pograxha" 
-		class="w-full sm:w-1/5 lg:w-1/3 rounded-lg object-cover"
-	/>
-	<div class="flex-1">
-		<h1 class="title mb-4">About</h1>
-		<p class="mb-4">
-			I am a fourth-year PhD Candidate in Economics at Trinity College Dublin under the supervision of 
-			<a href="https://davideromelli.com/" class="text-link font-semibold">Davide Romelli</a> and 
-			<a href="https://www.nicola-fontana.com/" class="text-link font-semibold">Nicola Fontana</a>. I am a Research Affiliate of 
-			IM-TCD (International Macro - TCD), and TRiSS (Trinity Research in Social Sciences).
-		</p>
-		<p class="mb-4">
-			My research interests lie in empirical Political Economy with a specific focus on Media Economics. I employ 
-			advanced text analysis techniques, including BERT-based models and large language models (LLMs).
-		</p>
-		<p class="mb-4">
-			I will be visiting MIT Sloan from January 2025 hosted by Professor <a href="https://sites.google.com/site/charlesangelucci/homepage?authuser=0" class="text-link font-semibold">Charles Angelucci</a>.
-		</p>
-		<p class="mb-4">
-			I hold a Master's degree in Economics from University of Bologna and a Bachelor’s degree in Economics from 
-			Marche Polytechnic University.
-		</p>
-		<p class="mb-4">
-			You can find my CV <a href="https://drive.google.com/file/d/1YjPnkxSaKTrxA1pNc-Cop8ptn2oP-OAm/view?usp=drive_link" class="text-link">here</a>. Email: <a href="mailto:pograxhm@tcd.ie" class="text-link">pograxhm@tcd.ie</a>
-		</p>
-	</div>
+<PageLayout meta={{ title: "Research" }}>
+	<section class="mt-0git flex flex-col gap-8 sm:flex-row">
+		<img
+			src="/WEBSITE_MP.jpg"
+			alt="Johann Ohler"
+			class="w-full rounded-lg object-cover sm:w-1/5 lg:w-1/3"
+		/>
+		<div class="flex-1 text-justify leading-normal">
+			<p class="mb-4">
+				I am a first-year PhD Student in Economic History at the LSE. My research interests lie in <span
+					class="decoration-3 font-bold underline decoration-accent">Economic History</span
+				>, <span class="decoration-3 font-bold underline decoration-accent"
+					>Population Economics</span
+				> and <span class="decoration-3 font-bold underline decoration-accent"
+					>Political Economy</span
+				>. In my current projects I use large-scale data sources to better understand the economic
+				and political factors that drove the demographic changes of the 18th and 19th century.
+
+				<p class="mb-4">
+					I am a member of the <a
+						class="cactus-link"
+						href="https://www.lse.ac.uk/Economic-History/HED"
+						class="text-link hover:underline"
+						target="_blank"
+						rel="noopener noreferrer">Historical Economic Demography</a
+					> group, and am supervised by <a
+						href="https://www.ericbschneider.com/research"
+						class="font-semibold text-link">Eric Schneider</a
+					> and <a href="https://www.tomraster.com/" class="font-semibold text-link">Tom Raster</a>.
+				</p>
+
+				<p class="mb-4">
+					You can find my CV <a
+						href="https://www.dropbox.com/scl/fi/ztlk7oyrptvgxp0ee0o8h/CV_Johann_Ohler.pdf?rlkey=u6ojvd4kihatugfrmisl6zpkm&st=wbfeurkz&dl=0"
+						class="text-link">here</a
+					>. Email: <a href="mailto:j.p.ohler@lse.ac.uk" class="text-link">j.p.ohler@lse.ac.uk</a>
+				</p>
+			</p>
+		</div>
 	</section>
-	
-	</section>
-	<section aria-label="Blog post list" class="mt-16">
-		<h1 class="title mb-4">Research</h1>
+
+	<section class="mt-16">
 		<!-- Working Papers Section -->
-		<h4 class="text-lg font-semibold mb-2">Working Papers</h4>
+		<h1 class="mb-2 text-lg font-bold">Working Papers</h1>
 		<ul class="mb-8 space-y-4">
 			<li>
 				<strong>
-				<a href="https://cepr.org/publications/dp18383" class="text-link" target="_blank" rel="noopener noreferrer">Man Bites Dog: Editorial Choices and Biases in the Reporting of Weather Events</a>
-				</strong> - with
-				<a class="cactus-link" href="https://nicolamastrorocco.com/" class="text-link hover:underline" target="_blank" rel="noopener noreferrer">Nicola Mastrorocco</a>, 
-				<a class="cactus-link" href="https://ariannaornaghi.com/" target="_blank" rel="noopener noreferrer">Arianna Ornaghi</a>, and 
-				<a class="cactus-link" href="https://stephanewolton.com/" target="_blank" rel="noopener noreferrer">Stephane Wolton</a> CEPR Discussion Paper (2023)
+					<a
+						href="https://download.ssrn.com/yexeh/bc1a57b6-42a3-42d6-a1cf-22fa42e5c6c4-meca.pdf?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEFsaCXVzLWVhc3QtMSJHMEUCIAE99vOTXQXbZGTmPPCECcuLcD%2Fx0n8eyI4LMcMcAR0vAiEA8xPJGf3MO53LiV7pdeM8vGwcTLCcaNapPTrJ0rkzw3EqvQUIFBAEGgwzMDg0NzUzMDEyNTciDA9dZtb%2BaSsuqnDZjyqaBYa6Hmw3tA3cra8lPkyKmJvwr1P9NCRyES%2FBk6BNvDZoNdSBvT4vzA0J10PRofmwyhBJA89NXYU6cAt3BAc%2FpOSI%2ByoOmeBwo%2BYXoiHrWt69TBN0SG8yFkVqaMIOlWZkGb7FhC0jaeDQ%2FKJ27Ski8hkGefVXIJ%2B94DQLhz0PxoJVif9CjXoQK8wygpaSEZDR3bhDaADayVdpwlas2FeIq%2BHDcGFyo%2FOyW%2BgQN7iAfwHBEdxtPZdUut41AsPKiYhzVek1hlsa5i23YD6K11oVFOPZYmYU01aVh8VKV987flBiIgHKp%2BQ%2F%2FQggba%2BEXz7kCBBrKU2F34DDuTDyPJss1kbDzjZNO%2FVqXv6WxgYOguHnn49ZktXUqtXLvBZzgLRJvxq2SfNgYTCJlcwISNvhAT6%2BkNasQRcz%2B3S8omQAfQ%2Fz6o1ws2OVHcbOJea%2BEwH%2BSiUDWBxrvKwzpY6sG0q4UN2Yy1p0%2F%2BUUMLQirisqagRToP9R1O3Cl2mI9nUVDESnveymqP8Zz88MFf52esJkpX7Q9H14J2KVXhmMBRlznOy1ykMa%2FNlOnyF1ncJhA%2Bqg%2BF0EANm2FpSGchLrV9ux0YkZvsCW3tvfvhLE8DhC3eKz9YGq00Aw782M45RxXNw8KJPlb4BBJRqv%2F2MWPfYFsiO3WsDrS1XQpVGN%2FQ2SKd1Ma3iiV6RunG0vykKEaQoonVRLZk5rSEnkbmFju7qZkqRWkMhfiKu07dViwaGefqIFc0qX9978l%2Bcuml8C3psfetbXE3X7rA6U1euK0Qkn%2Bn%2BKMW7z6%2BZrUhdWmIMN%2Be%2FokcahOTnt2nKveNBz6gZsV6wTCfvehapJ%2FA4vtJJyaWKUfMYew0SivXnOGGeJkrOzUmsvGWjAeVef4DDZh8a6BjqxAVmy9bbTRXeBeZ8Kp5FHm9ASRqUD5tPN0NsvT4r%2FinR0fCdssPicdNUxawvSu2iUn59Xf4AqraGwGIGlMwFT8x8BrwW5EKYo9br%2Bg7mpVxsfaE%2BjatIj4z7Fup9QHZfa8FMbBMMJ0qIozYCxBK9V5G3s9EUehV3qwDee3mq9ybb6wLjDvm3qMn9VsXXmMAO82fPqzl3OrrZO4a0yJNmywxOpOlzeS6SYzq0aM4Ai%2F%2FdhbA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241205T112504Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAUPUUPRWEUTHUN6YF%2F20241205%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=70b43f5be8fa880783740f0ad3530b395094458adafb733b2f6061a1110242ca&abstractId=4965731"
+						class="text-link"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Malthus in Germany? Reproductive Success and Status in pre-industrial Germany</a
+					></strong
+				>
+				<!-- Presentation Section -->
+				<p class="ml-4 mt-2 text-[1.2rem]">
+					<span class="underline decoration-[var(--theme-quote)] decoration-2">Presentations:</span>
+					IPECE (UCD), Centre for Economics, Polics, and History (TCD), Irish Economic Association Conference.
+				</p>
+				<!-- Awards Section -->
+				<p class="ml-4 mt-2 text-[1.2rem]">
+					<span class="underline decoration-[var(--theme-quote)] decoration-2">Awards:</span> LSE Economic
+					History Best Dissertation (2023), Francesca Carnevali Prize (2024).
+				</p>
 				<!-- Abstract Section -->
-				<p class="mt-2 ml-4 text-[0.75rem]">
-					Every day, editors of media outlets decide what is news and what is not. We unpack the process of news production by looking at the share of newscasts devoted to weather events by local TV stations in the United States. We document that coverage increases with the severity of the weather event that day. We also uncover that stations operating in Democratic-leaning markets devote more time to extreme weather events and mention climate change more than outlets in Republican-leaning markets. We make sense of these publication and presentation biases with a stylised model of news production and consumption.
+				<p class="ml-4 mt-2 text-[1.2rem]">
+					By exploiting the demographic records of 150,000 individuals from the historical county of
+					Wittgenstein, I test for status gradients in child mortality (the Malthusian positive
+					check) and marital fertility (preventive check). While I find no evidence for a status
+					gradient in child mortality, I find strong evidence for a status gradient in fertility.
+					The richest families had, on average, one-and-a-half extra children compared to their
+					poorer compatriots. Turning to the mechanics of the preventive check, this was driven by
+					delayed marriage in low-status families. Disaggregation of my dataset into six periods
+					reveals that this fertility differential began to disintegrate around 1800.
 				</p>
 			</li>
 		</ul>
-
-		<!-- Work in Progress Section -->
-		<h4 class="text-lg font-semibold mb-2">Work in Progress</h4>
-		<ul class="space-y-2">
-			<li style="margin-bottom: 0.8em;">
-				<strong>The Unseen Agenda: Do Television Broadcasters Reward Controversy?</strong>
-			</li>
-			<li style="margin-bottom: 0.8em;">
-				<strong>Uncovering the Hidden Side of Central Bank Communication: Evidence from Social Media</strong> - with 
-				<a class="cactus-link" href="https://faculty.unibocconi.eu/donatomasciandaro/" class="text-link hover:underline" target="_blank" rel="noopener noreferrer">Donato Masciandaro</a>, 
-				<a class="cactus-link" href="https://ideas.repec.org/f/ppa1446.html" class="text-link hover:underline" target="_blank" rel="noopener noreferrer">Conor Parle</a> and 
-				<a class="cactus-link" href="https://davideromelli.com/" class="text-link hover:underline" target="_blank" rel="noopener noreferrer">Davide Romelli</a>
-			</li>
-			<li style="margin-bottom: 0.8em;">
-				<strong>Scoring Goals, Spreading Hate: Drivers of Hate Crime in Germany</strong> - with 
-				<a class="cactus-link" href="https://sites.google.com/view/francesco-barilari/home?authuser=0" class="text-link hover:underline" target="_blank" rel="noopener noreferrer">Francesco Barilari</a>, 
-				and 
-				<a class="cactus-link" href="https://enricocavallotti.github.io/" class="text-link hover:underline" target="_blank" rel="noopener noreferrer">Enrico Cavallotti</a>
-			</li>
-		</ul>
 	</section>
-
 
 	<section class="mt-16">
-		<h1 class="title mb-4">Research Experience</h1>
-		<ul>
-			<li class="py-4 flex items-start">
-				<span class="text-sm w-1/4">Oct 2024 - ongoing</span>
-				<div class="w-3/4">
-					<strong class="block">Research Consultant for the United Nations</strong>
-					<p class="mt-1 text-[0.75rem]">
-						Large digitization and variable extraction of South African Laws Gazettes using advanced text region detection algorithms and Named Entity Recognition (NER) models.
-					</p>
-				</div>
+		<!-- Working in Progress Section -->
+		<h1 class="mb-2 text-lg font-bold">Work in Progress</h1>
+		<ul class="mb-8 space-y-10">
+			<li>
+				<strong> Build Back Better Health: Public Housing and the Mortality Transition</strong> - with
+				<a
+					class="cactus-link"
+					href="https://alandebromhead.weebly.com/"
+					class="text-link hover:underline"
+					target="_blank"
+					rel="noopener noreferrer">Alan de Bromhead (UCD)</a
+				>, and
+				<a
+					class="cactus-link"
+					href="https://www.ronanlyons.com/"
+					class="text-link hover:underline"
+					target="_blank"
+					rel="noopener noreferrer">Ronan Lyons (TCD)</a
+				>
+				<p class="ml-4 mt-2 text-[1.2rem]">Draft expected January 2025.</p>
+				<!-- Presentation Section -->
+				<p class="ml-4 mt-2 text-[1.2rem]">
+					<span class="underline decoration-[var(--theme-quote)] decoration-2">Presentations:</span>
+					University of Cork, University College Dublin, Trinity College Dublin, LSE Demography Seminar*,
+					South Denmark University*, 1st CEPR Applied Micro-Economic History Workshop*, Economic History
+					Society Confernence*.
+				</p>
+				<!-- Abstract Section -->
+				<p class="ml-4 mt-2 text-[1.2rem]">
+					We investigate the contribution of improved housing conditions to the late-19th century
+					mortality transition by studying the Irish Labourers Act; a large-scale rural housing
+					scheme in place between 1883 and 1915. Using event-study and novel Difference-in-
+					Difference estimators, we find that improved housing significantly reduced deaths from
+					contagious disease.
+				</p>
 			</li>
-			<li class="py-4 flex items-start">
-				<span class="text-sm w-1/4">July 2024 - Oct 2024</span>
-				<div class="w-3/4">
-					<strong class="block">Research Assistant for Dr. J. Zimmermann (TCD) and Prof. M. Suesse (TCD)</strong>
-					<p class="mt-1 text-[0.75rem]">
-						Advanced NLP techniques for digitization and variable extraction from historical Russian Revolutionary Biographies.
-					</p>
-				</div>
-			</li>
-			<li class="py-4 flex items-start">
-				<span class="text-sm w-1/4">Nov 2023 - March 2024</span>
-				<div class="w-3/4">
-					<strong class="block">Research Assistant for Prof. D. Romelli (TCD) and Prof. D. Masciandaro (Bocconi)</strong>
-					<p class="mt-1 text-[0.75rem]">
-						Fine-tuning of a BERT-based zero-shot classifier to detect Monetary Policy related texts.
-					</p>
-				</div>
+			<li>
+				<strong> Representation and Organisational Performance: Evidence from the Trenches</strong> -
+				with
+				<a
+					class="cactus-link"
+					href="https://research.rug.nl/en/persons/olly-brufal-de-melgarejo"
+					class="text-link hover:underline"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Oliver Brufal (University of Groeningen)</a
+				>
+				<p class="ml-4 mt-2 text-[1.2rem]">Draft available upon request.</p>
+				<!-- Presentation Section -->
+				<p class="ml-4 mt-2 text-[1.2rem]">
+					<span class="underline decoration-[var(--theme-quote)] decoration-2">Presentations:</span>
+					Cambridge Graduate Seminar, LSE Politcal Economy & Economic History WIP Seminar*.
+				</p>
+				<!-- Abstract Section -->
+				<p class="ml-4 mt-2 text-[1.2rem]">
+					Individual level records of every French war-time fatality in the Great War enable us to
+					explore the organisational implications of group representation. At the level of
+					regiments, we explore how being commanded by officers from one’s home region impacts
+					performance. We find that soldiers were more motivated when their superiors shared their
+					regional identity. Notably we find that this effect only holds for regional minorities
+					within the regiment, and that it is attenuated by greater diversity.
+				</p>
 			</li>
 		</ul>
 	</section>
-
-
 
 	<section class="mt-16">
-		<h1 class="title mb-4">Teaching</h1>
+		<h1 class="mb-2 text-lg font-bold">Research Experience</h1>
 		<ul>
-			<li class="py-4 flex items-start">
-				<span class="text-sm w-1/4">Spring 2022</span>
-				<div class="w-3/4">
-					<strong class="block">Introduction to Macroeconomics - Undergraduate</strong>
+			<li class="flex items-start py-4">
+				<span class="w-1/3 text-sm">Oct 2023 - June 2024</span>
+				<div class="w-2/3">
+					<strong class="block"
+						>Research Assistant to <a href="Ronanlyons.com" class="font-semibold text-link"
+							>Ronan Lyons</a
+						>.
+					</strong>
+					<p class="mt-1 text-[1.2rem]">
+						Worked on Urban Economics and Irish Economic History. Used advance NLP and OCR methods
+						for data transcription.
+					</p>
 				</div>
 			</li>
-			<li class="py-4 flex items-start">
-				<span class="text-sm w-1/4">Fall 2022</span>
-				<div class="w-3/4">
-					<strong class="block">Introduction to Microeconomics - Undergraduate</strong>
-				</div>
-			</li>
-			<li class="py-4 flex items-start">
-				<span class="text-sm w-1/4">Spring 2024</span>
-				<div class="w-3/4">
-					<strong class="block">Statistics - Undergraduate</strong>
+			<li class="flex items-start py-4">
+				<span class="w-1/3 text-sm">August 2021 - August 2022</span>
+				<div class="w-2/3">
+					<strong class="block"
+						>Research Assistant to <a
+							href="https://www.ucl.ac.uk/ssees/user/login?destination=node/5215"
+							class="font-semibold text-link">Tomas Cvrcek</a
+						>.
+					</strong>
+					<p class="mt-1 text-[1.2rem]">
+						Transcribed historical sources from the Austro-Hungarian empire and worked with ArcGIS
+						to geocode novel data.
+					</p>
 				</div>
 			</li>
 		</ul>
 	</section>
-	</PageLayout>
+	<button
+		aria-label="Back to Top"
+		class="z-90 fixed bottom-8 end-4 flex h-10 w-10 translate-y-28 items-center justify-center rounded-full border-2 border-transparent bg-zinc-200 text-3xl opacity-0 transition-all duration-300 hover:border-zinc-400 data-[show=true]:translate-y-0 data-[show=true]:opacity-100 dark:bg-zinc-700 sm:end-8 sm:h-12 sm:w-12"
+		data-show="true"
+		id="to-top-btn"
+		><svg
+			aria-hidden="true"
+			class="h-6 w-6"
+			fill="none"
+			focusable="true"
+			stroke="currentColor"
+			stroke-width="2"
+			viewBox="0 0 24 24"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path d="M4.5 15.75l7.5-7.5 7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+		</svg>
+	</button>
+
+	<script>
+		const toTopBtn = document.getElementById("to-top-btn");
+
+		window.addEventListener("scroll", () => {
+			if (window.scrollY > 300) {
+				toTopBtn.setAttribute("data-show", "true");
+			} else {
+				toTopBtn.setAttribute("data-show", "false");
+			}
+		});
+
+		toTopBtn.addEventListener("click", () => {
+			window.scrollTo({ top: 0, behavior: "smooth" });
+		});
+	</script>
+</PageLayout>

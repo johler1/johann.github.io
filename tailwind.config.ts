@@ -31,15 +31,18 @@ export default {
         ".title": {
           "@apply text-2xl font-semibold text-accent-2": {},
         },
+        ".menu": {
+          "@apply text-2xl font-semibold text-link": {},
+        },
       });
     }),
   ],
   theme: {
     extend: {
       fontSize: {
-        base: '1.125rem',    // Sets the base font size to 18px
-        sm: '1rem',          // Small font size set to 16px
-        lg: '1.25rem',       // Large font size set to 22px
+        base: '2rem',    // Sets the base font size to 18px
+        sm: '1.5rem',          // Small font size set to 16px
+        lg: '2.5rem',       // Large font size set to 22px
       },
       colors: {
         accent: "hsl(var(--theme-accent) / <alpha-value>)",
@@ -50,15 +53,15 @@ export default {
         textColor: "hsl(var(--theme-text) / <alpha-value>)",
       },
       fontFamily: {
-        sans: ['IBM Plex Mono', ...fontFamily.sans],
-        serif: ['IBM Plex Mono', ...fontFamily.serif],
-        mono: ['IBM Plex Mono', ...fontFamily.mono],
+        sans: ['Garamond', ...fontFamily.sans],
+        serif: ['Garamond', ...fontFamily.serif],
+        mono: ['Garamond', ...fontFamily.mono],
       },
       spacing: {
         // Adjust default spacing to reduce padding/margins throughout the site
-        2: '0.25rem',   // Reduced spacing (default is 0.5rem)
-        4: '0.5rem',    // Smaller spacing (default is 1rem)
-        8: '1rem',      // Standard spacing, slightly reduced (default is 2rem)
+        2: '0.4rem',   // Reduced spacing (default is 0.5rem)
+        4: '0.6rem',    // Smaller spacing (default is 1rem)
+        8: '1.2rem',      // Standard spacing, slightly reduced (default is 2rem)
       },
       container: {
         center: true,
@@ -79,7 +82,7 @@ export default {
           css: {
             fontSize: theme("fontSize.base"), // Apply the base font size globally
             color: theme("colors.textColor"),
-            fontFamily: theme("fontFamily.sans").join(', '), // Set the default font family
+            fontFamily: theme("fontFamily.serif").join(', '), // Set the default font family
             a: {
               "@apply cactus-link": "",
             },
