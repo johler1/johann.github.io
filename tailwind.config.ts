@@ -82,7 +82,7 @@ export default {
           css: {
             fontSize: theme("fontSize.base"), // Apply the base font size globally
             color: theme("colors.textColor"),
-            fontFamily: theme("fontFamily.serif").join(', '), // Set the default font family
+            fontFamily: theme("fontFamily.serif"), // Set the default font family
             a: {
               "@apply cactus-link": "",
             },
