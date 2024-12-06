@@ -6,8 +6,8 @@ import ThemeToggle from "../ThemeToggle.astro";
 const url = new URL(Astro.request.url);
 ---
 
-<header class="group relative mb-28  sm:ps-[4.5rem] flex id="main-header" sm:flex-row flex-col sm:items-start items-center>
-	<div class="flex sm:flex-row flex-col sm:items-start items-center">
+<header class=" group relative mb-28  sm:ps-[4.5rem] flex sm:flex-row flex-col sm:items-start items-center id="main-header" ">
+	<div class="flex sm:flex-col flex-row sm:items-start items-center">
 		<a
 			aria-current={url.pathname === "/" ? "page" : false}
 			class="inline-flex items-center grayscale hover:filter-none sm:relative sm:inline-block"
@@ -46,7 +46,7 @@ const url = new URL(Astro.request.url);
 		</a>
 		<nav
 			aria-label="Main menu"
-			class="-inset-x-4 top-14 sm:ms-[4rem] hidden flex-col items-end gap-y-4 rounded-md bg-bgColor/[.85] py-4 shadow backdrop-blur group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:mt-1 sm:flex sm:flex-row sm:items-center sm:divide-x sm:divide-solid sm:divide-link sm:rounded-none sm:bg-transparent sm:py-0 sm:shadow-none sm:backdrop-blur-none"
+			class="-inset-x-4 top-14 sm:ms-[3rem] sm:text-left hidden flex-col items-end gap-y-4 rounded-md bg-bgColor/[.85] py-4 shadow backdrop-blur group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:mt-1 sm:flex sm:flex-row sm:items-center sm:divide-x sm:divide-solid sm:divide-link sm:rounded-none sm:bg-transparent sm:py-0 sm:shadow-none sm:backdrop-blur-none"
 			id="navigation-menu"
 		>
 			{
@@ -65,7 +65,7 @@ const url = new URL(Astro.request.url);
 	</div>
 	<Search />
 	<ThemeToggle />
-	<mobile-button>
+	<!-- <mobile-button>
 		<button
 			aria-expanded="false"
 			aria-haspopup="menu"
@@ -103,10 +103,10 @@ const url = new URL(Astro.request.url);
 				<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
 			</svg>
 		</button>
-	</mobile-button>
+	</mobile-button> -->
 </header>
 
-<script>
+<!-- <script>
 	import { toggleClass } from "@/utils/domElement";
 
 	class MobileNavBtn extends HTMLElement {
@@ -125,4 +125,4 @@ const url = new URL(Astro.request.url);
 	}
 
 	customElements.define("mobile-button", MobileNavBtn);
-</script>
+</script> -->
