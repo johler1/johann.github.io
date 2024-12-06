@@ -53,9 +53,9 @@ export default {
         textColor: "hsl(var(--theme-text) / <alpha-value>)",
       },
       fontFamily: {
-        sans: ['EB Garamond', ...fontFamily.sans],
-        serif: ['EB Garamond', ...fontFamily.serif],
-        mono: ['EB Garamond', ...fontFamily.mono],
+        sans: ['eb-garamond', ...fontFamily.sans],
+        serif: ['eb-garamond', ...fontFamily.serif],
+        mono: ['eb-garamond', ...fontFamily.mono],
       },
       spacing: {
         // Adjust default spacing to reduce padding/margins throughout the site
