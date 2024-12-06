@@ -10,7 +10,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={{ title: "Research" }}>
-	<section class="mt-0git flex flex-col gap-8 sm:flex-row">
+	<section class="mt-0 flex flex-col gap-10 sm:flex-row">
 		<img
 			src="/WEBSITE_MP.jpg"
 			alt="Johann Ohler"
@@ -50,10 +50,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</div>
 	</section>
 
-	<section class="mt-16">
+	<section class="mt-32">
 		<!-- Working Papers Section -->
-		<h1 class="mb-2 text-lg font-bold">Working Papers</h1>
-		<ul class="mb-8 space-y-4">
+		<h1 class="mb-8 text-lg font-bold">Working Papers</h1>
+		<ul class="mb-4">
 			<li>
 				<strong>
 					<a
@@ -62,20 +62,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 						target="_blank"
 						rel="noopener noreferrer"
 						>Malthus in Germany? Reproductive Success and Status in pre-industrial Germany</a
-					></strong
-				>
-				<!-- Presentation Section -->
-				<p class="ml-4 mt-2 text-[1.2rem]">
-					<span class="underline decoration-[var(--theme-quote)] decoration-2">Presentations:</span>
-					IPECE (UCD), Centre for Economics, Polics, and History (TCD), Irish Economic Association Conference.
-				</p>
-				<!-- Awards Section -->
-				<p class="ml-4 mt-2 text-[1.2rem]">
-					<span class="underline decoration-[var(--theme-quote)] decoration-2">Awards:</span> LSE Economic
-					History Best Dissertation (2023), Francesca Carnevali Prize (2024).
-				</p>
+					>
+				</strong>
 				<!-- Abstract Section -->
-				<p class="ml-4 mt-2 text-[1.2rem]">
+				<p class="ml-8 mt-4 text-[1.2rem]">
 					By exploiting the demographic records of 150,000 individuals from the historical county of
 					Wittgenstein, I test for status gradients in child mortality (the Malthusian positive
 					check) and marital fertility (preventive check). While I find no evidence for a status
@@ -85,13 +75,23 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 					delayed marriage in low-status families. Disaggregation of my dataset into six periods
 					reveals that this fertility differential began to disintegrate around 1800.
 				</p>
+				<!-- Presentation Section -->
+				<p class="mt-4 text-[1.2rem]">
+					<span class="italic">Presentations:</span>
+					IPECE (UCD), Centre for Economics, Polics, and History (TCD), Irish Economic Association Conference.
+				</p>
+				<!-- Awards Section -->
+				<p class="mt-1 text-[1.2rem]">
+					<span class="italic">Awards:</span> LSE Economic History Best Dissertation (2023), Francesca
+					Carnevali Prize (2024).
+				</p>
 			</li>
 		</ul>
 	</section>
 
 	<section class="mt-16">
 		<!-- Working in Progress Section -->
-		<h1 class="mb-2 text-lg font-bold">Work in Progress</h1>
+		<h1 class="mb-8 text-lg font-bold">Work in Progress</h1>
 		<ul class="mb-8 space-y-10">
 			<li>
 				<strong> Build Back Better Health: Public Housing and the Mortality Transition</strong> - with
@@ -109,21 +109,23 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 					target="_blank"
 					rel="noopener noreferrer">Ronan Lyons (TCD)</a
 				>
-				<p class="ml-4 mt-2 text-[1.2rem]">Draft expected January 2025.</p>
-				<!-- Presentation Section -->
-				<p class="ml-4 mt-2 text-[1.2rem]">
-					<span class="underline decoration-[var(--theme-quote)] decoration-2">Presentations:</span>
-					University of Cork, University College Dublin, Trinity College Dublin, LSE Demography Seminar*,
-					South Denmark University*, 1st CEPR Applied Micro-Economic History Workshop*, Economic History
-					Society Confernence*.
-				</p>
 				<!-- Abstract Section -->
-				<p class="ml-4 mt-2 text-[1.2rem]">
+				<p class="ml-8 mt-4 text-[1.2rem]">
 					We investigate the contribution of improved housing conditions to the late-19th century
 					mortality transition by studying the Irish Labourers Act; a large-scale rural housing
 					scheme in place between 1883 and 1915. Using event-study and novel Difference-in-
 					Difference estimators, we find that improved housing significantly reduced deaths from
 					contagious disease.
+				</p>
+				<p class="mt-4 text-[1.2rem]">
+					<span class="italic">Draft expected January 2025.</span>
+				</p>
+				<!-- Presentation Section -->
+				<p class="mt-1 text-[1.2rem]">
+					<span class="italic">Presentations:</span>
+					University of Cork, University College Dublin, Trinity College Dublin, LSE Demography Seminar*,
+					South Denmark University*, 1st CEPR Applied Micro-Economic History Workshop*, Economic History
+					Society Confernence*.
 				</p>
 			</li>
 			<li>
@@ -138,27 +140,29 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				>
 					Oliver Brufal (University of Groeningen)</a
 				>
-				<p class="ml-4 mt-2 text-[1.2rem]">Draft available upon request.</p>
-				<!-- Presentation Section -->
-				<p class="ml-4 mt-2 text-[1.2rem]">
-					<span class="underline decoration-[var(--theme-quote)] decoration-2">Presentations:</span>
-					Cambridge Graduate Seminar, LSE Politcal Economy & Economic History WIP Seminar*.
-				</p>
 				<!-- Abstract Section -->
-				<p class="ml-4 mt-2 text-[1.2rem]">
+				<p class="ml-8 mt-4 text-[1.2rem]">
 					Individual level records of every French war-time fatality in the Great War enable us to
 					explore the organisational implications of group representation. At the level of
 					regiments, we explore how being commanded by officers from one’s home region impacts
 					performance. We find that soldiers were more motivated when their superiors shared their
 					regional identity. Notably we find that this effect only holds for regional minorities
 					within the regiment, and that it is attenuated by greater diversity.
+					<p class="mt-4 text-[1.2rem]">
+						<span class="italic">Draft available upon request.</span>
+					</p>
+					<!-- Presentation Section -->
+					<p class="mt-1 text-[1.2rem]">
+						<span class="italic">Presentations:</span>
+						Cambridge Graduate Seminar, LSE Politcal Economy & Economic History WIP Seminar*.
+					</p>
 				</p>
 			</li>
 		</ul>
 	</section>
 
 	<section class="mt-16">
-		<h1 class="mb-2 text-lg font-bold">Research Experience</h1>
+		<h1 class="mb-8 text-lg font-bold">Research Experience</h1>
 		<ul>
 			<li class="flex items-start py-4">
 				<span class="w-1/3 text-sm">October 2023 - June 2024</span>
