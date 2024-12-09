@@ -10,11 +10,11 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={{ title: "Research" }}>
-	<section class="mt-0 flex flex-col gap-10 sm:flex-row">
+	<section class="mt-0 flex flex-col gap-10 sm:flex-row" id="sectionHome">
 		<img
 			src="/WEBSITE_MP.jpg"
 			alt="Johann Ohler"
-			class=" sm:flex rounded-lg object-cover hight-auto w-4/5 sm:w-2/5 lg:w-1/3 min-w-[250px] max-h-[500px] mx-auto"
+			class="hight-auto mx-auto max-h-[500px] w-4/5 min-w-[250px] rounded-lg object-cover sm:flex sm:w-2/5 lg:w-1/3"
 		/>
 		<div class="flex-1 text-justify leading-normal">
 			<p class="mb-4">
@@ -62,7 +62,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</div>
 	</section>
 
-	<section class="mt-32">
+	<section class="mt-32" id="sectionWP">
 		<!-- Working Papers Section -->
 		<h1 class="mb-8 text-lg font-bold">Working Papers</h1>
 		<ul class="mb-4">
@@ -77,7 +77,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 					>
 				</strong>
 				<!-- Abstract Section -->
-				<p class="sm:ml-8 mt-4 text-[1.2rem]">
+				<p class="mt-4 text-[1.2rem] sm:ml-8">
 					By exploiting the demographic records of 150,000 individuals from the historical county of
 					Wittgenstein, I test for status gradients in child mortality (the Malthusian positive
 					check) and marital fertility (preventive check). While I find no evidence for a status
@@ -101,7 +101,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</ul>
 	</section>
 
-	<section class="mt-16">
+	<section class="mt-16" id="sectionWIP">
 		<!-- Working in Progress Section -->
 		<h1 class="mb-8 text-lg font-bold">Work in Progress</h1>
 		<ul class="mb-8 space-y-10">
@@ -122,7 +122,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 					rel="noopener noreferrer">Ronan Lyons (TCD)</a
 				>
 				<!-- Abstract Section -->
-				<p class="sm:ml-8 mt-4 text-[1.2rem]">
+				<p class="mt-4 text-[1.2rem] sm:ml-8">
 					We investigate the contribution of improved housing conditions to the late-19th century
 					mortality transition by studying the Irish Labourers Act; a large-scale rural housing
 					scheme in place between 1883 and 1915. Using event-study and novel Difference-in-
@@ -137,7 +137,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 					<span class="italic">Presentations:</span>
 					University of Cork, University College Dublin, Trinity College Dublin, LSE Demography Seminar*,
 					South Denmark University*, 1st CEPR Applied Micro-Economic History Workshop*, Economic History
-					Society Confernence*.
+					Society Conference*.
 				</p>
 			</li>
 			<li>
@@ -150,10 +150,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					Oliver Brufal (University of Groeningen)</a
+					Oliver Brufal (University of Groningen)</a
 				>
 				<!-- Abstract Section -->
-				<p class="sm:ml-8 mt-4 text-[1.2rem]">
+				<p class="mt-4 text-[1.2rem] sm:ml-8">
 					Individual level records of every French war-time fatality in the Great War enable us to
 					explore the organisational implications of group representation. At the level of
 					regiments, we explore how being commanded by officers from one’s home region impacts
@@ -173,10 +173,10 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</ul>
 	</section>
 
-	<section class="mt-16 mb-24">
+	<section class="mt-16" id="sectionEXP">
 		<h1 class="mb-8 text-lg font-bold">Research Experience</h1>
 		<ul>
-			<li class="flex items-start py-4 gap-1">
+			<li class="flex items-start gap-1 py-4">
 				<span class="w-1/3 text-[1.2rem] sm:text-sm">October 2023 - June 2024</span>
 				<div class="w-2/3">
 					<strong class="block"
@@ -190,7 +190,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 					</p>
 				</div>
 			</li>
-			<li class="flex items-start py-4 gap-1">
+			<li class="flex items-start gap-1 py-4">
 				<span class="w-1/3 text-[1.2rem] sm:text-sm">August 2021 - August 2022</span>
 				<div class="w-2/3">
 					<strong class="block"
@@ -207,6 +207,52 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 			</li>
 		</ul>
 	</section>
+
+	<section class="mb-24 mt-16" id="sectionPRES">
+		<h1 class="mb-2 text-lg font-bold">Presentations</h1>
+		<h1 class="mb-2 text-[2rem] font-semibold">Upcoming:</h1>
+		<ul>
+			<li class="flex items-start py-4">
+				<span class="w-1/3 text-sm">29th January 2025</span>
+				<div class="w-2/3">
+					<strong class="block"> LSE Demography Seminar </strong>
+					<p class="mt-1 text-[1.2rem]">
+						Build Back Better Health: Public Housing and the Mortality Transition.
+					</p>
+				</div>
+			</li>
+			<li class="flex items-start py-4">
+				<span class="w-1/3 text-sm">7th-8th Febuary 2025</span>
+				<div class="w-2/3">
+					<strong class="block"> CEPR Applied Micro History Workshop </strong>
+					<p class="mt-1 text-[1.2rem]">
+						Build Back Better Health: Public Housing and the Mortality Transition.
+					</p>
+				</div>
+			</li>
+			<li class="flex items-start py-4">
+				<span class="w-1/3 text-sm">27th Febuary 2025</span>
+				<div class="w-2/3">
+					<strong class="block">
+						LSE Seminar for Political Economy and Economic History (SPEECH)
+					</strong>
+					<p class="mt-1 text-[1.2rem]">
+						Representation and Organisational Performance: Evidence from the Trenches.
+					</p>
+				</div>
+			</li>
+			<li class="flex items-start py-4">
+				<span class="w-1/3 text-sm">11th March 2025</span>
+				<div class="w-2/3">
+					<strong class="block"> South Denmark University Economics Seminar </strong>
+					<p class="mt-1 text-[1.2rem]">
+						Build Back Better Health: Public Housing and the Mortality Transition.
+					</p>
+				</div>
+			</li>
+		</ul>
+	</section>
+
 	<button
 		aria-label="Back to Top"
 		class="z-90 fixed bottom-8 end-4 flex h-10 w-10 translate-y-28 items-center justify-center rounded-full border-2 border-transparent bg-zinc-200 text-3xl opacity-0 transition-all duration-300 hover:border-zinc-400 data-[show=true]:translate-y-0 data-[show=true]:opacity-100 dark:bg-zinc-700 sm:end-8 sm:h-12 sm:w-12"

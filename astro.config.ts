@@ -102,7 +102,7 @@ export default defineConfig({
   prefetch: true,
 
   // ! Please remember to replace the following site property with your own domain
-  site: "https://matteopograxha.com/",
+  site: "https://johannohler.com/",
 
   vite: {
       optimizeDeps: {
