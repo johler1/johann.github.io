@@ -10,7 +10,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={{ title: "Research" }}>
-	<section class="mt-0 flex flex-col gap-10 sm:flex-row" id="sectionHome">
+	<section class="mt-0 flex flex-col gap-10 sm:flex-row" id="Home">
 		<img
 			src="/WEBSITE_MP.jpg"
 			alt="Johann Ohler"
@@ -62,9 +62,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</div>
 	</section>
 
-	<section class="mt-32" id="sectionWP">
+	<section class="mt-32" id="WorkingPapers">
 		<!-- Working Papers Section -->
-		<h1 class="mb-8 text-lg font-bold">Working Papers</h1>
+		<h1 class="mb-8 text-center text-lg font-bold sm:text-left">Working Papers</h1>
 		<ul class="mb-4">
 			<li>
 				<strong>
@@ -101,9 +101,9 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</ul>
 	</section>
 
-	<section class="mt-16" id="sectionWIP">
+	<section class="mt-16" id="WIP">
 		<!-- Working in Progress Section -->
-		<h1 class="mb-8 text-lg font-bold">Work in Progress</h1>
+		<h1 class="mb-8 text-center text-lg font-bold sm:text-left">Work in Progress</h1>
 		<ul class="mb-8 space-y-10">
 			<li>
 				<strong> Build Back Better Health: Public Housing and the Mortality Transition</strong> - with
@@ -122,14 +122,55 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 					rel="noopener noreferrer">Ronan Lyons (TCD)</a
 				>
 				<!-- Abstract Section -->
-				<p class="mt-4 text-[1.2rem] sm:ml-8">
-					We investigate the contribution of improved housing conditions to the late-19th century
-					mortality transition by studying the Irish Labourers Act; a large-scale rural housing
-					scheme in place between 1883 and 1915. Using event-study and novel Difference-in-
-					Difference estimators, we find that improved housing significantly reduced deaths from
-					contagious disease.
-				</p>
-				<p class="mt-6 text-[1.2rem]">
+				<div class="ml-2">
+					<!-- Abstract Button (Left-Aligned to the Page Edge) -->
+					<button
+						class="toggle-abstract mt-3 flex items-center text-[1.4rem] font-semibold hover:text-link focus:outline-none"
+					>
+						<!-- Rotating Arrow in Circle (No Margin) -->
+						<span
+							class="arrow-icon flex h-6 w-6 items-center justify-center rounded-full border-2 border-link transition-transform duration-500"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-4 w-4 text-link"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="6"
+							>
+								<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+							</svg>
+						</span>
+						<!-- Button Text with Left Margin -->
+						<span class="ml-2">Abstract</span>
+					</button>
+
+					<!-- Abstract Content -->
+					<div class="abstract-content hidden overflow-hidden transition-all duration-500">
+						<p class="mt-4 text-[1.2rem] sm:ml-8">
+							Did improved housing conditions contribute to the 19th century mortality transition?
+							In this paper we examine a rare example of a public health intervention in rural
+							areas, namely the large-scale provision of social housing in Ireland in the late 19th
+							and early 20th centuries. We exploit a novel dataset of deaths-by-disease,
+							deaths-by-age and the implementation of the house building scheme across local
+							districts over the period 1870-1919, to test the impact of the intervention on
+							mortality. Both two-way fixed-effects and novel difference-in-difference estimators
+							show that areas that received more cottages experienced a larger decline in disease
+							mortality over subsequent decades. Our estimates indicate that improved housing
+							conditions may account for up to 40 % of the rural mortality decline in this period.
+							This effect is driven by reductions in deaths from respiratory diseases. A causal
+							interpretation is supported by falsification tests on deaths from non-communicable
+							diseases and through an analysis using age-at-death and death-by-gender data. Beyond
+							indicating that large-scale capital public health interventions can be effective in a
+							rural setting, our results add to the literature of the European mortality transition
+							and provide important causal evidence on the link between housing conditions and
+							health outcomes.
+						</p>
+					</div>
+				</div>
+
+				<p class="mt-3 text-[1.2rem]">
 					<span class="italic">Draft expected January 2025.</span>
 				</p>
 				<!-- Presentation Section -->
@@ -153,29 +194,72 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 					Oliver Brufal (University of Groningen)</a
 				>
 				<!-- Abstract Section -->
-				<p class="mt-4 text-[1.2rem] sm:ml-8">
-					Individual level records of every French war-time fatality in the Great War enable us to
-					explore the organisational implications of group representation. At the level of
-					regiments, we explore how being commanded by officers from one’s home region impacts
-					performance. We find that soldiers were more motivated when their superiors shared their
-					regional identity. Notably we find that this effect only holds for regional minorities
-					within the regiment, and that it is attenuated by greater diversity.
-					<p class="mt-6 text-[1.2rem]">
-						<span class="italic">Draft available upon request.</span>
-					</p>
-					<!-- Presentation Section -->
-					<p class="mt-1 text-[1.2rem]">
-						<span class="italic">Presentations:</span>
-						Cambridge Graduate Seminar, LSE Politcal Economy & Economic History WIP Seminar*.
-					</p>
+				<div class="ml-2">
+					<!-- Abstract Button (Left-Aligned to the Page Edge) -->
+					<button
+						class="toggle-abstract mt-3 flex items-center text-[1.4rem] font-semibold hover:text-link focus:outline-none"
+					>
+						<!-- Rotating Arrow in Circle (No Margin) -->
+						<span
+							class="arrow-icon flex h-6 w-6 items-center justify-center rounded-full border-2 border-link transition-transform duration-500"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-4 w-4 text-link"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+								stroke-width="6"
+							>
+								<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+							</svg>
+						</span>
+						<!-- Button Text with Left Margin -->
+						<span class="ml-2">Abstract</span>
+					</button>
+
+					<!-- Abstract Content -->
+					<div class="abstract-content hidden overflow-hidden transition-all duration-500">
+						<p class="mt-4 text-[1.2rem] sm:ml-8">
+							Individual level records of every French war-time fatality in the Great War enable us
+							to explore the organisational implications of group representation. At the level of
+							regiments, we explore how being commanded by officers from one’s home region impacts
+							performance. We find that soldiers were more motivated when their superiors shared
+							their regional identity. Notably we find that this effect only holds for regional
+							minorities within the regiment, and that it is attenuated by greater diversity.
+						</p>
+					</div>
+				</div>
+
+				<p class="mt-3 text-[1.2rem]">
+					<span class="italic">Draft available upon request.</span>
+				</p>
+				<!-- Presentation Section -->
+				<p class="mt-1 text-[1.2rem]">
+					<span class="italic">Presentations:</span>
+					Cambridge Graduate Seminar, LSE Politcal Economy & Economic History WIP Seminar*.
 				</p>
 			</li>
 		</ul>
 	</section>
 
-	<section class="mt-16" id="sectionEXP">
-		<h1 class="mb-8 text-lg font-bold">Research Experience</h1>
+	<section class="mt-16" id="Experience">
+		<h1 class="mb-8 text-center text-lg font-bold sm:text-left">Research Experience</h1>
 		<ul>
+			<li class="flex items-start gap-1 py-4">
+				<span class="w-1/3 text-[1.2rem] sm:text-sm">December 2024 - ongoing</span>
+				<div class="w-2/3">
+					<strong class="block"
+						>Research Assistant to <a
+							href="https://www.ericbschneider.com"
+							class="font-semibold text-link">Eric Schneider</a
+						>.
+					</strong>
+					<p class="mt-1 text-[1.2rem]">
+						Build OCR pipeline for the automated transcription of handwritten historical tables.
+					</p>
+				</div>
+			</li>
 			<li class="flex items-start gap-1 py-4">
 				<span class="w-1/3 text-[1.2rem] sm:text-sm">October 2023 - June 2024</span>
 				<div class="w-2/3">
@@ -208,12 +292,12 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</ul>
 	</section>
 
-	<section class="mb-24 mt-16" id="sectionPRES">
-		<h1 class="mb-2 text-lg font-bold">Presentations</h1>
-		<h1 class="mb-2 text-[2rem] font-semibold">Upcoming:</h1>
+	<section class="mb-24 mt-16" id="Presentations">
+		<h1 class="mb-8 text-center text-lg font-bold sm:text-left">Presentations</h1>
+		<h1 class="mb-2 hidden text-[2rem] font-semibold sm:flex sm:text-left">Upcoming:</h1>
 		<ul>
 			<li class="flex items-start py-4">
-				<span class="w-1/3 text-sm">29th January 2025</span>
+				<span class="w-1/3 text-[1.2rem] sm:text-sm">29th January 2025</span>
 				<div class="w-2/3">
 					<strong class="block"> LSE Demography Seminar </strong>
 					<p class="mt-1 text-[1.2rem]">
@@ -222,7 +306,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				</div>
 			</li>
 			<li class="flex items-start py-4">
-				<span class="w-1/3 text-sm">7th-8th Febuary 2025</span>
+				<span class="w-1/3 text-[1.2rem] sm:text-sm">7-8th Febuary 2025</span>
 				<div class="w-2/3">
 					<strong class="block"> CEPR Applied Micro History Workshop </strong>
 					<p class="mt-1 text-[1.2rem]">
@@ -231,7 +315,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				</div>
 			</li>
 			<li class="flex items-start py-4">
-				<span class="w-1/3 text-sm">27th Febuary 2025</span>
+				<span class="w-1/3 text-[1.2rem] sm:text-sm">27th Febuary 2025</span>
 				<div class="w-2/3">
 					<strong class="block">
 						LSE Seminar for Political Economy and Economic History (SPEECH)
@@ -242,7 +326,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				</div>
 			</li>
 			<li class="flex items-start py-4">
-				<span class="w-1/3 text-sm">11th March 2025</span>
+				<span class="w-1/3 text-[1.2rem] sm:text-sm">11th March 2025</span>
 				<div class="w-2/3">
 					<strong class="block"> South Denmark University Economics Seminar </strong>
 					<p class="mt-1 text-[1.2rem]">
@@ -285,6 +369,21 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
 		toTopBtn.addEventListener("click", () => {
 			window.scrollTo({ top: 0, behavior: "smooth" });
+		});
+
+		const buttons = document.querySelectorAll(".toggle-abstract");
+
+		buttons.forEach((button) => {
+			button.addEventListener("click", () => {
+				const content = button.nextElementSibling; // Target the sibling content
+				const arrow = button.querySelector(".arrow-icon");
+
+				// Toggle the content visibility
+				content.classList.toggle("hidden");
+
+				// Rotate the arrow icon
+				arrow.classList.toggle("rotate-90");
+			});
 		});
 	</script>
 </PageLayout>
