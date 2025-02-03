@@ -1,13 +1,12 @@
 ---
-import { menuLinks, siteConfig } from "src/site.config";
 
 const year = new Date().getFullYear();
 ---
 
 <footer
-	class="mt-auto flex w-full flex-col items-center justify-center gap-y-2 pb-4 pt-20 text-center align-top font-semibold text-gray-600 dark:text-gray-400 sm:flex-row sm:justify-between sm:text-xs"
+	class="mt-auto flex w-full flex-col items-center justify-center gap-y-2 pb-10 pt-20 text-center align-top font-semibold text-gray-600 dark:text-gray-400 sm:flex-row sm:justify-between sm:text-xs"
 >
-	<div class="footer-wrapper hidden sm:flex">
+	<div class="footer-wrapper hidden min-[900px]:flex">
 		<div class="copyright-wrapper">
 			<span>Copyright &#169; {year}</span>
 			<span class="separator">&nbsp;|&nbsp;</span>
@@ -15,11 +14,11 @@ const year = new Date().getFullYear();
 		</div>
 	</div>
 	<nav
-		aria-label="More on this site"
-		class="flex gap-x-2 sm:gap-x-0 sm:divide-x sm:divide-gray-500"
-	>
+	aria-label="More on this site"
+	class="flex w-full justify-center min-[900px]:justify-end gap-x-2 min-[900px]:gap-x-0 min-[900px]:divide-x min-[900px]:divide-gray-500"
+  >
 		<a
-			class="px-4 py-2 text-[1.1rem] font-extrabold sm:py-0 sm:text-base sm:hover:text-textColor sm:hover:underline"
+			class="px-4 py-2 text-[2rem] font-extrabold min-[900px]:py-0 min-[900px]:text-base min-[900px]:hover:text-textColor hover:underline"
 			href="https://scholar.google.com/citations?user=GDBDCOAAAAAJ&hl=en"
 			target="_blank"
 			rel="noopener noreferrer"
@@ -27,7 +26,7 @@ const year = new Date().getFullYear();
 			GoogleScholar
 		</a>
 		<a
-			class="px-4 py-2 text-[1.1rem] font-extrabold sm:py-0 sm:text-base sm:hover:text-textColor sm:hover:underline"
+			class="px-4 py-2 text-[2rem] font-extrabold min-[900px]:py-0 min-[900px]:text-base min-[900px]:hover:text-textColor hover:underline"
 			href="https://x.com/OhlerJohann"
 			target="_blank"
 			rel="noopener noreferrer"
@@ -35,7 +34,7 @@ const year = new Date().getFullYear();
 			Twitter
 		</a>
 		<a
-			class="px-4 py-2 text-[1.1rem] font-extrabold sm:py-0 sm:text-base sm:hover:text-textColor sm:hover:underline"
+			class="px-4 py-2 text-[2rem] font-extrabold min-[900px]:py-0 min-[900px]:text-base min-[900px]:hover:text-textColor hover:underline"
 			href="https://bsky.app/profile/ohlerjohann.bsky.social"
 			target="_blank"
 			rel="noopener noreferrer"

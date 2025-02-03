@@ -6,16 +6,16 @@ import ThemeToggle from "../ThemeToggle.astro";
 const url = new URL(Astro.request.url);
 ---
 
-<header class=" group relative mb-28  sm:ps-[4.5rem] flex sm:flex-row flex-col sm:items-start items-center id="main-header" ">
-	<div class="flex sm:flex-col flex-row sm:items-start items-center">
+<header class="group relative min-[1000px]:mb-28 mb-12  min-[1000px]:ps-[4.5rem] flex min-[1000px]:flex-row flex-col min-[1000px]:items-start items-center id="main-header" ">
+	<div class="flex min-[1000px]:flex-col flex-row min-[1000px]:items-start items-center mb-3 min-[1000px]:mb-0">
 		<a
 			aria-current={url.pathname === "/" ? "page" : false}
-			class="inline-flex items-center grayscale hover:filter-none sm:relative sm:inline-block"
+			class="inline-flex items-center grayscale hover:filter-none min-[1000px]:relative min-[1000px]:inline-block"
 			href="/"
 		>
 			<svg
 				aria-hidden="true"
-				class="hidden sm:flex h-26 w-26 absolute me-3 sm:absolute sm:start-[-4.5rem] sm:me-0 sm:h-28 sm:w-28"
+				class="hidden min-[1000px]:flex h-26 w-26 absolute me-3 min-[1000px]:absolute min-[1000px]:start-[-4.5rem] min-[1000px]:me-0 min-[1000px]:h-28 min-[1000px]:w-28"
 				fill="none"
 				focusable="false"
 				viewBox="0 100 800 800"
@@ -42,18 +42,18 @@ const url = new URL(Astro.request.url);
 					d="M 172.34375 -325.796875 C 195.445312 -325.796875 217.125 -321.445312 237.375 -312.75 C 257.625 -304.050781 275.472656 -291.972656 290.921875 -276.515625 C 306.367188 -261.066406 318.441406 -243.21875 327.140625 -222.96875 C 335.847656 -202.71875 340.203125 -181.046875 340.203125 -157.953125 C 340.203125 -134.847656 335.847656 -113.171875 327.140625 -92.921875 C 318.441406 -72.671875 306.367188 -54.820312 290.921875 -39.375 C 275.472656 -23.925781 257.625 -11.847656 237.375 -3.140625 C 217.125 5.554688 195.445312 9.90625 172.34375 9.90625 C 149.25 9.90625 127.578125 5.554688 107.328125 -3.140625 C 87.078125 -11.847656 69.222656 -23.925781 53.765625 -39.375 C 38.316406 -54.820312 26.242188 -72.671875 17.546875 -92.921875 C 8.847656 -113.171875 4.5 -134.847656 4.5 -157.953125 C 4.5 -181.046875 8.847656 -202.71875 17.546875 -222.96875 C 26.242188 -243.21875 38.316406 -261.066406 53.765625 -276.515625 C 69.222656 -291.972656 87.078125 -304.050781 107.328125 -312.75 C 127.578125 -321.445312 149.25 -325.796875 172.34375 -325.796875 Z M 172.34375 -325.796875 "
 				></path>
 			</svg>
-			<span class="text-6xl font-bold text-center sm:text-left sm:ms-[4rem] ms-0 sm:text-4xl">Johann Ohler</span>
+			<span class="text-6xl font-bold text-center min-[1000px]:text-left min-[1000px]:ms-[4rem] ms-0 min-[1000px]:text-4xl">Johann Ohler</span>
 		</a>
 		<nav
 			aria-label="Main menu"
-			class="-inset-x-4 top-14 sm:ms-[3rem] sm:text-left hidden flex-col items-end gap-y-4 rounded-md bg-bgColor/[.85] py-4 shadow backdrop-blur group-[.menu-open]:z-50 group-[.menu-open]:flex sm:static sm:z-auto sm:mt-1 sm:flex sm:flex-row sm:items-center sm:divide-x sm:divide-solid sm:divide-link sm:rounded-none sm:bg-transparent sm:py-0 sm:shadow-none sm:backdrop-blur-none"
+			class="-inset-x-4 top-14 min-[1000px]:ms-[3rem] min-[1000px]:text-left hidden flex-col items-end gap-y-4 rounded-md bg-bgColor/[.85] py-4 shadow backdrop-blur group-[.menu-open]:z-50 group-[.menu-open]:flex min-[1000px]:static min-[1000px]:z-auto min-[1000px]:mt-1 min-[1000px]:flex min-[1000px]:flex-row min-[1000px]:items-center min-[1000px]:divide-x min-[1000px]:divide-solid min-[1000px]:divide-link min-[1000px]:rounded-none min-[1000px]:bg-transparent min-[1000px]:py-0 min-[1000px]:shadow-none min-[1000px]:backdrop-blur-none"
 			id="navigation-menu"
 		>
 			{
 				menuLinks.map((link) => (
 					<a
 						aria-current={url.pathname === link.path ? "page" : false}
-						class="px-3 py-2 text-[1.3rem] text-link underline-offset-2 sm:py-0 sm:hover:underline"
+						class="px-3 py-2 text-[1.3rem] text-link underline-offset-2 min-[1000px]:py-0 min-[1000px]:hover:underline"
 						data-astro-prefetch
 						href={link.path}
 					>
@@ -70,7 +70,7 @@ const url = new URL(Astro.request.url);
 			aria-expanded="false"
 			aria-haspopup="menu"
 			aria-label="Open main menu"
-			class="group relative ms-4 h-7 w-7 sm:invisible sm:hidden"
+			class="group relative ms-4 h-7 w-7 min-[1000px]:invisible min-[1000px]:hidden"
 			id="toggle-navigation-menu"
 			type="button"
 		>

@@ -10,14 +10,14 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={{ title: "Research" }}>
-	<section class="mt-0 flex flex-col gap-10 sm:flex-row" id="Home">
+	<section class="mt-0 flex flex-col gap-10 min-[1000px]:flex-row" id="Home">
 		<img
-			src="/WEBSITE_MP.jpg"
-			alt="Johann Ohler"
-			class="hight-auto mx-auto max-h-[500px] w-4/5 min-w-[250px] rounded-lg object-cover sm:flex sm:w-2/5 lg:w-1/3"
+		  src="/WEBSITE_MP.jpg"
+		  alt="Johann Ohler"
+		  class="h-auto mx-auto max-h-[500px] w-2/5 min-w-[250px] rounded-lg object-cover min-[1000px]:w-1/5 lg:w-1/3"
 		/>
 		<div class="flex-1 text-justify leading-normal">
-			<p class="mb-4">
+			<p class="mb-4 mt-8 min-[1000px]:mt-0">
 				I am a first-year PhD Student in Economic History at the LSE. My research interests lie in <span
 					class="decoration-3 font-bold underline decoration-accent">Economic History</span
 				>, <span class="decoration-3 font-bold underline decoration-accent"
@@ -62,7 +62,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</div>
 	</section>
 
-	<section class="mt-32" id="WorkingPapers">
+	<section class="min-[1000px]:mt-20 mt-14" id="WorkingPapers">
 		<!-- Working Papers Section -->
 		<h1 class="mb-8 text-center text-lg font-bold sm:text-left">Working Papers</h1>
 		<ul class="mb-4">
@@ -106,7 +106,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		<h1 class="mb-8 text-center text-lg font-bold sm:text-left">Work in Progress</h1>
 		<ul class="mb-8 space-y-10">
 			<li>
-				<strong> Build Back Better Health: Public Housing and the Mortality Transition</strong> - with
+				<strong> Build Better Health: Public Housing and the Mortality Transition</strong> - with
 				<a
 					class="cactus-link"
 					href="https://alandebromhead.weebly.com/"
@@ -147,7 +147,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 					</button>
 
 					<!-- Abstract Content -->
-					<div class="abstract-content hidden overflow-hidden transition-all duration-500">
+					<div class="abstract-content hidden overflow-hidden transition-all duration-700">
 						<p class="mt-4 text-[1.2rem] sm:ml-8">
 							Did improved housing conditions contribute to the 19th century mortality transition?
 							In this paper we examine a rare example of a public health intervention in rural
@@ -171,13 +171,13 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				</div>
 
 				<p class="mt-3 text-[1.2rem]">
-					<span class="italic">Draft expected January 2025.</span>
+					<span class="italic">Draft expected March 2025.</span>
 				</p>
 				<!-- Presentation Section -->
 				<p class="mt-1 text-[1.2rem]">
 					<span class="italic">Presentations:</span>
-					University of Cork, University College Dublin, Trinity College Dublin, LSE Demography Seminar*,
-					South Denmark University*, 1st CEPR Applied Micro-Economic History Workshop*, Economic History
+					University of Cork, University College Dublin, Trinity College Dublin, LSE Demography Seminar,
+					South Denmark University*, CEPR Applied Micro-Economic History Workshop*, CEPR Public Health Interventions in the Long Run Workshop*, Economic History
 					Society Conference*.
 				</p>
 			</li>
@@ -219,7 +219,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 					</button>
 
 					<!-- Abstract Content -->
-					<div class="abstract-content hidden overflow-hidden transition-all duration-500">
+					<div class="abstract-content hidden overflow-hidden transition-all duration-700">
 						<p class="mt-4 text-[1.2rem] sm:ml-8">
 							Individual level records of every French war-time fatality in the Great War enable us
 							to explore the organisational implications of group representation. At the level of
@@ -232,7 +232,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				</div>
 
 				<p class="mt-3 text-[1.2rem]">
-					<span class="italic">Draft available upon request.</span>
+					<span class="italic">Draft expected Summer 2025.</span>
 				</p>
 				<!-- Presentation Section -->
 				<p class="mt-1 text-[1.2rem]">
@@ -297,25 +297,16 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		<h1 class="mb-2 hidden text-[2rem] font-semibold sm:flex sm:text-left">Upcoming:</h1>
 		<ul>
 			<li class="flex items-start py-4">
-				<span class="w-1/3 text-[1.2rem] sm:text-sm">29th January 2025</span>
+				<span class="w-1/3 text-[1.2rem] sm:text-sm">7th Febuary</span>
 				<div class="w-2/3">
-					<strong class="block"> LSE Demography Seminar </strong>
+					<strong class="block"> CEPR Applied Micro-Economic History Workshop </strong>
 					<p class="mt-1 text-[1.2rem]">
-						Build Back Better Health: Public Housing and the Mortality Transition.
+						Build Better Health: Public Housing and the Mortality Transition.
 					</p>
 				</div>
 			</li>
 			<li class="flex items-start py-4">
-				<span class="w-1/3 text-[1.2rem] sm:text-sm">7-8th Febuary 2025</span>
-				<div class="w-2/3">
-					<strong class="block"> CEPR Applied Micro History Workshop </strong>
-					<p class="mt-1 text-[1.2rem]">
-						Build Back Better Health: Public Housing and the Mortality Transition.
-					</p>
-				</div>
-			</li>
-			<li class="flex items-start py-4">
-				<span class="w-1/3 text-[1.2rem] sm:text-sm">27th Febuary 2025</span>
+				<span class="w-1/3 text-[1.2rem] sm:text-sm">27th Febuary</span>
 				<div class="w-2/3">
 					<strong class="block">
 						LSE Seminar for Political Economy and Economic History (SPEECH)
@@ -326,11 +317,31 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				</div>
 			</li>
 			<li class="flex items-start py-4">
-				<span class="w-1/3 text-[1.2rem] sm:text-sm">11th March 2025</span>
+				<span class="w-1/3 text-[1.2rem] sm:text-sm">11th March</span>
 				<div class="w-2/3">
 					<strong class="block"> South Denmark University Economics Seminar </strong>
 					<p class="mt-1 text-[1.2rem]">
-						Build Back Better Health: Public Housing and the Mortality Transition.
+						Reproductive Inequality, Mobility, and Status in pre-industrial Germany.
+					</p>
+				</div>
+			</li>
+			<li class="flex items-start py-4">
+				<span class="w-1/3 text-[1.2rem] sm:text-sm">17th March</span>
+				<div class="w-2/3">
+					<strong class="block"> CEPR Public Health Interventions in the Long Run Workshop</strong>
+					<p class="mt-1 text-[1.2rem]">
+						Build Better Health: Public Housing and the Mortality Transition.
+					</p>
+				</div>
+			</li>
+		</ul>
+		<h1 class="mb-2 hidden text-[2rem] font-semibold sm:flex sm:text-left">Past:</h1>
+		<ul>
+			<li class="flex items-start py-4">
+				<div class="w-3/3">
+					<strong class="block"> 2025 </strong>
+					<p class="mt-1 text-[1.2rem]">
+						LSE Demography Seminar.
 					</p>
 				</div>
 			</li>
