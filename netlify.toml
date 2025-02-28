@@ -1,2 +1,2 @@
 [build]
-  command = 'npm  run build'
+  command = "NODE_ENV=production npm install && npm run build"
