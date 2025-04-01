@@ -1,0 +1,86 @@
+---
+import { Image } from "astro:assets";
+import aboutImg from "@/assets/about-astro.png";
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+	description: "I'm a starter theme for Astro.build",
+	title: "About",
+};
+---
+
+<PageLayout meta={meta}>
+	<section class="mt-14 min-[1000px]:mt-20" id="WorkingPapers">
+		<!-- Working Papers Section -->
+		<h1 class="mb-8 text-center text-lg font-bold sm:text-left">Working Papers</h1>
+		<ul class="mb-4">
+			<li>
+				<strong>
+					<a
+						href="https://download.ssrn.com/yexeh/bc1a57b6-42a3-42d6-a1cf-22fa42e5c6c4-meca.pdf?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEFsaCXVzLWVhc3QtMSJHMEUCIAE99vOTXQXbZGTmPPCECcuLcD%2Fx0n8eyI4LMcMcAR0vAiEA8xPJGf3MO53LiV7pdeM8vGwcTLCcaNapPTrJ0rkzw3EqvQUIFBAEGgwzMDg0NzUzMDEyNTciDA9dZtb%2BaSsuqnDZjyqaBYa6Hmw3tA3cra8lPkyKmJvwr1P9NCRyES%2FBk6BNvDZoNdSBvT4vzA0J10PRofmwyhBJA89NXYU6cAt3BAc%2FpOSI%2ByoOmeBwo%2BYXoiHrWt69TBN0SG8yFkVqaMIOlWZkGb7FhC0jaeDQ%2FKJ27Ski8hkGefVXIJ%2B94DQLhz0PxoJVif9CjXoQK8wygpaSEZDR3bhDaADayVdpwlas2FeIq%2BHDcGFyo%2FOyW%2BgQN7iAfwHBEdxtPZdUut41AsPKiYhzVek1hlsa5i23YD6K11oVFOPZYmYU01aVh8VKV987flBiIgHKp%2BQ%2F%2FQggba%2BEXz7kCBBrKU2F34DDuTDyPJss1kbDzjZNO%2FVqXv6WxgYOguHnn49ZktXUqtXLvBZzgLRJvxq2SfNgYTCJlcwISNvhAT6%2BkNasQRcz%2B3S8omQAfQ%2Fz6o1ws2OVHcbOJea%2BEwH%2BSiUDWBxrvKwzpY6sG0q4UN2Yy1p0%2F%2BUUMLQirisqagRToP9R1O3Cl2mI9nUVDESnveymqP8Zz88MFf52esJkpX7Q9H14J2KVXhmMBRlznOy1ykMa%2FNlOnyF1ncJhA%2Bqg%2BF0EANm2FpSGchLrV9ux0YkZvsCW3tvfvhLE8DhC3eKz9YGq00Aw782M45RxXNw8KJPlb4BBJRqv%2F2MWPfYFsiO3WsDrS1XQpVGN%2FQ2SKd1Ma3iiV6RunG0vykKEaQoonVRLZk5rSEnkbmFju7qZkqRWkMhfiKu07dViwaGefqIFc0qX9978l%2Bcuml8C3psfetbXE3X7rA6U1euK0Qkn%2Bn%2BKMW7z6%2BZrUhdWmIMN%2Be%2FokcahOTnt2nKveNBz6gZsV6wTCfvehapJ%2FA4vtJJyaWKUfMYew0SivXnOGGeJkrOzUmsvGWjAeVef4DDZh8a6BjqxAVmy9bbTRXeBeZ8Kp5FHm9ASRqUD5tPN0NsvT4r%2FinR0fCdssPicdNUxawvSu2iUn59Xf4AqraGwGIGlMwFT8x8BrwW5EKYo9br%2Bg7mpVxsfaE%2BjatIj4z7Fup9QHZfa8FMbBMMJ0qIozYCxBK9V5G3s9EUehV3qwDee3mq9ybb6wLjDvm3qMn9VsXXmMAO82fPqzl3OrrZO4a0yJNmywxOpOlzeS6SYzq0aM4Ai%2F%2FdhbA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241205T112504Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAUPUUPRWEUTHUN6YF%2F20241205%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=70b43f5be8fa880783740f0ad3530b395094458adafb733b2f6061a1110242ca&abstractId=4965731"
+						class="text-link hover:underline"
+						target="_blank"
+						rel="noopener noreferrer"
+						>Malthus in Germany? Reproductive Success and Status in pre-industrial Germany</a
+					>
+				</strong>
+				<!-- Abstract Section -->
+				<p class="mt-4 text-[1.2rem] sm:ml-8">
+					By exploiting the demographic records of 150,000 individuals from the historical county of
+					Wittgenstein, I test for status gradients in child mortality (the Malthusian positive
+					check) and marital fertility (preventive check). While I find no evidence for a status
+					gradient in child mortality, I find strong evidence for a status gradient in fertility.
+					The richest families had, on average, one-and-a-half extra children compared to their
+					poorer compatriots. Turning to the mechanics of the preventive check, this was driven by
+					delayed marriage in low-status families. Disaggregation of my dataset into six periods
+					reveals that this fertility differential began to disintegrate around 1800.
+				</p>
+				<!-- Presentation Section -->
+				<p class="mt-6 text-[1.2rem]">
+					<span class="italic">Presentations:</span>
+					University College Dublin, Trinity College Dublin, Irish Economic Association Conference.
+				</p>
+				<!-- Awards Section -->
+				<p class="mt-1 text-[1.2rem]">
+					<span class="italic">Awards:</span> LSE Economic History Best Dissertation (2023), Francesca
+					Carnevali Prize (2024).
+				</p>
+			</li>
+		</ul>
+	</section>
+
+	<div class="space-y-6">
+		<h1 class="title">About</h1>
+		<p>
+			Hi, I’m a starter Astro. I’m particularly great for getting you started with your own blogging
+			website.
+		</p>
+		<div class="flex justify-center">
+			<Image
+				alt="A cartoon cactus looking at the 'Astro.build' logo"
+				fetchpriority="high"
+				loading="eager"
+				src={aboutImg}
+			/>
+		</div>
+		<p>Here are my some of my awesome built in features:</p>
+		<ul class="list-inside list-disc">
+			<li>I'm ultra fast as I'm a static site</li>
+			<li>I'm fully responsive</li>
+			<li>I come with a light and dark mode</li>
+			<li>I'm easy to customise and add additional content</li>
+			<li>I have Tailwind CSS styling</li>
+			<li>Shiki code syntax highlighting</li>
+			<li>Satori for auto generating OG images for blog posts</li>
+		</ul>
+		<p>
+			Clone or fork my <a
+				aria-label="github repository"
+				class="cactus-link inline-block"
+				href="https://github.com/chrismwilliams/astro-cactus"
+				rel="noreferrer"
+				target="_blank">repo</a
+			> if you like me!
+		</p>
+	</div>
+</PageLayout>
