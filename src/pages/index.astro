@@ -14,61 +14,72 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		<img
 			src="/WEBSITE_MP.jpg"
 			alt="Johann Ohler"
-			class="mx-auto h-auto max-h-[500px] w-2/5 min-w-[250px] rounded-lg object-cover min-[1000px]:w-1/5 lg:w-1/3"
+			class="mx-auto hidden h-auto max-h-[500px] w-2/5 min-w-[250px] rounded-lg object-cover min-[1000px]:block min-[1000px]:w-1/5 lg:w-1/3"
 		/>
-		<div class="flex-1 text-justify leading-normal">
-			<p class="mb-4 mt-8 min-[1000px]:mt-0">
-				I am a first-year PhD Student in the Economic History department at the LSE. My research
-				interests lie in <span class="decoration-3 font-bold underline decoration-accent"
-					>Economic History</span
-				>, <span class="decoration-3 font-bold underline decoration-accent"
-					>Population Economics</span
-				>, <span class="decoration-3 font-bold underline decoration-accent">Urban Economics</span> and
-				<span class="decoration-3 font-bold underline decoration-accent">Political Economy</span>.
-				In my current projects I use large-scale data sources to better understand the economic and
-				political factors that drove demographic change in the 18th and 19th century.
+		<div class="flex-1 text-justify leading-tight">
+			<p class="mb-8 mt-8 min-[1000px]:mt-0">
+				I am a PhD Student in the Economic History department at the LSE. My research interests lie
+				in <span class="decoration-3 font-bold underline decoration-accent">Economic History</span>, <span
+					class="decoration-3 font-bold underline decoration-accent">Population Economics</span
+				>, and <span class="decoration-3 font-bold underline decoration-accent"
+					>Political Economy</span
+				>.
+			</p>
 
-				<p class="mb-4">
-					I am a member of the <a
-						class="cactus-link"
-						href="https://www.lse.ac.uk/Economic-History/HED"
-						class="text-link hover:underline"
-						target="_blank"
-						rel="noopener noreferrer">Historical Economic Demography</a
-					> group, and am supervised by <a
-						class="cactus-link"
-						href="https://www.ericbschneider.com/"
-						class="text-link hover:underline"
-						target="_blank"
-						rel="noopener noreferrer">Eric Schneider</a
-					> and <a
-						class="cactus-link"
-						href="https://www.tomraster.com/"
-						class="text-link hover:underline"
-						target="_blank"
-						rel="noopener noreferrer">Tom Raster</a
-					>.
-				</p>
+			<p class="mb-8">
+				I am a member of the <a
+					class="cactus-link text-link hover:underline"
+					href="https://www.lse.ac.uk/Economic-History/HED"
+					target="_blank"
+					rel="noopener noreferrer">Historical Economic Demography</a
+				> group, and am supervised by <a
+					class="cactus-link text-link hover:underline"
+					href="https://www.ericbschneider.com/"
+					target="_blank"
+					rel="noopener noreferrer">Eric Schneider</a
+				> and <a
+					class="cactus-link text-link hover:underline"
+					href="https://www.tomraster.com/"
+					target="_blank"
+					rel="noopener noreferrer">Tom Raster</a
+				>.
+			</p>
 
-				<p class="mb-4">
-					You can find my CV <a
-						class="text-bold cactus-link"
-						href="https://www.dropbox.com/scl/fi/ztlk7oyrptvgxp0ee0o8h/CV_Johann_Ohler.pdf?rlkey=u6ojvd4kihatugfrmisl6zpkm&st=64uwzjj5&dl=0"
-						class="text-link hover:underline"
-						target="_blank"
-						rel="noopener noreferrer">here</a
-					>. Email: <a href="mailto:j.p.ohler@lse.ac.uk" class="text-link">j.p.ohler@lse.ac.uk</a>
-				</p>
+			<p class="mb-8">
+				I will be visiting UCLA Economics from Spring 2025 where I am hosted by <a
+					class="cactus-link text-link hover:underline"
+					href="https://sites.google.com/g.ucla.edu/marthajbailey"
+					target="_blank"
+					rel="noopener noreferrer">Martha Bailey</a
+				>.
+			</p>
+
+			<p class="mb-8">
+				You can find my CV <a
+					class="cactus-link font-bold text-link hover:underline"
+					href="https://www.dropbox.com/scl/fi/ztlk7oyrptvgxp0ee0o8h/CV_Johann_Ohler.pdf?rlkey=u6ojvd4kihatugfrmisl6zpkm&st=64uwzjj5&dl=0"
+					target="_blank"
+					rel="noopener noreferrer">here</a
+				>. Email: <a href="mailto:j.p.ohler@lse.ac.uk" class="text-link">j.p.ohler@lse.ac.uk</a>
 			</p>
 		</div>
 	</section>
 
-	<section class="mt-16" id="WIP">
-		<!-- Working in Progress Section -->
-		<h1 class="mb-8 text-center text-lg font-bold sm:text-left">Work in Progress</h1>
+	<section class="mt-16" id="WP">
+		<!-- Working Paper Section -->
+		<h1 class="mb-8 text-center text-lg font-bold sm:text-left">Working Papers</h1>
 		<ul class="mb-8 space-y-10">
 			<li>
-				<strong>Building Better Health: Public Housing and the Mortality Transition</strong>
+				<a
+					class="text-accent no-underline hover:font-extrabold hover:underline"
+					href="https://www.dropbox.com/scl/fi/ppoqbblsjfymmzgdn799v/BBH_1010.pdf?rlkey=fsyarcj3aroxygzzohe5i0zlu&st=mzow07oa&dl=0"
+					class="hover:bold text-link"
+					target="_blank"
+					rel="noopener noreferrer"
+					><strong
+						>Build Better Health: Evidence from Ireland on Housing Quality and Mortality</strong
+					></a
+				>
 				<br />
 				<div class="mt-0 text-[1.3rem]">
 					with
@@ -90,336 +101,337 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 					</a>
 				</div>
 				<!-- Abstract Section -->
-				<div class="ml-2">
-					<!-- Abstract Button (Left-Aligned to the Page Edge) -->
-					<button
-						class="toggle-abstract mt-3 flex items-center text-[1.4rem] font-semibold hover:text-link focus:outline-none"
-					>
-						<!-- Rotating Arrow in Circle (No Margin) -->
-						<span
-							class="arrow-icon flex h-5 w-5 items-center justify-center rounded-full border-2 border-link transition-transform duration-500"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-4 w-4 text-link"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="6"
-							>
-								<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-							</svg>
-						</span>
-						<!-- Button Text with Left Margin -->
-						<span class="ml-2">Abstract</span>
-					</button>
-
-					<!-- Abstract Content -->
-					<div class="abstract-content hidden overflow-hidden transition-all duration-700">
-						<p class="mt-4 text-[1.2rem] sm:ml-8">
-							Did improved housing conditions contribute to the 19th century mortality transition?
-							In this paper we examine a rare example of a public health intervention in rural
-							areas, namely the large-scale provision of social housing in Ireland in the late 19th
-							and early 20th centuries. We exploit a novel dataset of deaths-by-disease,
-							deaths-by-age and the implementation of the house building scheme across local
-							districts over the period 1870-1919, to test the impact of the intervention on
-							mortality. Both two-way fixed-effects and novel difference-in-difference estimators
-							show that areas that received more cottages experienced a larger decline in disease
-							mortality over subsequent decades. Our estimates indicate that improved housing
-							conditions may account for up to 40 % of the rural mortality decline in this period.
-							This effect is driven by reductions in deaths from respiratory diseases. A causal
-							interpretation is supported by falsification tests on deaths from non-communicable
-							diseases and through an analysis using age-at-death and death-by-gender data. Beyond
-							indicating that large-scale capital public health interventions can be effective in a
-							rural setting, our results add to the literature of the European mortality transition
-							and provide important causal evidence on the link between housing conditions and
-							health outcomes.
-						</p>
-					</div>
+				<div class="ml-2 mt-4 text-[1.2rem] sm:ml-8">
+					Poor housing conditions, and the negative effects of Household Air Pollution (HAP) in
+					particular, remain one of the most pressing global public health challenges. While the
+					association between poor housing and health has a long history, evidence of a direct link
+					is lacking. In this paper, we examine a rare example of a public housing intervention in
+					rural areas, namely the large-scale provision of high-quality housing in Ireland in the
+					late 19th and early 20th centuries. We exploit a novel dataset of deaths-by-disease and
+					deaths-by-age-and-sex over the period 1871–1919, to test the impact of the intervention on
+					mortality. Our difference-in difference estimates indicate that improved housing
+					conditions reduced mortality by as much as 1 death per 1000. This effect is driven by
+					reductions in deaths from respiratory diseases. We propose a likely mechanism that is
+					consistent with the pattern of results we observe: a reduction in Household Air Pollution
+					through improved housing quality and better ventilation. A cost-benefit analysis reveals
+					that the scheme was a highly cost-effective intervention.
 				</div>
-
-				<p class="mt-3 text-[1.2rem]">
-					<span class="italic">Draft expected 2025Q2.</span>
-				</p>
-				<!-- Presentation Section -->
-				<p class="mt-1 text-[1.2rem]">
-					<span class="italic">Presentations:</span>
-					University of Cork, University College Dublin, Trinity College Dublin, LSE Demography Seminar,
-					CEPR Applied Micro-Economic History Workshop, CEPR Public Health Interventions Workshop, EHS
-					Conference*, EHA Meeting*.
-				</p>
-			</li>
-			<li>
-				<strong> Regional Networks and Motivation: Evidence from the Trenches of WWI</strong>
-				<br />
-				<div class="mt-0 text-[1.3rem]">
-					with
-					<a
-						class="cactus-link"
-						href="https://research.rug.nl/en/persons/olly-brufal-de-melgarejo"
-						class="text-link hover:underline"
+				<!-- Link Section -->
+				<div class="mt-4 text-[1.3rem]">
+					[<a
+						class="cactus-link no-underline hover:underline"
+						href="https://cepr.org/publications/dp20725"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						Oliver Brufal (University of Groningen)</a
-					>
-				</div>
-				<!-- Abstract Section -->
-				<div class="ml-2">
-					<!-- Abstract Button (Left-Aligned to the Page Edge) -->
-					<button
-						class="toggle-abstract mt-3 flex items-center text-[1.4rem] font-semibold hover:text-link focus:outline-none"
-					>
-						<!-- Rotating Arrow in Circle (No Margin) -->
-						<span
-							class="arrow-icon flex h-5 w-5 items-center justify-center rounded-full border-2 border-link transition-transform duration-500"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-4 w-4 text-link"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="6"
-							>
-								<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-							</svg>
-						</span>
-						<!-- Button Text with Left Margin -->
-						<span class="ml-2">Abstract</span>
-					</button>
-
-					<!-- Abstract Content -->
-					<div class="abstract-content hidden overflow-hidden transition-all duration-700">
-						<p class="mt-4 text-[1.2rem] sm:ml-8">
-							Mission-oriented organizations rely on social incentives in the absence of
-							high-powered pecuniary incentives. We identify a novel social incentive with
-							significant impact on motivation. We present evidence on how agents' motivation is
-							affected when they share personal traits - in our setting localized regional identity
-							- with a principal. Using individual‐level data on all French WWI fatalities, we
-							estimate the effect of losing such connection. In a design-based
-							difference-in-difference setup we exploit within-regiment variation across regional
-							groups. We find that soldiers (agents) are more motivated when a principal (officer)
-							with a shared identity is present. Placebo treatments - a random draw of non-connected
-							officers dying - support a causal interpretation of our results. Heterogeneity
-							analysis reveals that regional network effects matter most for minority groups in
-							non-diverse regiments. By exploring how our effect varies across regions we can also
-							speak to the determinants of regional cultural identity in France in the early 19th
-							century.
-						</p>
-					</div>
+						CEPR DP
+					</a>]
 				</div>
 
-				<p class="mt-3 text-[1.2rem]">
-					<span class="italic">Draft expected 2025Q2.</span>
-				</p>
 				<!-- Presentation Section -->
 				<p class="mt-1 text-[1.2rem]">
 					<span class="italic">Presentations:</span>
-					Cambridge EH Graduate Seminar, LSE SPEECH, University of Groningen*.
+					LSE Demography Seminar, CEPR Applied Micro-Economic History Workshop, CEPR Public Health Interventions
+					Workshop.
 				</p>
 			</li>
-			<li>
-				<strong>
-					Fertility, Mobility, and Class Structure: Evidence from pre-industrial Germany</strong
-				>
-				<br />
-				<!-- Abstract Section -->
-				<div class="ml-2">
-					<!-- Abstract Button (Left-Aligned to the Page Edge) -->
-					<button
-						class="toggle-abstract mt-3 flex items-center text-[1.4rem] font-semibold hover:text-link focus:outline-none"
-					>
-						<!-- Rotating Arrow in Circle (No Margin) -->
-						<span
-							class="arrow-icon flex h-5 w-5 items-center justify-center rounded-full border-2 border-link transition-transform duration-500"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-4 w-4 text-link"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="6"
-							>
-								<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-							</svg>
-						</span>
-						<!-- Button Text with Left Margin -->
-						<span class="ml-2">Abstract</span>
-					</button>
+		</ul>
 
-					<!-- Abstract Content -->
-					<div class="abstract-content hidden overflow-hidden transition-all duration-700">
-						<p class="mt-4 text-[1.2rem] sm:ml-8">
-							Reproductive inequality - the fertility differential between poor and rich couples -
-							together with intergenerational mobility shapes class structure. Still, few studies
-							evaluate these dynamics in a joint framework. Evolutionary growth theories such as
-							Galor & Moav (2002) or Clark (2007) argue that fertility differentials contributed to
-							the spread of certain growth-enhancing traits, eventually resulting in modern economic
-							growth. However, they do not explicitly account for regression to the mean in economic
-							status. By leveraging the demographic records of 150,000 individuals from
-							pre-industrial Germany, I estimate reproductive inequality and social mobility. High
-							status couples had more surviving children, with their status closely related to their
-							parents' position in the socio-economic distribution. By combining my estimates of
-							reproductive inequality and social mobility I simulate an overlapping generation model
-							to explore the parameter space that enables the demographic mechanisms that underpin
-							evolutionary growth theories.
-						</p>
-					</div>
-				</div>
-
-				<p class="mt-3 text-[1.2rem]">
-					<span class="italic">Draft expected 2025Q3. </span>
-				</p>
-				<p class="mt-3 text-[1.2rem]">
-					<span class="italic">
-						Subsumes: <a
-							href="https://download.ssrn.com/yexeh/bc1a57b6-42a3-42d6-a1cf-22fa42e5c6c4-meca.pdf?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEFsaCXVzLWVhc3QtMSJHMEUCIAE99vOTXQXbZGTmPPCECcuLcD%2Fx0n8eyI4LMcMcAR0vAiEA8xPJGf3MO53LiV7pdeM8vGwcTLCcaNapPTrJ0rkzw3EqvQUIFBAEGgwzMDg0NzUzMDEyNTciDA9dZtb%2BaSsuqnDZjyqaBYa6Hmw3tA3cra8lPkyKmJvwr1P9NCRyES%2FBk6BNvDZoNdSBvT4vzA0J10PRofmwyhBJA89NXYU6cAt3BAc%2FpOSI%2ByoOmeBwo%2BYXoiHrWt69TBN0SG8yFkVqaMIOlWZkGb7FhC0jaeDQ%2FKJ27Ski8hkGefVXIJ%2B94DQLhz0PxoJVif9CjXoQK8wygpaSEZDR3bhDaADayVdpwlas2FeIq%2BHDcGFyo%2FOyW%2BgQN7iAfwHBEdxtPZdUut41AsPKiYhzVek1hlsa5i23YD6K11oVFOPZYmYU01aVh8VKV987flBiIgHKp%2BQ%2F%2FQggba%2BEXz7kCBBrKU2F34DDuTDyPJss1kbDzjZNO%2FVqXv6WxgYOguHnn49ZktXUqtXLvBZzgLRJvxq2SfNgYTCJlcwISNvhAT6%2BkNasQRcz%2B3S8omQAfQ%2Fz6o1ws2OVHcbOJea%2BEwH%2BSiUDWBxrvKwzpY6sG0q4UN2Yy1p0%2F%2BUUMLQirisqagRToP9R1O3Cl2mI9nUVDESnveymqP8Zz88MFf52esJkpX7Q9H14J2KVXhmMBRlznOy1ykMa%2FNlOnyF1ncJhA%2Bqg%2BF0EANm2FpSGchLrV9ux0YkZvsCW3tvfvhLE8DhC3eKz9YGq00Aw782M45RxXNw8KJPlb4BBJRqv%2F2MWPfYFsiO3WsDrS1XQpVGN%2FQ2SKd1Ma3iiV6RunG0vykKEaQoonVRLZk5rSEnkbmFju7qZkqRWkMhfiKu07dViwaGefqIFc0qX9978l%2Bcuml8C3psfetbXE3X7rA6U1euK0Qkn%2Bn%2BKMW7z6%2BZrUhdWmIMN%2Be%2FokcahOTnt2nKveNBz6gZsV6wTCfvehapJ%2FA4vtJJyaWKUfMYew0SivXnOGGeJkrOzUmsvGWjAeVef4DDZh8a6BjqxAVmy9bbTRXeBeZ8Kp5FHm9ASRqUD5tPN0NsvT4r%2FinR0fCdssPicdNUxawvSu2iUn59Xf4AqraGwGIGlMwFT8x8BrwW5EKYo9br%2Bg7mpVxsfaE%2BjatIj4z7Fup9QHZfa8FMbBMMJ0qIozYCxBK9V5G3s9EUehV3qwDee3mq9ybb6wLjDvm3qMn9VsXXmMAO82fPqzl3OrrZO4a0yJNmywxOpOlzeS6SYzq0aM4Ai%2F%2FdhbA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241205T112504Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAUPUUPRWEUTHUN6YF%2F20241205%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=70b43f5be8fa880783740f0ad3530b395094458adafb733b2f6061a1110242ca&abstractId=4965731"
+		<section class="mt-16" id="WIP">
+			<!-- Working in Progress Section -->
+			<h1 class="mb-8 text-center text-lg font-bold sm:text-left">Work in Progress</h1>
+			<ul class="mb-8 space-y-10">
+				<li>
+					<strong> Regional Identity and Motivation: Evidence from the Trenches of WWI</strong>
+					<br />
+					<div class="mt-0 text-[1.3rem]">
+						with
+						<a
+							class="cactus-link"
+							href="https://research.rug.nl/en/persons/olly-brufal-de-melgarejo"
 							class="text-link hover:underline"
 							target="_blank"
 							rel="noopener noreferrer"
-							>Malthus in Germany? Reproductive Success and Status in pre-industrial Germany</a
-						></span
+						>
+							Oliver Brufal (University of Groningen)</a
+						>
+					</div>
+					<!-- Abstract Section -->
+					<div class="ml-2">
+						<!-- Abstract Button (Left-Aligned to the Page Edge) -->
+						<button
+							class="toggle-abstract mt-3 flex items-center text-[1.4rem] font-semibold hover:text-link focus:outline-none"
+						>
+							<!-- Rotating Arrow in Circle (No Margin) -->
+							<span
+								class="arrow-icon flex h-5 w-5 items-center justify-center rounded-full border-2 border-link transition-transform duration-500"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-4 w-4 text-link"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+									stroke-width="6"
+								>
+									<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+								</svg>
+							</span>
+							<!-- Button Text with Left Margin -->
+							<span class="ml-2">Abstract</span>
+						</button>
+
+						<!-- Abstract Content -->
+						<div class="abstract-content hidden overflow-hidden transition-all duration-700">
+							<p class="mt-4 text-[1.2rem] sm:ml-8">
+								Mission-oriented organizations rely on social incentives in the absence of
+								high-powered pecuniary incentives. We identify a novel social incentive with
+								significant impact on motivation. We present evidence on how agents' motivation is
+								affected when they share personal traits - in our setting localized regional
+								identity - with a principal. Using individual‐level data on all French WWI
+								fatalities, we estimate the effect of losing such connection. In a design-based
+								difference-in-difference setup we exploit within-regiment variation across regional
+								groups. We find that soldiers (agents) are more motivated when a principal (officer)
+								with a shared identity is present. Placebo treatments - a random draw of
+								non-connected officers dying - support a causal interpretation of our results.
+								Heterogeneity analysis reveals that regional network effects matter most for
+								minority groups in non-diverse regiments. By exploring how our effect varies across
+								regions we can also speak to the determinants of regional cultural identity in
+								France in the early 19th century.
+							</p>
+						</div>
+					</div>
+
+					<p class="mt-1 text-[1.2rem]">
+						<span class="italic">Draft expected 2025Q4.</span>
+					</p>
+					<!-- Presentation Section -->
+					<p class="mt-1 text-[1.2rem]">
+						<span class="italic">Presentations:</span>
+						Cambridge EH Graduate Seminar, LSE SPEECH, University of Groningen*.
+					</p>
+				</li>
+				<li>
+					<strong>
+						Fertility, Mobility, and Class Structure: Evidence from pre-industrial Germany</strong
 					>
-				</p>
-				<!-- Presentation Section -->
-				<p class="mt-1 text-[1.2rem]">
-					<span class="italic">Presentations:</span>
-					South Denmark University.
-				</p>
-			</li>
-		</ul>
-	</section>
+					<br />
+					<!-- Abstract Section -->
+					<div class="ml-2">
+						<!-- Abstract Button (Left-Aligned to the Page Edge) -->
+						<button
+							class="toggle-abstract mt-3 flex items-center text-[1.4rem] font-semibold hover:text-link focus:outline-none"
+						>
+							<!-- Rotating Arrow in Circle (No Margin) -->
+							<span
+								class="arrow-icon flex h-5 w-5 items-center justify-center rounded-full border-2 border-link transition-transform duration-500"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-4 w-4 text-link"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+									stroke-width="6"
+								>
+									<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+								</svg>
+							</span>
+							<!-- Button Text with Left Margin -->
+							<span class="ml-2">Abstract</span>
+						</button>
 
-	<section class="mt-16" id="Experience">
-		<h1 class="mb-8 text-center text-lg font-bold sm:text-left">Research Experience</h1>
-		<ul>
-			<li class="flex items-start gap-1 py-4">
-				<span class="w-1/3 text-[1.2rem] sm:text-sm">December 2024 - ongoing</span>
-				<div class="w-2/3">
-					<strong class="block"
-						>Research Assistant to <a
-							href="https://www.ericbschneider.com"
-							class="font-semibold text-link">Eric Schneider</a
-						>.
-					</strong>
+						<!-- Abstract Content -->
+						<div class="abstract-content hidden overflow-hidden transition-all duration-700">
+							<p class="mt-4 text-[1.2rem] sm:ml-8">
+								Reproductive inequality - the fertility differential between poor and rich couples -
+								together with intergenerational mobility shapes class structure. Still, few studies
+								evaluate these dynamics in a joint framework. Evolutionary growth theories such as
+								Galor & Moav (2002) or Clark (2007) argue that fertility differentials contributed
+								to the spread of certain growth-enhancing traits, eventually resulting in modern
+								economic growth. However, they do not explicitly account for regression to the mean
+								in economic status. By leveraging the demographic records of 150,000 individuals
+								from pre-industrial Germany, I estimate reproductive inequality and social mobility.
+								High status couples had more surviving children, with their status closely related
+								to their parents' position in the socio-economic distribution. By combining my
+								estimates of reproductive inequality and social mobility I simulate an overlapping
+								generation model to explore the parameter space that enables the demographic
+								mechanisms that underpin evolutionary growth theories.
+							</p>
+						</div>
+					</div>
+
 					<p class="mt-1 text-[1.2rem]">
-						Build OCR pipeline for the automated transcription of handwritten historical tables.
+						<span class="italic">Draft expected 2025Q4. </span>
 					</p>
-				</div>
-			</li>
-			<li class="flex items-start gap-1 py-4">
-				<span class="w-1/3 text-[1.2rem] sm:text-sm">October 2023 - June 2024</span>
-				<div class="w-2/3">
-					<strong class="block"
-						>Research Assistant to <a href="https://Ronanlyons.com" class="font-semibold text-link"
-							>Ronan Lyons</a
-						>.
-					</strong>
 					<p class="mt-1 text-[1.2rem]">
-						Worked on Urban Economics and Irish Economic History. Used advance NLP and OCR methods
-						for data transcription.
+						<span class="italic">
+							Subsumes: <a
+								href="https://download.ssrn.com/yexeh/bc1a57b6-42a3-42d6-a1cf-22fa42e5c6c4-meca.pdf?response-content-disposition=inline&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEFsaCXVzLWVhc3QtMSJHMEUCIAE99vOTXQXbZGTmPPCECcuLcD%2Fx0n8eyI4LMcMcAR0vAiEA8xPJGf3MO53LiV7pdeM8vGwcTLCcaNapPTrJ0rkzw3EqvQUIFBAEGgwzMDg0NzUzMDEyNTciDA9dZtb%2BaSsuqnDZjyqaBYa6Hmw3tA3cra8lPkyKmJvwr1P9NCRyES%2FBk6BNvDZoNdSBvT4vzA0J10PRofmwyhBJA89NXYU6cAt3BAc%2FpOSI%2ByoOmeBwo%2BYXoiHrWt69TBN0SG8yFkVqaMIOlWZkGb7FhC0jaeDQ%2FKJ27Ski8hkGefVXIJ%2B94DQLhz0PxoJVif9CjXoQK8wygpaSEZDR3bhDaADayVdpwlas2FeIq%2BHDcGFyo%2FOyW%2BgQN7iAfwHBEdxtPZdUut41AsPKiYhzVek1hlsa5i23YD6K11oVFOPZYmYU01aVh8VKV987flBiIgHKp%2BQ%2F%2FQggba%2BEXz7kCBBrKU2F34DDuTDyPJss1kbDzjZNO%2FVqXv6WxgYOguHnn49ZktXUqtXLvBZzgLRJvxq2SfNgYTCJlcwISNvhAT6%2BkNasQRcz%2B3S8omQAfQ%2Fz6o1ws2OVHcbOJea%2BEwH%2BSiUDWBxrvKwzpY6sG0q4UN2Yy1p0%2F%2BUUMLQirisqagRToP9R1O3Cl2mI9nUVDESnveymqP8Zz88MFf52esJkpX7Q9H14J2KVXhmMBRlznOy1ykMa%2FNlOnyF1ncJhA%2Bqg%2BF0EANm2FpSGchLrV9ux0YkZvsCW3tvfvhLE8DhC3eKz9YGq00Aw782M45RxXNw8KJPlb4BBJRqv%2F2MWPfYFsiO3WsDrS1XQpVGN%2FQ2SKd1Ma3iiV6RunG0vykKEaQoonVRLZk5rSEnkbmFju7qZkqRWkMhfiKu07dViwaGefqIFc0qX9978l%2Bcuml8C3psfetbXE3X7rA6U1euK0Qkn%2Bn%2BKMW7z6%2BZrUhdWmIMN%2Be%2FokcahOTnt2nKveNBz6gZsV6wTCfvehapJ%2FA4vtJJyaWKUfMYew0SivXnOGGeJkrOzUmsvGWjAeVef4DDZh8a6BjqxAVmy9bbTRXeBeZ8Kp5FHm9ASRqUD5tPN0NsvT4r%2FinR0fCdssPicdNUxawvSu2iUn59Xf4AqraGwGIGlMwFT8x8BrwW5EKYo9br%2Bg7mpVxsfaE%2BjatIj4z7Fup9QHZfa8FMbBMMJ0qIozYCxBK9V5G3s9EUehV3qwDee3mq9ybb6wLjDvm3qMn9VsXXmMAO82fPqzl3OrrZO4a0yJNmywxOpOlzeS6SYzq0aM4Ai%2F%2FdhbA%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20241205T112504Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAUPUUPRWEUTHUN6YF%2F20241205%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=70b43f5be8fa880783740f0ad3530b395094458adafb733b2f6061a1110242ca&abstractId=4965731"
+								class="text-link hover:underline"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Malthus in Germany? Reproductive Success and Status in pre-industrial Germany</a
+							></span
+						>
 					</p>
-				</div>
-			</li>
-			<li class="flex items-start gap-1 py-4">
-				<span class="w-1/3 text-[1.2rem] sm:text-sm">August 2021 - August 2022</span>
-				<div class="w-2/3">
-					<strong class="block"
-						>Research Assistant to <a
-							href="https://profiles.ucl.ac.uk/44206-tomas-cvrcek"
-							class="font-semibold text-link">Tomas Cvrcek</a
-						>.
-					</strong>
+					<!-- Presentation Section -->
 					<p class="mt-1 text-[1.2rem]">
-						Transcribed historical sources from the Austro-Hungarian empire and worked with ArcGIS
-						to geocode data.
+						<span class="italic">Presentations:</span>
+						South Denmark University.
 					</p>
-				</div>
-			</li>
-		</ul>
-	</section>
+				</li>
+			</ul>
+		</section>
 
-	<section class="mb-24 mt-16" id="Presentations">
-		<h1 class="mb-8 text-center text-lg font-bold sm:text-left">Presentations</h1>
-		<!-- <h1 class="mb-2 hidden text-[2rem] font-semibold sm:flex sm:text-left">Upcoming:</h1> -->
-		<!-- <ul>
-			<li class="flex items-start py-4">
-				<span class="w-1/3 text-[1.2rem] sm:text-sm">27th March</span>
-				<div class="w-2/3">
-					<strong class="block"> CEPR Public Health Interventions in the Long Run Workshop</strong>
-					<p class="mt-1 text-[1.2rem]">
-						Build Better Health: Public Housing and the Mortality Transition.
-					</p>
-				</div>
-			</li>
-		</ul> -->
-		<h1 class="mb-2 hidden text-[2rem] font-semibold sm:flex sm:text-left">Past:</h1>
-		<ul>
-			<li class="flex items-start py-4">
-				<div class="w-3/3">
-					<strong class="mb-0 block"> 2025 </strong>
-					<p class="mt-0.5 text-[1.2rem]">
-						CEPR Public Health Interventions in the Long Run. SDU Economics. LSE SPEECH. CEPR
-						Applied Micro-Economic History Workshop. LSE Demography.
-					</p>
-					<strong class="mb-0 mt-3 block"> 2024 </strong>
-					<p class="mt-0.5 text-[1.2rem]">
-						Cambridge Graduate Seminar. IEA Conference. IPECE Workshop.
-					</p>
-				</div>
-			</li>
-		</ul>
-	</section>
+		<section class="mt-16" id="Experience">
+			<h1 class="mb-8 text-center text-lg font-bold sm:text-left">Research Experience</h1>
+			<ul>
+				<li class="flex items-start gap-1 py-4">
+					<span class="hidden w-1/3 text-[1.2rem] sm:block sm:text-sm">December 2024 - ongoing</span
+					>
+					<div class="w-full sm:w-2/3">
+						<strong class="block">
+							Research Assistant to
+							<a href="https://www.ericbschneider.com" class="font-semibold text-link"
+								>Eric Schneider</a
+							>.
+						</strong>
+						<p class="mt-1 text-[1.2rem]">
+							Build OCR pipeline for the automated transcription of handwritten historical tables.
+						</p>
+					</div>
+				</li>
 
-	<button
-		aria-label="Back to Top"
-		class="z-90 fixed bottom-8 end-4 flex h-10 w-10 translate-y-28 items-center justify-center rounded-full border-2 border-transparent bg-zinc-200 text-3xl opacity-0 transition-all duration-300 hover:border-zinc-400 data-[show=true]:translate-y-0 data-[show=true]:opacity-100 dark:bg-zinc-700 sm:end-8 sm:h-12 sm:w-12"
-		data-show="true"
-		id="to-top-btn"
-		><svg
-			aria-hidden="true"
-			class="h-6 w-6"
-			fill="none"
-			focusable="true"
-			stroke="currentColor"
-			stroke-width="2"
-			viewBox="0 0 24 24"
-			xmlns="http://www.w3.org/2000/svg"
-		>
-			<path d="M4.5 15.75l7.5-7.5 7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
-		</svg>
-	</button>
+				<li class="flex items-start gap-1 py-4">
+					<span class="hidden w-1/3 text-[1.2rem] sm:block sm:text-sm"
+						>October 2023 - June 2024</span
+					>
+					<div class="w-full sm:w-2/3">
+						<strong class="block">
+							Research Assistant to
+							<a href="https://Ronanlyons.com" class="font-semibold text-link">Ronan Lyons</a>.
+						</strong>
+						<p class="mt-1 text-[1.2rem]">
+							Worked on Urban Economics and Irish Economic History. Used advanced NLP and OCR
+							methods for data transcription.
+						</p>
+					</div>
+				</li>
 
-	<script>
-		const toTopBtn = document.getElementById("to-top-btn");
+				<li class="flex items-start gap-1 py-4">
+					<span class="hidden w-1/3 text-[1.2rem] sm:block sm:text-sm"
+						>August 2021 - August 2022</span
+					>
+					<div class="w-full sm:w-2/3">
+						<strong class="block">
+							Research Assistant to
+							<a
+								href="https://profiles.ucl.ac.uk/44206-tomas-cvrcek"
+								class="font-semibold text-link">Tomas Cvrcek</a
+							>.
+						</strong>
+						<p class="mt-1 text-[1.2rem]">
+							Transcribed historical sources from the Austro-Hungarian empire and worked with ArcGIS
+							to geocode data.
+						</p>
+					</div>
+				</li>
+			</ul>
 
-		window.addEventListener("scroll", () => {
-			if (window.scrollY > 300) {
-				toTopBtn.setAttribute("data-show", "true");
-			} else {
-				toTopBtn.setAttribute("data-show", "false");
-			}
-		});
+			<h1 class="mb-8 mt-8 text-center text-lg font-bold sm:text-left">Teaching Experience</h1>
+			<ul>
+				<li class="flex items-start gap-1 py-4">
+					<span class="hidden w-1/3 text-[1.2rem] sm:block sm:text-sm"
+						>September 2025 - ongoing</span
+					>
+					<div class="w-full sm:w-2/3">
+						<strong class="mr-1">Intermediate Quantitative Methods</strong>
+						<em>(Postgraduate)</em>
+						<p class="mt-1 text-[1.2rem]">London School of Economics - Department of Methodology</p>
+					</div>
+				</li>
+			</ul>
+		</section>
 
-		toTopBtn.addEventListener("click", () => {
-			window.scrollTo({ top: 0, behavior: "smooth" });
-		});
+		<section class="mb-24 mt-16" id="Presentations">
+			<h1 class="mb-8 text-center text-lg font-bold sm:text-left">Presentations</h1>
+			<h1 class="mb-2 hidden text-[2rem] font-semibold sm:flex sm:text-left">Upcoming:</h1>
+			<ul>
+				<li class="flex items-start py-4">
+					<span class="w-1/3 text-[1.2rem] sm:text-sm">2nd December</span>
+					<div class="w-2/3">
+						<strong class='mb-0block"'> University of Mannheim</strong>
+						<p class="mt-0 text-[1.2rem]">TBA</p>
+					</div>
+				</li>
+			</ul>
+			<h1 class="mb-2 hidden text-[2rem] font-semibold sm:flex sm:text-left">Past:</h1>
+			<ul>
+				<li class="flex items-start py-4">
+					<div class="w-3/3">
+						<strong class="mb-0 block"> 2025 </strong>
+						<p class="mt-0.5 text-[1.2rem]">
+							CEPR Public Health Interventions in the Long Run. SDU Economics. LSE SPEECH. CEPR
+							Applied Micro-Economic History Workshop. LSE Demography.
+						</p>
+						<strong class="mb-0 mt-3 block"> 2024 </strong>
+						<p class="mt-0.5 text-[1.2rem]">
+							Cambridge Graduate Seminar. IEA Conference. IPECE Workshop.
+						</p>
+					</div>
+				</li>
+			</ul>
+		</section>
 
-		const buttons = document.querySelectorAll(".toggle-abstract");
+		<button
+			aria-label="Back to Top"
+			class="z-90 fixed bottom-8 end-4 flex h-10 w-10 translate-y-28 items-center justify-center rounded-full border-2 border-transparent bg-zinc-200 text-3xl opacity-0 transition-all duration-300 hover:border-zinc-400 data-[show=true]:translate-y-0 data-[show=true]:opacity-100 dark:bg-zinc-700 sm:end-8 sm:h-12 sm:w-12"
+			data-show="true"
+			id="to-top-btn"
+			><svg
+				aria-hidden="true"
+				class="h-6 w-6"
+				fill="none"
+				focusable="true"
+				stroke="currentColor"
+				stroke-width="2"
+				viewBox="0 0 24 24"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path d="M4.5 15.75l7.5-7.5 7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+			</svg>
+		</button>
 
-		buttons.forEach((button) => {
-			button.addEventListener("click", () => {
-				const content = button.nextElementSibling; // Target the sibling content
-				const arrow = button.querySelector(".arrow-icon");
+		<script>
+			const toTopBtn = document.getElementById("to-top-btn");
 
-				// Toggle the content visibility
-				content.classList.toggle("hidden");
-
-				// Rotate the arrow icon
-				arrow.classList.toggle("rotate-90");
+			window.addEventListener("scroll", () => {
+				if (window.scrollY > 300) {
+					toTopBtn.setAttribute("data-show", "true");
+				} else {
+					toTopBtn.setAttribute("data-show", "false");
+				}
 			});
-		});
-	</script>
+
+			toTopBtn.addEventListener("click", () => {
+				window.scrollTo({ top: 0, behavior: "smooth" });
+			});
+
+			const buttons = document.querySelectorAll(".toggle-abstract");
+
+			buttons.forEach((button) => {
+				button.addEventListener("click", () => {
+					const content = button.nextElementSibling; // Target the sibling content
+					const arrow = button.querySelector(".arrow-icon");
+
+					// Toggle the content visibility
+					content.classList.toggle("hidden");
+
+					// Rotate the arrow icon
+					arrow.classList.toggle("rotate-90");
+				});
+			});
+		</script>
+	</section>
 </PageLayout>

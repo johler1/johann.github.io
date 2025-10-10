@@ -6,23 +6,20 @@
 
 	:root,
 	:root[data-theme="light"] {
-		color-scheme: light;
-		/* https://tailwindcss.com/docs/customizing-colors#using-css-variables */
-		--theme-bg: 0deg 0% 98%;
-		--theme-link: 172deg 18% 41%;
-		--theme-text: 203deg 11% 15%;
-		--theme-accent: 351deg 66% 48%;
-		--theme-accent-2: 0deg 0% 7%;
-		--theme-quote: 351deg 66% 48%;
+		--theme-bg: 0deg 0% 99%;
+		--theme-link: 350deg 70% 35%;
+		--theme-text: 210deg 10% 18%;
+		--theme-accent: 350deg 70% 45%;
+		--theme-accent-2: 0deg 0% 10%;
+		--theme-quote: 350deg 70% 40%;
 	}
 
 	:root[data-theme="dark"] {
-		color-scheme: dark;
-		--theme-bg: 210deg 6% 12%;
-		--theme-link: 330deg 49% 67%;
-		--theme-text: 220deg 3% 79%;
-		--theme-accent: 159deg 64% 45%;
-		--theme-accent-2: 0deg 0% 93%;
-		--theme-quote: 102deg 100% 86%;
+		--theme-bg: 220deg 8% 13%;
+		--theme-link: 355deg 55% 70%;
+		--theme-text: 210deg 8% 80%;
+		--theme-accent: 350deg 60% 55%;
+		--theme-accent-2: 0deg 0% 92%;
+		--theme-quote: 350deg 65% 60%;
 	}
 }
