@@ -53,9 +53,26 @@ export default {
         textColor: "hsl(var(--theme-text) / <alpha-value>)",
       },
       fontFamily: {
-        sans: ['eb-garamond', ...fontFamily.sans],
-        serif: ['eb-garamond', ...fontFamily.serif],
-        mono: ['eb-garamond', ...fontFamily.mono],
+        sans: [
+          '"Source Sans Pro"',
+          'system-ui',
+          '"Helvetica Neue"',
+          'Helvetica',
+          'Arial',
+          'sans-serif',
+        ],
+        serif: [...fontFamily.serif],
+        mono: [
+          '"SFMono-Regular"',
+          'Menlo',
+          'Consolas',
+          'monospace',
+        ],
+        display: [
+          '"Playfair Display"',
+          '"Source Sans Pro"',
+          'sans-serif',
+        ],
       },
       spacing: {
         // Adjust default spacing to reduce padding/margins throughout the site
@@ -82,7 +99,7 @@ export default {
           css: {
             fontSize: theme("fontSize.base"), // Apply the base font size globally
             color: theme("colors.textColor"),
-            fontFamily: theme("fontFamily.serif"), // Set the default font family
+            fontFamily: theme("fontFamily.sans"),
             a: {
               "@apply cactus-link": "",
             },

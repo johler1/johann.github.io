@@ -3,23 +3,45 @@
 @tailwind utilities;
 
 @layer base {
+	body {
+		background-image: radial-gradient(circle at 10% 15%, hsl(var(--theme-accent-2) / 0.08) 0%, transparent 45%),
+			radial-gradient(circle at 80% 20%, hsl(var(--theme-accent) / 0.12) 0%, transparent 55%),
+			radial-gradient(circle at 50% 90%, hsl(var(--theme-link) / 0.08) 0%, transparent 60%);
+		background-color: hsl(var(--theme-bg));
+	}
+
+	[data-theme="dark"] body {
+		background-image: radial-gradient(circle at 10% 15%, hsl(var(--theme-accent-2) / 0.12) 0%, transparent 45%),
+			radial-gradient(circle at 80% 20%, hsl(var(--theme-accent) / 0.18) 0%, transparent 55%),
+			radial-gradient(circle at 50% 90%, hsl(var(--theme-link) / 0.12) 0%, transparent 60%);
+		background-color: hsl(var(--theme-bg));
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-display tracking-tight;
+	}
 
 	:root,
 	:root[data-theme="light"] {
-		--theme-bg: 0deg 0% 99%;
-		--theme-link: 350deg 70% 35%;
-		--theme-text: 210deg 10% 18%;
-		--theme-accent: 350deg 70% 45%;
-		--theme-accent-2: 0deg 0% 10%;
-		--theme-quote: 350deg 70% 40%;
+		--theme-bg: 40deg 30% 96%;
+		--theme-link: 220deg 35% 40%;
+		--theme-text: 225deg 20% 18%;
+		--theme-accent: 12deg 60% 48%;
+		--theme-accent-2: 210deg 28% 28%;
+		--theme-quote: 40deg 45% 40%;
 	}
 
 	:root[data-theme="dark"] {
-		--theme-bg: 220deg 8% 13%;
-		--theme-link: 355deg 55% 70%;
-		--theme-text: 210deg 8% 80%;
-		--theme-accent: 350deg 60% 55%;
-		--theme-accent-2: 0deg 0% 92%;
-		--theme-quote: 350deg 65% 60%;
+		--theme-bg: 225deg 24% 12%;
+		--theme-link: 210deg 50% 70%;
+		--theme-text: 40deg 20% 86%;
+		--theme-accent: 20deg 65% 60%;
+		--theme-accent-2: 205deg 36% 62%;
+		--theme-quote: 34deg 50% 55%;
 	}
 }
