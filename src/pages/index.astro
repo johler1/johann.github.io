@@ -10,19 +10,26 @@ const sectionLinks = [
 	{ id: "Presentations", label: "Presentations" },
 ];
 const footerLinks = [
-	{ href: "https://scholar.google.com/citations?user=GDBDCOAAAAAJ&hl=en", label: "GoogleScholar" },
+	{
+		href: "https://scholar.google.com/citations?user=GDBDCOAAAAAJ&hl=en",
+		label: "GoogleScholar",
+	},
 	{ href: "https://x.com/OhlerJohann", label: "Twitter" },
 	{ href: "mailto:j.p.ohler@lse.ac.uk", label: "Email" },
 ];
 ---
 
 <PageLayout meta={{ title: "Research" }}>
-	<div class="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-0 xl:gap-0">
+	<div
+		class="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-0 xl:gap-0"
+	>
 		<aside
 			aria-label="Page sections"
 			class="flex flex-col pb-6 dark:border-zinc-600 lg:sticky lg:top-12 lg:h-[calc(100vh-6rem)] lg:max-w-[35%] lg:flex-none lg:basis-[35%] lg:overflow-hidden lg:border-b-0 lg:border-e lg:border-black lg:pb-12"
 		>
-			<div class="flex flex-col gap-3 border-b border-black dark:border-zinc-600 lg:px-8">
+			<div
+				class="flex flex-col gap-3 border-b border-black dark:border-zinc-600 lg:px-8"
+			>
 				<a
 					class="mb-6 block text-center font-display text-[2.8rem] font-bold leading-tight text-textColor no-underline transition hover:text-link lg:text-left lg:text-[2.3rem]"
 					href="/"
@@ -30,8 +37,12 @@ const footerLinks = [
 					<span class="block">Johann Ohler</span>
 				</a>
 			</div>
-			<div class="mt-40 hidden flex-col gap-3 border-b border-black dark:border-zinc-600 lg:flex">
-				<nav class="flex flex-col text-[1.3rem] font-semibold uppercase tracking-wide">
+			<div
+				class="mt-40 hidden flex-col gap-3 border-b border-black dark:border-zinc-600 lg:flex"
+			>
+				<nav
+					class="flex flex-col text-[1.3rem] font-semibold uppercase tracking-wide"
+				>
 					{
 						sectionLinks.map(({ id, label }) => (
 							<a
@@ -48,7 +59,9 @@ const footerLinks = [
 			</div>
 			<div class="mt-auto hidden flex-col gap-3 lg:flex lg:px-8">
 				<div class="flex items-end justify-between">
-					<nav class="flex flex-col text-[1rem] font-semibold tracking-wide">
+					<nav
+						class="flex flex-col text-[1rem] font-semibold tracking-wide"
+					>
 						{
 							footerLinks.map(({ href, label }) => (
 								<a
@@ -69,20 +82,33 @@ const footerLinks = [
 			</div>
 		</aside>
 
-		<main class="flex-1 lg:hidden lg:max-w-[60%] lg:flex-none lg:basis-[60%]" data-main-content>
-			<section class="flex scroll-mt-24 flex-col pt-12 lg:mt-[140px]" id="Home">
-				<div class="flex flex-col items-center gap-6 lg:flex-row lg:items-stretch">
-					<div class="mb-12 space-y-6 px-10 text-[1.4rem] leading-tight lg:flex-1 lg:pl-10">
+		<main
+			class="flex-1 lg:hidden lg:max-w-[60%] lg:flex-none lg:basis-[60%]"
+			data-main-content
+		>
+			<section
+				class="flex scroll-mt-24 flex-col pt-12 lg:mt-[140px]"
+				id="Home"
+			>
+				<div
+					class="flex flex-col items-center gap-6 lg:flex-row lg:items-stretch"
+				>
+					<div
+						class="mb-12 space-y-6 px-10 text-[1.4rem] leading-tight lg:flex-1 lg:pl-10"
+					>
 						<p>
-							I am a PhD Student in the Economic History department at the LSE. My research
-							interests lie in
-							<span class="decoration-3 font-bold underline decoration-accent"
+							I am a PhD Student in the Economic History
+							department at the LSE. My research interests lie in
+							<span
+								class="decoration-3 font-bold underline decoration-accent"
 								>Economic History</span
 							>,
-							<span class="decoration-3 font-bold underline decoration-accent"
+							<span
+								class="decoration-3 font-bold underline decoration-accent"
 								>Population Economics</span
 							>, and
-							<span class="decoration-3 font-bold underline decoration-accent"
+							<span
+								class="decoration-3 font-bold underline decoration-accent"
 								>Political Economy</span
 							>.
 						</p>
@@ -126,7 +152,9 @@ const footerLinks = [
 							>
 								here
 							</a>
-							. Email: <a href="mailto:j.p.ohler@lse.ac.uk" class="text-link">j.p.ohler@lse.ac.uk</a
+							. Email: <a
+								href="mailto:j.p.ohler@lse.ac.uk"
+								class="text-link">j.p.ohler@lse.ac.uk</a
 							>
 						</p>
 					</div>
@@ -143,7 +171,9 @@ const footerLinks = [
 				class="mb-20 flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
 				id="WP"
 			>
-				<h1 class="text-center text-lg font-bold sm:text-left">Working Papers</h1>
+				<h1 class="text-center text-lg font-bold sm:text-left">
+					Working Papers
+				</h1>
 				<ul class="space-y-15">
 					<li>
 						<!-- TITLE -->
@@ -154,7 +184,8 @@ const footerLinks = [
 							rel="noopener noreferrer"
 						>
 							<strong
-								>Build Better Health: Evidence from Ireland on Housing Quality and Mortality</strong
+								>Build Better Health: Evidence from Ireland on
+								Housing Quality and Mortality</strong
 							>
 						</a>
 
@@ -196,23 +227,36 @@ const footerLinks = [
 										stroke="currentColor"
 										stroke-width="6"
 									>
-										<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M9 5l7 7-7 7"></path>
 									</svg>
 								</span>
 								<span class="ml-2">Abstract</span>
 							</button>
 
-							<div class="abstract-content hidden overflow-hidden transition-all duration-700">
+							<div
+								class="abstract-content hidden overflow-hidden transition-all duration-700"
+							>
 								<p class="mt-2 text-[1.2rem] sm:ml-8">
-									Poor housing conditions remain a major global public health challenge but direct
-									causal evidence on their health effects is limited. We examine a rare rural
-									housing intervention: the large-scale construction of subsidized high-quality
-									cottages in Ireland 1883-1919. Using annual district-level data on deaths by
-									cause, age and sex, we estimate the program's impact using
-									difference-in-differences and triple-difference designs. Districts that built more
-									cottages experienced mortality reductions of up to one death per thousand, driven
-									by fewer respiratory deaths. The results are consistent with reduced indoor air
-									pollution through improved ventilation. Cost-benefit analysis shows the scheme was
+									Poor housing conditions remain a major
+									global public health challenge but direct
+									causal evidence on their health effects is
+									limited. We examine a rare rural housing
+									intervention: the large-scale construction
+									of subsidized high-quality cottages in
+									Ireland 1883-1919. Using annual
+									district-level data on deaths by cause, age
+									and sex, we estimate the program's impact
+									using difference-in-differences and
+									triple-difference designs. Districts that
+									built more cottages experienced mortality
+									reductions of up to one death per thousand,
+									driven by fewer respiratory deaths. The
+									results are consistent with reduced indoor
+									air pollution through improved ventilation.
+									Cost-benefit analysis shows the scheme was
 									highly cost-effective.
 								</p>
 							</div>
@@ -221,8 +265,8 @@ const footerLinks = [
 						<!-- PRESENTATIONS + LINKS (same line) -->
 						<div class="mt-1 text-[1.2rem]">
 							<span class="italic">Presentations:</span>
-							LSE Demography Seminar, CEPR Applied Micro-Economic History Workshop, CEPR Public Health
-							Interventions Workshop.
+							LSE Demography Seminar, CEPR Applied Micro-Economic History
+							Workshop, CEPR Public Health Interventions Workshop.
 							<span class="ml-2 text-[1.2rem]">
 								[
 								<a
@@ -255,7 +299,10 @@ const footerLinks = [
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<strong>Selection and Evolutionary Growth in pre-Industrial Germany</strong>
+							<strong
+								>Selection and Evolutionary Growth in
+								pre-Industrial Germany</strong
+							>
 						</a>
 
 						<!-- COAUTHORS -->
@@ -286,28 +333,45 @@ const footerLinks = [
 										stroke="currentColor"
 										stroke-width="6"
 									>
-										<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M9 5l7 7-7 7"></path>
 									</svg>
 								</span>
 								<span class="ml-2">Abstract</span>
 							</button>
 
-							<div class="abstract-content hidden overflow-hidden transition-all duration-700">
+							<div
+								class="abstract-content hidden overflow-hidden transition-all duration-700"
+							>
 								<p class="mt-2 text-[1.2rem] sm:ml-8">
-									Evolutionary growth theory posits that natural selection set the stage for modern
-									growth. I leverage micro-data from historical Germany to assess the viability of
-									the selection mechanisms. I estimate fertility differentials and the
-									inter-generational transmission of SES. High status couples, proxied by
-									occupation, had 1-2 additional children, and SES was strongly heritable. To
-									explore whether these parameters induce selection, I simulate an overlapping
-									generation model of fertility choice and status transmission. The German
-									parameters do not enable Clark's (2007) survival of the richest, whereas Galor and
-									Moav's(2002) selection on quality can arise if the returns to investing in child
-									quality are sufficiently large. Monte Carlo simulations extend the analysis beyond
-									Germany. Survival of the richest requires exceptionally high coefficients of
-									transmission (~0.87), and selection on quality emerges whenever returns to quality
-									investments translate into higher fertility. Both depend on the strong
-									heritability of the growth-complementary traits.
+									Evolutionary growth theory posits that
+									natural selection set the stage for modern
+									growth. I leverage micro-data from
+									historical Germany to assess the viability
+									of the selection mechanisms. I estimate
+									fertility differentials and the
+									inter-generational transmission of SES. High
+									status couples, proxied by occupation, had
+									1-2 additional children, and SES was
+									strongly heritable. To explore whether these
+									parameters induce selection, I simulate an
+									overlapping generation model of fertility
+									choice and status transmission. The German
+									parameters do not enable Clark's (2007)
+									survival of the richest, whereas Galor and
+									Moav's(2002) selection on quality can arise
+									if the returns to investing in child quality
+									are sufficiently large. Monte Carlo
+									simulations extend the analysis beyond
+									Germany. Survival of the richest requires
+									exceptionally high coefficients of
+									transmission (~0.87), and selection on
+									quality emerges whenever returns to quality
+									investments translate into higher fertility.
+									Both depend on the strong heritability of
+									the growth-complementary traits.
 								</p>
 							</div>
 						</div>
@@ -335,20 +399,18 @@ const footerLinks = [
 							</span>
 						</div>
 					</li>
-				</ul>
-			</section>
 
-			<section
-				class="mb-20 flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
-				id="WIP"
-			>
-				<h1 class="text-center text-lg font-bold sm:text-left">Selected Work in Progress</h1>
-				<ul class="space-y-15">
 					<li>
 						<!-- TITLE -->
-						<a class="mt-10 block text-[1.6rem] leading-tight no-underline">
+						<a
+							class="mt-10 block text-[1.6rem] leading-tight text-accent no-underline hover:font-extrabold hover:underline"
+							href="https://www.dropbox.com/scl/fi/yp1rbztsqu7pfmlho69uz/WWI_ORG_0602.pdf?rlkey=xtknsep5vtzfrft73bbh1n2ba&st=ehsbhwjp&dl=0"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<strong
-								>Regional Identity in Organisations: Vertical Alignment on the Western Front of WW1</strong
+								>Regional Identity in Organisations: Vertical
+								Alignment on the Western Front of WW1</strong
 							>
 						</a>
 
@@ -382,26 +444,42 @@ const footerLinks = [
 										stroke="currentColor"
 										stroke-width="6"
 									>
-										<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M9 5l7 7-7 7"></path>
 									</svg>
 								</span>
 								<span class="ml-2">Abstract</span>
 							</button>
 
-							<div class="abstract-content hidden overflow-hidden transition-all duration-700">
+							<div
+								class="abstract-content hidden overflow-hidden transition-all duration-700"
+							>
 								<p class="mt-2 text-[1.2rem] sm:ml-8">
-									Soldiers in conscripted armies have low incentives to exert effort; the reward for
-									doing so is small, and the potential cost (death) is incalculable. We investigate
-									whether shared regional identity between soldiers and officers can alter the
-									incentive problem. We test this hypothesis using data on all French WW1
-									fatalities. We use a data-driven approach to infer cultural regions from surnames.
-									Soldiers and officers are considered aligned if they were born in the same region.
-									We estimate the effect of losing alignment in a design-based
-									difference-in-difference setup. Conditional on the regiment and battle, whether a
-									dead officer was regionally connected is quasi-random. Within-regiment variation
-									shows mortality declines among treated soldiers. The effect is concentrated among
-									officers with distinctly regional names, that are non-migrants, supporting a
-									behavioural mechanism. Our results suggest that shared identity with superiors
+									Soldiers in conscripted armies have low
+									incentives to exert effort; the reward for
+									doing so is small, and the potential cost
+									(death) is incalculable. We investigate
+									whether shared regional identity between
+									soldiers and officers can alter the
+									incentive problem. We test this hypothesis
+									using data on all French WW1 fatalities. We
+									use a data-driven approach to infer cultural
+									regions from surnames. Soldiers and officers
+									are considered aligned if they were born in
+									the same region. We estimate the effect of
+									losing alignment in a design-based
+									difference-in-difference setup. Conditional
+									on the regiment and battle, whether a dead
+									officer was regionally connected is
+									quasi-random. Within-regiment variation
+									shows mortality declines among treated
+									soldiers. The effect is concentrated among
+									officers with distinctly regional names,
+									that are non-migrants, supporting a
+									behavioural mechanism. Our results suggest
+									that shared identity with superiors
 									incentivises agents to exert greater effort.
 								</p>
 							</div>
@@ -410,79 +488,42 @@ const footerLinks = [
 						<!-- PRESENTATIONS + LINKS (same line) -->
 						<div class="mt-1 text-[1.2rem]">
 							<span class="italic">Presentations:</span>
-							Cambridge EH Graduate Seminar, LSE SPEECH, University of Groningen, University of Mannheim.
+							Cambridge EH Graduate Seminar, LSE SPEECH, University
+							of Mannheim.
 							<!-- <span class="ml-2 text-[1.2rem]">
-				[
-				<a class="cactus-link no-underline hover:underline" href="https://cepr.org/publications/dp20725" target="_blank" rel="noopener noreferrer">
-				CEPR DP
-				</a>
-				]
-				[
-				<a class="cactus-link no-underline hover:underline" href="https://www.lse.ac.uk/asset-library/WP386.pdf" target="_blank" rel="noopener noreferrer">
-				LSE WP
-				</a>
-				]
-			</span> -->
+								[
+								<a
+									class="cactus-link no-underline hover:underline"
+									href="https://www.dropbox.com/scl/fi/yp1rbztsqu7pfmlho69uz/WWI_ORG_0602.pdf?rlkey=xtknsep5vtzfrft73bbh1n2ba&st=ehsbhwjp&dl=0"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									PDF
+								</a>
+								]
+							</span> -->
 						</div>
 					</li>
+				</ul>
+			</section>
 
-					<li>
-						<!-- TITLE -->
-						<a class="mt-10 block text-[1.6rem] leading-tight no-underline">
-							<strong>Fertility and Housing in US Cities, 1900-1950</strong>
-						</a>
-
-						<!-- ABSTRACT TOGGLE -->
-						<!-- <div class="ml-2 mt-1">
-			<button
-				type="button"
-				class="toggle-abstract flex items-center text-[1.2rem] font-semibold hover:text-link focus:outline-none"
+			<section
+				class="mb-20 flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
+				id="WIP"
 			>
-				<span class="arrow-icon flex h-3 w-3 items-center justify-center transition-transform duration-500">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-3 w-3 text-link"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					stroke-width="6"
-				>
-					<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-				</svg>
-				</span>
-				<span class="ml-2">Abstract</span>
-			</button>
-
-			<div class="abstract-content hidden overflow-hidden transition-all duration-700">
-				<p class="mt-2 text-[1.2rem] sm:ml-8">
-    			Soldiers in conscripted armies have low incentives to exert effort; the reward for doing so is small, and the potential cost (death) is incalculable. We investigate whether shared regional identity between soldiers and officers can alter the incentive problem. We test this hypothesis using data on all French WW1 fatalities. We use a data-driven approach to infer cultural regions from surnames. Soldiers and officers are considered aligned if they were born in the same region. We estimate the effect of losing alignment in a design-based difference-in-difference setup. Conditional on the regiment and battle, whether a dead officer was regionally connected is quasi-random. Within-regiment variation shows mortality declines among treated soldiers. The effect is concentrated among officers with distinctly regional names, that are non-migrants, supporting a behavioural mechanism. Our results suggest that shared identity with superiors incentivises agents to exert greater effort.
-				</p>
-			</div>
-			</div> -->
-
-						<!-- PRESENTATIONS + LINKS (same line) -->
-						<!-- <div class="mt-1 text-[1.2rem]">
-			<span class="italic">Presentations:</span>
-			Cambridge EH Graduate Seminar, LSE SPEECH, University of Groningen, University of Mannheim. -->
-						<!-- <span class="ml-2 text-[1.2rem]">
-				[
-				<a class="cactus-link no-underline hover:underline" href="https://cepr.org/publications/dp20725" target="_blank" rel="noopener noreferrer">
-				CEPR DP
-				</a>
-				]
-				[
-				<a class="cactus-link no-underline hover:underline" href="https://www.lse.ac.uk/asset-library/WP386.pdf" target="_blank" rel="noopener noreferrer">
-				LSE WP
-				</a>
-				]
-			</span> -->
-						<!-- </div> -->
-					</li>
-
+				<h1 class="text-center text-lg font-bold sm:text-left">
+					Selected Work in Progress
+				</h1>
+				<ul class="space-y-15">
 					<li>
 						<!-- TITLE -->
-						<a class="mt-10 block text-[1.6rem] leading-tight no-underline">
-							<strong>Geocoding Urban Enumeration Districts from the US Census, 1880-1950</strong>
+						<a
+							class="mt-10 block text-[1.6rem] leading-tight no-underline"
+						>
+							<strong
+								>Geocoding Urban Enumeration Districts from the
+								US Census, 1880-1950</strong
+							>
 						</a>
 
 						<!-- COAUTHORS -->
@@ -497,52 +538,17 @@ const footerLinks = [
 								James Feigenbaum (Boston University)
 							</a>
 						</div>
+					</li>
 
-						<!-- ABSTRACT TOGGLE -->
-						<!-- <div class="ml-2 mt-1">
-			<button
-				type="button"
-				class="toggle-abstract flex items-center text-[1.2rem] font-semibold hover:text-link focus:outline-none"
-			>
-				<span class="arrow-icon flex h-3 w-3 items-center justify-center transition-transform duration-500">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-3 w-3 text-link"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					stroke-width="6"
-				>
-					<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
-				</svg>
-				</span>
-				<span class="ml-2">Abstract</span>
-			</button>
-
-			<div class="abstract-content hidden overflow-hidden transition-all duration-700">
-				<p class="mt-2 text-[1.2rem] sm:ml-8">
-    			Soldiers in conscripted armies have low incentives to exert effort; the reward for doing so is small, and the potential cost (death) is incalculable. We investigate whether shared regional identity between soldiers and officers can alter the incentive problem. We test this hypothesis using data on all French WW1 fatalities. We use a data-driven approach to infer cultural regions from surnames. Soldiers and officers are considered aligned if they were born in the same region. We estimate the effect of losing alignment in a design-based difference-in-difference setup. Conditional on the regiment and battle, whether a dead officer was regionally connected is quasi-random. Within-regiment variation shows mortality declines among treated soldiers. The effect is concentrated among officers with distinctly regional names, that are non-migrants, supporting a behavioural mechanism. Our results suggest that shared identity with superiors incentivises agents to exert greater effort.
-				</p>
-			</div>
-			</div> -->
-
-						<!-- PRESENTATIONS + LINKS (same line) -->
-						<!-- <div class="mt-1 text-[1.2rem]">
-			<span class="italic">Presentations:</span>
-			Cambridge EH Graduate Seminar, LSE SPEECH, University of Groningen, University of Mannheim. -->
-						<!-- <span class="ml-2 text-[1.2rem]">
-				[
-				<a class="cactus-link no-underline hover:underline" href="https://cepr.org/publications/dp20725" target="_blank" rel="noopener noreferrer">
-				CEPR DP
-				</a>
-				]
-				[
-				<a class="cactus-link no-underline hover:underline" href="https://www.lse.ac.uk/asset-library/WP386.pdf" target="_blank" rel="noopener noreferrer">
-				LSE WP
-				</a>
-				]
-			</span> -->
-						<!-- </div> -->
+					<li>
+						<!-- TITLE -->
+						<a
+							class="mt-10 block text-[1.6rem] leading-tight no-underline"
+						>
+							<strong
+								>Fertility and Housing in US Cities, 1900-1950</strong
+							>
+						</a>
 					</li>
 				</ul>
 			</section>
@@ -551,56 +557,86 @@ const footerLinks = [
 				class="mb-6 flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
 				id="Experiences"
 			>
-				<h1 class="text-center text-lg font-bold sm:text-left">Research Experience</h1>
+				<h1 class="text-center text-lg font-bold sm:text-left">
+					Research Experience
+				</h1>
 				<ul>
 					<li class="flex items-start gap-2 py-2">
-						<span class="hidden w-1/4 text-[1rem] text-zinc-600 dark:text-zinc-300 sm:block">
+						<span
+							class="hidden w-1/4 text-[1rem] text-zinc-600 dark:text-zinc-300 sm:block"
+						>
 							Dec. 2024 – Dec. 2025
 						</span>
 						<div class="w-full leading-tight sm:w-3/4">
-							<strong class="block font-sans text-[1.3rem] font-semibold">
+							<strong
+								class="block font-sans text-[1.3rem] font-semibold"
+							>
 								Research Assistant to
-								<a href="https://www.ericbschneider.com" class="text-link">Eric Schneider</a>.
-							</strong>
-
-							<p class="mt-0.5 text-[1.2rem] text-zinc-600 dark:text-zinc-300">
-								Build OCR pipeline for the automated transcription of handwritten historical tables.
-							</p>
-						</div>
-					</li>
-
-					<li class="flex items-start gap-2 py-2">
-						<span class="hidden w-1/4 text-[1rem] text-zinc-600 dark:text-zinc-300 sm:block">
-							Oct. 2023 - June 2024
-						</span>
-						<div class="w-full leading-tight sm:w-3/4">
-							<strong class="block font-sans text-[1.3rem] font-semibold">
-								Research Assistant to
-								<a href="https://Ronanlyons.com" class="text-link">Ronan Lyons</a>.
-							</strong>
-
-							<p class="mt-0.5 text-[1.2rem] text-zinc-600 dark:text-zinc-300">
-								Worked on Urban Economics and Irish Economic History. Used advanced NLP and OCR
-								methods for data transcription.
-							</p>
-						</div>
-					</li>
-
-					<li class="flex items-start gap-2 py-2">
-						<span class="hidden w-1/4 text-[1rem] text-zinc-600 dark:text-zinc-300 sm:block">
-							Aug. 2021 - Aug. 2022
-						</span>
-						<div class="w-full leading-tight sm:w-3/4">
-							<strong class="block font-sans text-[1.3rem] font-semibold">
-								Research Assistant to
-								<a href="https://profiles.ucl.ac.uk/44206-tomas-cvrcek" class="text-link"
-									>Tomas Cvrcek</a
+								<a
+									href="https://www.ericbschneider.com"
+									class="text-link">Eric Schneider</a
 								>.
 							</strong>
 
-							<p class="mt-0.5 text-[1.2rem] text-zinc-600 dark:text-zinc-300">
-								Transcribed historical sources from the Austro-Hungarian empire and worked with
-								ArcGIS to geocode data.
+							<p
+								class="mt-0.5 text-[1.2rem] text-zinc-600 dark:text-zinc-300"
+							>
+								Build OCR pipeline for the automated
+								transcription of handwritten historical tables.
+							</p>
+						</div>
+					</li>
+
+					<li class="flex items-start gap-2 py-2">
+						<span
+							class="hidden w-1/4 text-[1rem] text-zinc-600 dark:text-zinc-300 sm:block"
+						>
+							Oct. 2023 - June 2024
+						</span>
+						<div class="w-full leading-tight sm:w-3/4">
+							<strong
+								class="block font-sans text-[1.3rem] font-semibold"
+							>
+								Research Assistant to
+								<a
+									href="https://Ronanlyons.com"
+									class="text-link">Ronan Lyons</a
+								>.
+							</strong>
+
+							<p
+								class="mt-0.5 text-[1.2rem] text-zinc-600 dark:text-zinc-300"
+							>
+								Worked on Urban Economics and Irish Economic
+								History. Used advanced NLP and OCR methods for
+								data transcription.
+							</p>
+						</div>
+					</li>
+
+					<li class="flex items-start gap-2 py-2">
+						<span
+							class="hidden w-1/4 text-[1rem] text-zinc-600 dark:text-zinc-300 sm:block"
+						>
+							Aug. 2021 - Aug. 2022
+						</span>
+						<div class="w-full leading-tight sm:w-3/4">
+							<strong
+								class="block font-sans text-[1.3rem] font-semibold"
+							>
+								Research Assistant to
+								<a
+									href="https://profiles.ucl.ac.uk/44206-tomas-cvrcek"
+									class="text-link">Tomas Cvrcek</a
+								>.
+							</strong>
+
+							<p
+								class="mt-0.5 text-[1.2rem] text-zinc-600 dark:text-zinc-300"
+							>
+								Transcribed historical sources from the
+								Austro-Hungarian empire and worked with ArcGIS
+								to geocode data.
 							</p>
 						</div>
 					</li>
@@ -611,21 +647,30 @@ const footerLinks = [
 				class="mb-20 flex flex-col gap-6 px-10 pt-2 dark:border-zinc-600"
 				id="Teaching Experience"
 			>
-				<h1 class="mb-4 mt-4 text-center text-lg font-bold sm:text-left">Teaching Experience</h1>
+				<h1
+					class="mb-4 mt-4 text-center text-lg font-bold sm:text-left"
+				>
+					Teaching Experience
+				</h1>
 				<ul>
 					<li class="flex items-start gap-2 py-2">
-						<span class="hidden w-1/4 text-[1rem] text-zinc-600 dark:text-zinc-300 sm:block">
+						<span
+							class="hidden w-1/4 text-[1rem] text-zinc-600 dark:text-zinc-300 sm:block"
+						>
 							Autumn 2025
 						</span>
 
 						<div class="w-full leading-tight sm:w-3/4">
 							<div class="text-[1.3rem]">
-								<strong class="font-sans font-semibold"> Intermediate Quantitative Methods </strong>
+								<strong class="font-sans font-semibold">
+									Intermediate Quantitative Methods
+								</strong>
 								<em class="ml-1">(Postgraduate)</em>
 							</div>
 
 							<p class="mt-0.5 text-[1.2rem]">
-								London School of Economics – Department of Methodology
+								London School of Economics – Department of
+								Methodology
 							</p>
 						</div>
 					</li>
@@ -636,16 +681,28 @@ const footerLinks = [
 				class="mb-40 flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
 				id="Presentations"
 			>
-				<h1 class="text-center text-lg font-bold sm:text-left">Presentations</h1>
+				<h1 class="text-center text-lg font-bold sm:text-left">
+					Presentations
+				</h1>
 				<ul>
-					<li class="mb-0 hidden text-[1.5rem] font-semibold sm:flex sm:text-left">Upcoming:</li>
+					<li
+						class="mb-0 hidden text-[1.5rem] font-semibold sm:flex sm:text-left"
+					>
+						Upcoming:
+					</li>
 					<li class="flex items-start py-4">
-						<span class="hidden w-1/4 text-[1rem] text-zinc-600 dark:text-zinc-300 sm:block"
-							>February 3rd, 2026</span
+						<span
+							class="hidden w-1/4 text-[1rem] text-zinc-600 dark:text-zinc-300 sm:block"
+							>February 13rd, 2026</span
 						>
 						<div class="w-2/3">
-							<strong class="mb-0 block font-sans text-[1.3rem]"> UC Irvine</strong>
-							<p class="mt-0 text-[1rem]">Geocoding Urban Census Enumeration Districts</p>
+							<strong class="mb-0 block font-sans text-[1.3rem]"
+								>Cal Tech</strong
+							>
+							<p class="mt-0 text-[1rem]">
+								Selection and Evolutionary Growth in
+								pre-Industrial Germany
+							</p>
 						</div>
 					</li>
 				</ul>
@@ -653,15 +710,26 @@ const footerLinks = [
 				<ul>
 					<li class="flex items-start py-4 text-[1.4rem]">
 						<div class="w-full">
-							<strong class="mb-0 block font-sans">2025</strong>
+							<strong class="mb-0 mt-3 block font-sans"
+								>2026</strong
+							>
+							<p class="mt-0.5 text-[1.2rem]">UC Irvine.</p>
+							<strong class="mb-0 mt-3 block font-sans"
+								>2025</strong
+							>
 							<p class="mt-0.5 text-[1.2rem]">
-								University of Mannheim | CEPR Public Health Interventions in the Long Run | South
-								Denmark University | LSE SPEECH | CEPR Applied Micro-Economic History Workshop | LSE
+								University of Mannheim | CEPR Public Health
+								Interventions in the Long Run | South Denmark
+								University | LSE SPEECH | CEPR Applied
+								Micro-Economic History Workshop | LSE
 								Demography.
 							</p>
-							<strong class="mb-0 mt-3 block font-sans">2024</strong>
+							<strong class="mb-0 mt-3 block font-sans"
+								>2024</strong
+							>
 							<p class="mt-0.5 text-[1.2rem]">
-								Cambridge Graduate Seminar | IEA Conference | IPECE Workshop.
+								Cambridge Graduate Seminar | IEA Conference |
+								IPECE Workshop.
 							</p>
 						</div>
 					</li>
@@ -686,20 +754,27 @@ const footerLinks = [
 			viewBox="0 0 24 24"
 			xmlns="http://www.w3.org/2000/svg"
 		>
-			<path d="M4.5 15.75l7.5-7.5 7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+			<path
+				d="M4.5 15.75l7.5-7.5 7.5 7.5"
+				stroke-linecap="round"
+				stroke-linejoin="round"></path>
 		</svg>
 	</button>
 
 	<script>
 		const mainContent = document.querySelector("[data-main-content]");
-		const sectionNavLinks = Array.from(document.querySelectorAll("[data-section-link]"));
+		const sectionNavLinks = Array.from(
+			document.querySelectorAll("[data-section-link]"),
+		);
 		const underlineClasses = [
 			"underline",
 			"decoration-4",
 			"decoration-accent",
 			"underline-offset-4",
 		];
-		const linkById = new Map(sectionNavLinks.map((link) => [link.dataset.target, link]));
+		const linkById = new Map(
+			sectionNavLinks.map((link) => [link.dataset.target, link]),
+		);
 		let activeSectionId = null;
 
 		const showMainContent = () => {
@@ -760,7 +835,9 @@ const footerLinks = [
 				(entries) => {
 					const visibleEntries = entries
 						.filter((entry) => entry.isIntersecting)
-						.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+						.sort(
+							(a, b) => b.intersectionRatio - a.intersectionRatio,
+						);
 
 					if (!visibleEntries.length) {
 						return;
@@ -803,7 +880,9 @@ const footerLinks = [
 		const hashId = window.location.hash.replace("#", "");
 
 		if (hashId) {
-			const initialLink = sectionNavLinks.find((link) => link.dataset.target === hashId);
+			const initialLink = sectionNavLinks.find(
+				(link) => link.dataset.target === hashId,
+			);
 			const initialSection = document.getElementById(hashId);
 
 			if (initialLink && initialSection) {
