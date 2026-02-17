@@ -58,6 +58,12 @@ const footerLinks = [
 				</nav>
 			</div>
 			<div class="mt-auto hidden flex-col gap-3 lg:flex lg:px-8">
+				<a
+					class="mb-2 text-[1.3rem] font-semibold tracking-wide text-accent no-underline transition hover:text-link"
+					href="/resources/"
+				>
+					Resources
+				</a>
 				<div class="flex items-end justify-between">
 					<nav
 						class="flex flex-col text-[1rem] font-semibold tracking-wide"
@@ -87,14 +93,14 @@ const footerLinks = [
 			data-main-content
 		>
 			<section
-				class="flex scroll-mt-24 flex-col pt-12 lg:mt-[140px]"
+				class="mb-20 flex scroll-mt-24 flex-col pt-6 lg:mt-[100px]"
 				id="Home"
 			>
 				<div
-					class="flex flex-col items-center gap-6 lg:flex-row lg:items-stretch"
+					class="flex flex-col items-center gap-2 lg:flex-row lg:items-center"
 				>
 					<div
-						class="mb-12 space-y-6 px-10 text-[1.4rem] leading-tight lg:flex-1 lg:pl-10"
+						class="mb-12 space-y-6 px-10 text-[1.4rem] leading-tight lg:mb-0 lg:flex-1 lg:pl-10"
 					>
 						<p>
 							I am a PhD Student in the Economic History
@@ -160,7 +166,7 @@ const footerLinks = [
 					</div>
 					<img
 						alt="Portrait"
-						class="mx-auto hidden h-auto max-h-[500px] w-2/5 min-w-[250px] rounded-none object-cover min-[1000px]:block min-[1000px]:w-1/5 lg:w-1/3"
+						class="hidden h-auto max-h-[400px] w-1/4 min-w-[200px] rounded-none object-cover lg:block"
 						loading="lazy"
 						src="/WEBSITE_MP.jpg"
 					/>
@@ -168,7 +174,7 @@ const footerLinks = [
 			</section>
 
 			<section
-				class="mb-20 flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
+				class="mb-32 flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
 				id="WP"
 			>
 				<h1 class="text-center text-lg font-bold sm:text-left">
@@ -379,7 +385,7 @@ const footerLinks = [
 						<!-- PRESENTATIONS + LINKS (same line) -->
 						<div class="mt-1 text-[1.2rem]">
 							<span class="italic">Presentations:</span>
-							South Denmark University.
+							Caltech, South Denmark University.
 							<span class="ml-2 text-[1.2rem]">
 								<!-- [
 				<a class="cactus-link no-underline hover:underline" href="https://cepr.org/publications/dp20725" target="_blank" rel="noopener noreferrer">
@@ -508,7 +514,7 @@ const footerLinks = [
 			</section>
 
 			<section
-				class="mb-20 flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
+				class="mb-32 flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
 				id="WIP"
 			>
 				<h1 class="text-center text-lg font-bold sm:text-left">
@@ -538,6 +544,47 @@ const footerLinks = [
 								James Feigenbaum (Boston University)
 							</a>
 						</div>
+
+						<!-- ABSTRACT TOGGLE -->
+						<div class="ml-2 mt-1">
+							<button
+								type="button"
+								class="toggle-abstract flex items-center font-sans text-[1.2rem] font-semibold hover:text-link focus:outline-none"
+							>
+								<span
+									class="arrow-icon flex h-3 w-3 items-center justify-center transition-transform duration-500"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="h-3 w-3 text-link"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+										stroke-width="6"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M9 5l7 7-7 7"></path>
+									</svg>
+								</span>
+								<span class="ml-2">Abstract</span>
+							</button>
+
+							<div
+								class="abstract-content hidden overflow-hidden transition-all duration-700"
+							>
+								<p class="mt-2 text-[1.2rem] sm:ml-8">
+									Studying urban development often requires within-city locations. However, the geographic limitations of census data limit historical studies in terms of granularity and coverage. This project proposes a scalable geocoding procedure to obtain within-city locations for households in U.S. cities for the 1880–1950 census. Using inferred street intersections within enumeration districts (EDs), this approach requires minimal data inputs, rather than detailed historical maps and city directories. ED centroids are assigned to households to obtain approximate locations. We geolocate 80% of all EDs across 133 cities across the six census-waves. The 1950 sample includes approximate location for 28% of the US population. When benchmarking this procedure against ED polygons, we successfully assign locations to 78% of all EDs. This compares favourably to 50% coverage for existing address-based approaches. The resulting crosswalk would enable researchers to use within-city variation to study patterns of urban development, as well as to exploit fine-grained geographic variation to answer causal questions.
+								</p>
+							</div>
+						</div>
+
+						<!-- PRESENTATIONS -->
+						<div class="mt-1 text-[1.2rem]">
+							<span class="italic">Presentations:</span>
+							UCLA, UC Irvine.
+						</div>
 					</li>
 
 					<li>
@@ -554,7 +601,7 @@ const footerLinks = [
 			</section>
 
 			<section
-				class="mb-6 flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
+				class="mb-10 flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
 				id="Experiences"
 			>
 				<h1 class="text-center text-lg font-bold sm:text-left">
@@ -644,7 +691,7 @@ const footerLinks = [
 			</section>
 
 			<section
-				class="mb-20 flex flex-col gap-6 px-10 pt-2 dark:border-zinc-600"
+				class="mb-32 flex flex-col gap-6 px-10 pt-2 dark:border-zinc-600"
 				id="Teaching Experience"
 			>
 				<h1
@@ -678,13 +725,13 @@ const footerLinks = [
 			</section>
 
 			<section
-				class="mb-40 flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
+				class="mb-[25vh] flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
 				id="Presentations"
 			>
 				<h1 class="text-center text-lg font-bold sm:text-left">
 					Presentations
 				</h1>
-				<ul>
+				<!-- <ul>
 					<li
 						class="mb-0 hidden text-[1.5rem] font-semibold sm:flex sm:text-left"
 					>
@@ -705,7 +752,7 @@ const footerLinks = [
 							</p>
 						</div>
 					</li>
-				</ul>
+				</ul> -->
 				<!-- <h1 class="mb-2 hidden text-[2rem] font-semibold sm:flex sm:text-left">Past:</h1> -->
 				<ul>
 					<li class="flex items-start py-4 text-[1.4rem]">
@@ -713,7 +760,7 @@ const footerLinks = [
 							<strong class="mb-0 mt-3 block font-sans"
 								>2026</strong
 							>
-							<p class="mt-0.5 text-[1.2rem]">UC Irvine.</p>
+							<p class="mt-0.5 text-[1.2rem]">Cal Tech | UC Irvine.</p>
 							<strong class="mb-0 mt-3 block font-sans"
 								>2025</strong
 							>
