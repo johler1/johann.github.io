@@ -23,7 +23,7 @@ const {
 	>
 	<script is:inline>document.body.offsetHeight;document.body.style.opacity='1';</script>
 		<!-- Scroll progress bar -->
-		<div id="scroll-progress" class="fixed left-0 top-0 z-50 h-[5px] bg-link transition-none" style="width:0%"></div>
+		<div id="scroll-progress" class="fixed left-0 z-50 h-[5px] bg-link transition-none" style="width:0%; top: env(safe-area-inset-top, 0px);"></div>
 
 		<ThemeProvider />
 		<SkipLink />

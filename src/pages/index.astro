@@ -289,7 +289,7 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 				<h2 class="mb-6 text-[1.6rem] font-bold">Teaching Experience</h2>
 				<ul>
 					<li class="flex items-start gap-4 py-2">
-						<span class="w-24 flex-none font-mono text-[0.85rem] text-zinc-500 dark:text-zinc-400">
+						<span class="w-24 flex-none font-mono text-[0.85rem] text-zinc-500 dark:text-zinc-400" data-flip>
 							Autumn 2025
 						</span>
 						<div class="leading-tight">
@@ -310,7 +310,7 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 				<h2 class="mb-6 text-[1.6rem] font-bold">Research Experience</h2>
 				<ul>
 					<li class="flex items-start gap-4">
-						<span class="w-24 flex-none font-mono text-[0.85rem] text-zinc-500 dark:text-zinc-400">
+						<span class="w-24 flex-none font-mono text-[0.85rem] text-zinc-500 dark:text-zinc-400" data-flip>
 							2024 – 2025
 						</span>
 						<div class="text-[1rem] leading-tight">
@@ -319,7 +319,7 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 						</div>
 					</li>
 					<li class="flex items-start gap-4">
-						<span class="w-24 flex-none font-mono text-[0.85rem] text-zinc-500 dark:text-zinc-400">
+						<span class="w-24 flex-none font-mono text-[0.85rem] text-zinc-500 dark:text-zinc-400" data-flip>
 							2023 – 2024
 						</span>
 						<div class="text-[1rem] leading-tight">
@@ -328,7 +328,7 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 						</div>
 					</li>
 					<li class="flex items-start gap-4">
-						<span class="w-24 flex-none font-mono text-[0.85rem] text-zinc-500 dark:text-zinc-400">
+						<span class="w-24 flex-none font-mono text-[0.85rem] text-zinc-500 dark:text-zinc-400" data-flip>
 							2021 – 2022
 						</span>
 						<div class="text-[1rem] leading-tight">
@@ -344,13 +344,13 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 				<h2 class="mb-6 text-[1.6rem] font-bold">Presentations</h2>
 				<ul>
 					<li>
-						<strong class="block text-[1.05rem]">2026</strong>
+						<strong class="block text-[1.05rem]" data-flip>2026</strong>
 						<p class="mt-0.5 text-[0.95rem]" data-shuffle>UCLA | Caltech | UC Irvine.</p>
-						<strong class="mt-4 block text-[1.05rem]">2025</strong>
+						<strong class="mt-4 block text-[1.05rem]" data-flip>2025</strong>
 						<p class="mt-0.5 text-[0.95rem]" data-shuffle>
 							University of Mannheim | CEPR Public Health Interventions in the Long Run | South Denmark University | LSE SPEECH | CEPR Applied Micro-Economic History Workshop | LSE Demography.
 						</p>
-						<strong class="mt-4 block text-[1.05rem]">2024</strong>
+						<strong class="mt-4 block text-[1.05rem]" data-flip>2024</strong>
 						<p class="mt-0.5 text-[0.95rem]" data-shuffle>
 							Cambridge Graduate Seminar | IEA Conference | IPECE Workshop.
 						</p>
@@ -642,6 +642,57 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 		const presSection = document.getElementById("Presentations");
 		if (presSection) shuffleObserver.observe(presSection);
 
+		// Flip-clock date animation
+		const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+		if (!prefersReducedMotion) {
+			function flipText(el) {
+				const finalText = el.textContent.trim();
+				const chars = finalText.split("");
+				const digits = "0123456789";
+				const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+				const totalCycles = 16;
+				const frameDuration = 100;
+				let frame = 0;
+
+				const interval = setInterval(() => {
+					frame++;
+					const display = chars.map((ch, i) => {
+						const lockFrame = Math.floor(totalCycles * (i + 1) / chars.length);
+						if (frame >= lockFrame) return ch;
+						if (ch === " " || ch === "\u2013" || ch === "-" || ch === "\u2014") return ch;
+						if (/\d/.test(ch)) return digits[Math.floor(Math.random() * digits.length)];
+						if (/[a-zA-Z]/.test(ch)) {
+							const pool = /[A-Z]/.test(ch) ? letters : letters.toLowerCase();
+							return pool[Math.floor(Math.random() * pool.length)];
+						}
+						return ch;
+					});
+					el.textContent = display.join("");
+					if (frame >= totalCycles) {
+						el.textContent = finalText;
+						clearInterval(interval);
+					}
+				}, frameDuration);
+			}
+
+			const flipObserver = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						const flips = entry.target.querySelectorAll("[data-flip]");
+						flips.forEach((el, i) => {
+							setTimeout(() => flipText(el), 200 + i * 150);
+						});
+						flipObserver.unobserve(entry.target);
+					}
+				});
+			}, { threshold: 0.1 });
+
+			["Teaching", "Experiences", "Presentations"].forEach((id) => {
+				const section = document.getElementById(id);
+				if (section) flipObserver.observe(section);
+			});
+		}
+
 		// Toggle abstracts
 		document.querySelectorAll(".toggle-abstract").forEach((button) => {
 			button.addEventListener("click", () => {
@@ -660,8 +711,8 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 	</script>
 
 	<!-- Mobile bottom icon bar -->
-	<div class="pointer-events-none fixed bottom-[44px] left-0 z-40 h-16 w-full bg-gradient-to-t from-bgColor to-transparent lg:hidden"></div>
-	<div class="fixed bottom-0 left-0 z-50 flex w-full items-center justify-center gap-8 border-t border-zinc-300 bg-bgColor py-3 dark:border-zinc-700 lg:hidden">
+	<div class="pointer-events-none fixed left-0 z-40 h-16 w-full bg-gradient-to-t from-bgColor to-transparent lg:hidden" style="bottom: calc(44px + env(safe-area-inset-bottom, 0px));"></div>
+	<div class="fixed bottom-0 left-0 z-50 flex w-full items-center justify-center gap-8 border-t border-zinc-300 bg-bgColor py-3 dark:border-zinc-700 lg:hidden" style="padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));">
 		<div class="absolute left-4 text-[0.9rem]">
 			<ThemeToggle />
 		</div>
