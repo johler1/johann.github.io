@@ -619,7 +619,8 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 				const alpha = t * t * 0.5;
 				ctx.beginPath();
 				ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
-				ctx.fillStyle = `hsla(16, 65%, 42%, ${alpha})`;
+				const linkColor = getComputedStyle(document.documentElement).getPropertyValue('--theme-link').trim();
+				ctx.fillStyle = `hsla(${linkColor} / ${alpha})`;
 				ctx.filter = `blur(${(1 - t) * 6}px)`;
 				ctx.fill();
 			}
