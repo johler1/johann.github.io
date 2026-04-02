@@ -39,11 +39,7 @@ export default {
   ],
   theme: {
     extend: {
-      fontSize: {
-        base: '2rem',    // Sets the base font size to 18px
-        sm: '1.5rem',          // Small font size set to 16px
-        lg: '2.5rem',       // Large font size set to 22px
-      },
+      fontSize: {},
       colors: {
         accent: "hsl(var(--theme-accent) / <alpha-value>)",
         "accent-2": "hsl(var(--theme-accent-2) / <alpha-value>)",
@@ -54,11 +50,9 @@ export default {
       },
       fontFamily: {
         sans: [
-          '"Source Sans Pro"',
-          'system-ui',
-          '"Helvetica Neue"',
-          'Helvetica',
+          '"Source Sans 3"',
           'Arial',
+          'Helvetica',
           'sans-serif',
         ],
         serif: [...fontFamily.serif],
@@ -68,18 +62,8 @@ export default {
           'Consolas',
           'monospace',
         ],
-        display: [
-          '"Playfair Display"',
-          '"Source Sans Pro"',
-          'sans-serif',
-        ],
       },
-      spacing: {
-        // Adjust default spacing to reduce padding/margins throughout the site
-        2: '0.4rem',   // Reduced spacing (default is 0.5rem)
-        4: '0.6rem',    // Smaller spacing (default is 1rem)
-        8: '1.2rem',      // Standard spacing, slightly reduced (default is 2rem)
-      },
+      spacing: {},
       container: {
         center: true,
         padding: '1rem', // Decrease container padding for a tighter layout

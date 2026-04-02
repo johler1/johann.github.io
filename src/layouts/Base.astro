@@ -19,12 +19,25 @@ const {
 		<BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
 	</head>
 	<body
-		class="mx-auto flex min-h-screen w-full flex-col bg-bgColor px-6 pt-12 font-sans text-base font-normal text-textColor antialiased sm:px-20 lg:w-[90vw]"
+		class="mx-auto flex min-h-screen w-full max-w-6xl flex-col bg-bgColor px-6 pt-12 font-sans text-base font-normal text-textColor antialiased opacity-0 transition-opacity duration-500 sm:px-12"
 	>
+	<script is:inline>document.body.offsetHeight;document.body.style.opacity='1';</script>
+		<!-- Scroll progress bar -->
+		<div id="scroll-progress" class="fixed left-0 top-0 z-50 h-[5px] bg-link transition-none" style="width:0%"></div>
+
 		<ThemeProvider />
 		<SkipLink />
 		<main id="main">
 			<slot />
 		</main>
+
+		<script is:inline>
+			const progressBar = document.getElementById('scroll-progress');
+			window.addEventListener('scroll', () => {
+				const scrollTop = document.documentElement.scrollTop;
+				const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+				progressBar.style.width = (scrollTop / scrollHeight * 100) + '%';
+			});
+		</script>
 	</body>
 </html>

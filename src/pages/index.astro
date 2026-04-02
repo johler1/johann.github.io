@@ -1,789 +1,369 @@
 ---
 import PageLayout from "@/layouts/Base.astro";
 import ThemeToggle from "@/components/ThemeToggle.astro";
-
-const sectionLinks = [
-	{ id: "Home", label: "About" },
-	{ id: "WP", label: "Working Papers" },
-	{ id: "WIP", label: "Work in Progress" },
-	{ id: "Experiences", label: "Experiences" },
-	{ id: "Presentations", label: "Presentations" },
-];
-const footerLinks = [
-	{
-		href: "https://scholar.google.com/citations?user=GDBDCOAAAAAJ&hl=en",
-		label: "GoogleScholar",
-	},
-	{ href: "https://x.com/OhlerJohann", label: "Twitter" },
-	{ href: "mailto:j.p.ohler@lse.ac.uk", label: "Email" },
-];
 ---
 
 <PageLayout meta={{ title: "Research" }}>
-	<div
-		class="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-0 xl:gap-0"
-	>
-		<aside
-			aria-label="Page sections"
-			class="flex flex-col pb-6 dark:border-zinc-600 lg:sticky lg:top-12 lg:h-[calc(100vh-6rem)] lg:max-w-[35%] lg:flex-none lg:basis-[35%] lg:overflow-hidden lg:border-b-0 lg:border-e lg:border-black lg:pb-12"
-		>
-			<div
-				class="flex flex-col gap-3 border-b border-black dark:border-zinc-600 lg:px-8"
-			>
+	<div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:gap-16">
+		<!-- LEFT COLUMN: identity card -->
+		<aside class="flex flex-col items-end gap-1 pt-4 lg:sticky lg:top-12 lg:max-w-[280px] lg:flex-none lg:items-start lg:gap-6 lg:pt-12">
+			<div class="relative hidden lg:block" id="portrait-wrap">
+				<img
+					alt="Portrait"
+					class="h-auto w-48 rounded-none object-cover"
+					loading="lazy"
+					src="/WEBSITE_MP.jpg"
+				/>
+			</div>
+			<div class="text-right lg:text-left">
+				<h1 class="text-[1.8rem] font-bold leading-tight text-textColor"><span class="inline-block" data-magnetic>J</span><span class="inline-block" data-magnetic>o</span><span class="inline-block" data-magnetic>h</span><span class="inline-block" data-magnetic>a</span><span class="inline-block" data-magnetic>n</span><span class="inline-block" data-magnetic>n</span><span class="inline-block">&nbsp;</span><span class="inline-block" data-magnetic>O</span><span class="inline-block" data-magnetic>h</span><span class="inline-block" data-magnetic>l</span><span class="inline-block" data-magnetic>e</span><span class="inline-block" data-magnetic>r</span></h1>
+				<p class="mt-1 text-[0.95rem]">
+					PhD Student, LSE Economic History
+				</p>
+				<p class="mt-1 text-[0.95rem] text-accent lg:mt-2 lg:text-[1rem]">
+					Economic History, Economic Demography, Urban Economics
+				</p>
+			</div>
+			<div class="flex items-center gap-2 text-[0.95rem]">
 				<a
-					class="mb-6 block text-center font-display text-[2.8rem] font-bold leading-tight text-textColor no-underline transition hover:text-link lg:text-left lg:text-[2.3rem]"
-					href="/"
+					class="text-link no-underline hover:underline"
+					href="/CV_Johann_Ohler.pdf"
+					target="_blank"
 				>
-					<span class="block">Johann Ohler</span>
+					CV
+				</a>
+				<span class="text-zinc-400">|</span>
+				<a
+					class="text-link no-underline hover:underline"
+					href="mailto:j.p.ohler@lse.ac.uk"
+				>
+					j.p.ohler@lse.ac.uk
 				</a>
 			</div>
-			<div
-				class="mt-40 hidden flex-col gap-3 border-b border-black dark:border-zinc-600 lg:flex"
-			>
-				<nav
-					class="flex flex-col text-[1.3rem] font-semibold uppercase tracking-wide"
-				>
-					{
-						sectionLinks.map(({ id, label }) => (
-							<a
-								class="mb-3 rounded-full px-4 py-2 text-textColor transition hover:text-link focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-link"
-								data-section-link
-								data-target={id}
-								href={`#${id}`}
-							>
-								{label}
-							</a>
-						))
-					}
-				</nav>
-			</div>
-			<div class="mt-auto hidden flex-col gap-3 lg:flex lg:px-8">
-				<a
-					class="mb-2 text-[1.3rem] font-semibold tracking-wide text-accent no-underline transition hover:text-link"
-					href="/resources/"
-				>
-					Resources
+			<!-- Icons: visible in sidebar on desktop -->
+			<div class="hidden items-center gap-4 pt-1 lg:flex">
+				<a href="https://scholar.google.com/citations?user=GDBDCOAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="inline-block text-textColor transition hover:text-link" data-magnetic aria-label="Google Scholar">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+						<path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+					</svg>
 				</a>
-				<div class="flex items-end justify-between">
-					<nav
-						class="flex flex-col text-[1rem] font-semibold tracking-wide"
-					>
-						{
-							footerLinks.map(({ href, label }) => (
-								<a
-									class="text-textColor no-underline transition hover:text-link"
-									href={href}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									{label}
-								</a>
-							))
-						}
-					</nav>
-					<div class="text-[1.1rem]">
-						<ThemeToggle />
-					</div>
-				</div>
+				<a href="https://x.com/OhlerJohann" target="_blank" rel="noopener noreferrer" class="inline-block text-textColor transition hover:text-link" data-magnetic aria-label="Twitter">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+						<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+					</svg>
+				</a>
+				<a href="https://bsky.app/profile/ohlerjohann.bsky.social" target="_blank" rel="noopener noreferrer" class="inline-block text-textColor transition hover:text-link" data-magnetic aria-label="Bluesky">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 568 501" fill="currentColor">
+						<path d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.21C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 323.8 536.444 388.56 473.333 453.32c-119.86 122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631 7.733-13.43 39.422-65.842 193.273-185.702 70.281-63.111-64.76-33.89-129.52 80.986-149.071-65.72 11.185-139.6-7.295-159.875-79.748C10.945 203.659 1 75.291 1 57.946 1-28.906 76.134-1.612 123.121 33.664z"/>
+					</svg>
+				</a>
 			</div>
 		</aside>
 
-		<main
-			class="flex-1 lg:hidden lg:max-w-[60%] lg:flex-none lg:basis-[60%]"
-			data-main-content
-		>
-			<section
-				class="mb-20 flex scroll-mt-24 flex-col pt-6 lg:mt-[100px]"
-				id="Home"
-			>
-				<div
-					class="flex flex-col items-center gap-2 lg:flex-row lg:items-center"
-				>
-					<div
-						class="mb-12 space-y-6 px-10 text-[1.4rem] leading-tight lg:mb-0 lg:flex-1 lg:pl-10"
+		<!-- Theme toggle: fixed top-right -->
+		<div class="fixed right-4 top-4 z-50 hidden text-[0.9rem] sm:right-8 sm:top-6 lg:block">
+			<ThemeToggle />
+		</div>
+
+		<!-- RIGHT COLUMN: content -->
+		<main class="flex-1 pb-24 pt-6 lg:pt-12">
+			<!-- BIO -->
+			<section class="mb-12 translate-y-4 opacity-0 transition-all duration-700 ease-out" data-reveal id="Home">
+				<p class="text-[1.1rem] leading-relaxed">
+					I am a PhD Student in the Economic History department at the LSE. I am a member of the
+					<a
+						class="text-link hover:underline"
+						href="https://www.lse.ac.uk/Economic-History/HED"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
-						<p>
-							I am a PhD Student in the Economic History
-							department at the LSE. My research interests lie in
-							<span
-								class="decoration-3 font-bold underline decoration-accent"
-								>Economic History</span
-							>,
-							<span
-								class="decoration-3 font-bold underline decoration-accent"
-								>Population Economics</span
-							>, and
-							<span
-								class="decoration-3 font-bold underline decoration-accent"
-								>Political Economy</span
-							>.
-						</p>
-						<p>
-							I am a member of the
-							<a
-								class="cactus-link text-link hover:underline"
-								href="https://www.lse.ac.uk/Economic-History/HED"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Historical Economic Demography
-							</a>
-							group, and am supervised by
-							<a
-								class="cactus-link text-link hover:underline"
-								href="https://www.ericbschneider.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Eric Schneider
-							</a>
-							and
-							<a
-								class="cactus-link text-link hover:underline"
-								href="https://www.tomraster.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Tom Raster
-							</a>
-							. I will be visiting UCLA Economics from Spring 2026.
-						</p>
-						<p>
-							You can find my CV
-							<a
-								class="cactus-link font-bold text-link hover:underline"
-								href="https://www.dropbox.com/scl/fi/ztlk7oyrptvgxp0ee0o8h/CV_Johann_Ohler.pdf?rlkey=u6ojvd4kihatugfrmisl6zpkm&st=64uwzjj5&dl=0"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								here
-							</a>
-							. Email: <a
-								href="mailto:j.p.ohler@lse.ac.uk"
-								class="text-link">j.p.ohler@lse.ac.uk</a
-							>
-						</p>
-					</div>
-					<img
-						alt="Portrait"
-						class="hidden h-auto max-h-[400px] w-1/4 min-w-[200px] rounded-none object-cover lg:block"
-						loading="lazy"
-						src="/WEBSITE_MP.jpg"
-					/>
-				</div>
+						Historical Economic Demography
+					</a>
+					group, and am supervised by
+					<a
+						class="text-link hover:underline"
+						href="https://www.ericbschneider.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Eric Schneider
+					</a>
+					and
+					<a
+						class="text-link hover:underline"
+						href="https://www.tomraster.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Tom Raster</a>. I will be visiting UCLA Economics from Spring 2026.
+				</p>
 			</section>
 
-			<section
-				class="mb-32 flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
-				id="WP"
-			>
-				<h1 class="text-center text-lg font-bold sm:text-left">
-					Working Papers
-				</h1>
-				<ul class="space-y-15">
-					<li>
-						<!-- TITLE -->
+			<!-- WORKING PAPERS -->
+			<section class="mb-12 translate-y-4 border-t border-zinc-300 pt-8 opacity-0 transition-all duration-700 ease-out dark:border-zinc-700" data-reveal id="WP">
+				<h2 class="mb-6 text-[1.6rem] font-bold">Working Papers</h2>
+				<ul class="space-y-10">
+					<li class="group">
 						<a
-							class="mt-10 block text-[1.6rem] leading-tight text-accent no-underline hover:font-extrabold hover:underline"
-							href="https://www.dropbox.com/scl/fi/ppoqbblsjfymmzgdn799v/BBH_1010.pdf?rlkey=fsyarcj3aroxygzzohe5i0zlu&st=mzow07oa&dl=0"
+							class="text-[1.15rem] font-semibold leading-tight text-link no-underline decoration-link decoration-1 underline-offset-2 transition-all duration-200 hover:underline"
+							href="/BBH_1010.pdf"
 							target="_blank"
-							rel="noopener noreferrer"
 						>
-							<strong
-								>Build Better Health: Evidence from Ireland on
-								Housing Quality and Mortality</strong
-							>
+							Build Better Health: Evidence from Ireland on Housing Quality and Mortality
 						</a>
-
-						<!-- COAUTHORS -->
-						<div class="mt-1 text-[1.2rem]">
+						<p class="mt-1 max-h-0 overflow-hidden text-[0.9rem] italic text-zinc-500 transition-all duration-300 group-hover:max-h-24 dark:text-zinc-400">
+							Improving housing quality — specifically ventilation — substantially lowered respiratory mortality, making structural housing reform a cost-effective public health intervention.
+						</p>
+						<div class="mt-1 text-[0.95rem]">
 							with
-							<a
-								class="cactus-link"
-								href="https://alandebromhead.weebly.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Alan de Bromhead (UCD)
-							</a>,
-							<a
-								class="cactus-link"
-								href="https://www.ronanlyons.com/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Ronan Lyons (TCD)
-							</a>
+							<a class="text-link hover:underline" href="https://alandebromhead.weebly.com/" target="_blank" rel="noopener noreferrer">Alan de Bromhead (UCD)</a>,
+							<a class="text-link hover:underline" href="https://www.ronanlyons.com/" target="_blank" rel="noopener noreferrer">Ronan Lyons (TCD)</a>
 						</div>
-
-						<!-- ABSTRACT TOGGLE -->
-						<div class="ml-2 mt-1">
+						<div class="ml-1 mt-1">
 							<button
 								type="button"
-								class="toggle-abstract flex items-center font-sans text-[1.2rem] font-semibold hover:text-link focus:outline-none"
+								class="toggle-abstract flex items-center text-[0.95rem] font-semibold hover:text-link focus:outline-none"
 							>
-								<span
-									class="arrow-icon flex h-3 w-3 items-center justify-center transition-transform duration-500"
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										class="h-3 w-3 text-link"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke="currentColor"
-										stroke-width="6"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M9 5l7 7-7 7"></path>
+								<span class="arrow-icon flex h-3 w-3 items-center justify-center transition-transform duration-300">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="6">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
 									</svg>
 								</span>
-								<span class="ml-2">Abstract</span>
+								<span class="ml-1">Abstract</span>
 							</button>
-
-							<div
-								class="abstract-content hidden overflow-hidden transition-all duration-700"
-							>
-								<p class="mt-2 text-[1.2rem] sm:ml-8">
-									Poor housing conditions remain a major
-									global public health challenge but direct
-									causal evidence on their health effects is
-									limited. We examine a rare rural housing
-									intervention: the large-scale construction
-									of subsidized high-quality cottages in
-									Ireland 1883-1919. Using annual
-									district-level data on deaths by cause, age
-									and sex, we estimate the program's impact
-									using difference-in-differences and
-									triple-difference designs. Districts that
-									built more cottages experienced mortality
-									reductions of up to one death per thousand,
-									driven by fewer respiratory deaths. The
-									results are consistent with reduced indoor
-									air pollution through improved ventilation.
-									Cost-benefit analysis shows the scheme was
-									highly cost-effective.
+							<div class="abstract-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+								<p class="mt-2 text-[0.95rem] leading-relaxed sm:ml-6">
+									Poor housing conditions remain a major global public health challenge but direct causal evidence on their health effects is limited. We examine a rare rural housing intervention: the large-scale construction of subsidized high-quality cottages in Ireland 1883-1919. Using annual district-level data on deaths by cause, age and sex, we estimate the program's impact using difference-in-differences and triple-difference designs. Districts that built more cottages experienced mortality reductions of up to one death per thousand, driven by fewer respiratory deaths. The results are consistent with reduced indoor air pollution through improved ventilation. Cost-benefit analysis shows the scheme was highly cost-effective.
 								</p>
 							</div>
 						</div>
-
-						<!-- PRESENTATIONS + LINKS (same line) -->
-						<div class="mt-1 text-[1.2rem]">
+						<div class="mt-1 text-[0.95rem]">
 							<span class="italic">Presentations:</span>
-							LSE Demography Seminar, CEPR Applied Micro-Economic History
-							Workshop, CEPR Public Health Interventions Workshop.
-							<span class="ml-2 text-[1.2rem]">
-								[
-								<a
-									class="cactus-link no-underline hover:underline"
-									href="https://cepr.org/publications/dp20725"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									CEPR DP
-								</a>
-								] [
-								<a
-									class="cactus-link no-underline hover:underline"
-									href="https://www.lse.ac.uk/asset-library/WP386.pdf"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									LSE WP
-								</a>
-								]
-							</span>
+							LSE Demography Seminar, CEPR Applied Micro-Economic History Workshop, CEPR Public Health Interventions Workshop.
+						</div>
+						<div class="mt-1 text-[0.95rem]">
+							[<a class="text-link no-underline hover:underline" href="https://cepr.org/publications/dp20725" target="_blank" rel="noopener noreferrer">CEPR DP</a>]
+							[<a class="text-link no-underline hover:underline" href="https://www.lse.ac.uk/asset-library/WP386.pdf" target="_blank" rel="noopener noreferrer">LSE WP</a>]
 						</div>
 					</li>
 
-					<li>
-						<!-- TITLE -->
+					<li class="group">
 						<a
-							class="mt-10 block text-[1.6rem] leading-tight text-accent no-underline hover:font-extrabold hover:underline"
-							href="https://www.dropbox.com/scl/fi/ahlc1oja63ohg1ans7a3w/EGT_1401.pdf?rlkey=msmrq8b8zz8fqvjgi2bkwn2km&st=16smjurs&dl=0"
+							class="text-[1.15rem] font-semibold leading-tight text-link no-underline decoration-link decoration-1 underline-offset-2 transition-all duration-200 hover:underline"
+							href="/EGT_1401.pdf"
 							target="_blank"
-							rel="noopener noreferrer"
 						>
-							<strong
-								>Selection and Evolutionary Growth in
-								pre-Industrial Germany</strong
-							>
+							Selection and Evolutionary Growth in pre-Industrial Germany
 						</a>
-
-						<!-- COAUTHORS -->
-						<!-- <div class="mt-1 text-[1.2rem]">
-			with
-			<a class="cactus-link" href="https://alandebromhead.weebly.com/" target="_blank" rel="noopener noreferrer">
-				Alan de Bromhead (UCD)
-			</a>,
-			<a class="cactus-link" href="https://www.ronanlyons.com/" target="_blank" rel="noopener noreferrer">
-				Ronan Lyons (TCD)
-			</a>
-			</div> -->
-
-						<!-- ABSTRACT TOGGLE -->
-						<div class="ml-2 mt-1">
+						<p class="mt-1 max-h-0 overflow-hidden text-[0.9rem] italic text-zinc-500 transition-all duration-300 group-hover:max-h-24 dark:text-zinc-400">
+							Pre-industrial Germany could sustain Galor-Moav selection on quality but not Clark's survival of the richest, suggesting evolutionary growth theories require stringent and historically contingent conditions.
+						</p>
+						<div class="ml-1 mt-1">
 							<button
 								type="button"
-								class="toggle-abstract flex items-center font-sans text-[1.2rem] font-semibold hover:text-link focus:outline-none"
+								class="toggle-abstract flex items-center text-[0.95rem] font-semibold hover:text-link focus:outline-none"
 							>
-								<span
-									class="arrow-icon flex h-3 w-3 items-center justify-center transition-transform duration-500"
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										class="h-3 w-3 text-link"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke="currentColor"
-										stroke-width="6"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M9 5l7 7-7 7"></path>
+								<span class="arrow-icon flex h-3 w-3 items-center justify-center transition-transform duration-300">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="6">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
 									</svg>
 								</span>
-								<span class="ml-2">Abstract</span>
+								<span class="ml-1">Abstract</span>
 							</button>
-
-							<div
-								class="abstract-content hidden overflow-hidden transition-all duration-700"
-							>
-								<p class="mt-2 text-[1.2rem] sm:ml-8">
-									Evolutionary growth theory posits that
-									natural selection set the stage for modern
-									growth. I leverage micro-data from
-									historical Germany to assess the viability
-									of the selection mechanisms. I estimate
-									fertility differentials and the
-									inter-generational transmission of SES. High
-									status couples, proxied by occupation, had
-									1-2 additional children, and SES was
-									strongly heritable. To explore whether these
-									parameters induce selection, I simulate an
-									overlapping generation model of fertility
-									choice and status transmission. The German
-									parameters do not enable Clark's (2007)
-									survival of the richest, whereas Galor and
-									Moav's(2002) selection on quality can arise
-									if the returns to investing in child quality
-									are sufficiently large. Monte Carlo
-									simulations extend the analysis beyond
-									Germany. Survival of the richest requires
-									exceptionally high coefficients of
-									transmission (~0.87), and selection on
-									quality emerges whenever returns to quality
-									investments translate into higher fertility.
-									Both depend on the strong heritability of
-									the growth-complementary traits.
+							<div class="abstract-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+								<p class="mt-2 text-[0.95rem] leading-relaxed sm:ml-6">
+									Evolutionary growth theory posits that natural selection set the stage for modern growth. I leverage micro-data from historical Germany to assess the viability of the selection mechanisms. I estimate fertility differentials and the inter-generational transmission of SES. High status couples, proxied by occupation, had 1-2 additional children, and SES was strongly heritable. To explore whether these parameters induce selection, I simulate an overlapping generation model of fertility choice and status transmission. The German parameters do not enable Clark's (2007) survival of the richest, whereas Galor and Moav's(2002) selection on quality can arise if the returns to investing in child quality are sufficiently large. Monte Carlo simulations extend the analysis beyond Germany. Survival of the richest requires exceptionally high coefficients of transmission (~0.87), and selection on quality emerges whenever returns to quality investments translate into higher fertility. Both depend on the strong heritability of the growth-complementary traits.
 								</p>
 							</div>
 						</div>
-
-						<!-- PRESENTATIONS + LINKS (same line) -->
-						<div class="mt-1 text-[1.2rem]">
+						<div class="mt-1 text-[0.95rem]">
 							<span class="italic">Presentations:</span>
 							Caltech, South Denmark University.
-							<span class="ml-2 text-[1.2rem]">
-								<!-- [
-				<a class="cactus-link no-underline hover:underline" href="https://cepr.org/publications/dp20725" target="_blank" rel="noopener noreferrer">
-				CEPR DP
-				</a>
-				] -->
-								[
-								<a
-									class="cactus-link no-underline hover:underline"
-									href="https://www.lse.ac.uk/asset-library/Economic-History/WP-390.pdf"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									LSE WP
-								</a>
-								]
-							</span>
+						</div>
+						<div class="mt-1 text-[0.95rem]">
+							[<a class="text-link no-underline hover:underline" href="https://www.lse.ac.uk/asset-library/Economic-History/WP-390.pdf" target="_blank" rel="noopener noreferrer">LSE WP</a>]
 						</div>
 					</li>
 
-					<li>
-						<!-- TITLE -->
+					<li class="group">
 						<a
-							class="mt-10 block text-[1.6rem] leading-tight text-accent no-underline hover:font-extrabold hover:underline"
-							href="https://www.dropbox.com/scl/fi/yp1rbztsqu7pfmlho69uz/WWI_ORG_0602.pdf?rlkey=xtknsep5vtzfrft73bbh1n2ba&st=ehsbhwjp&dl=0"
+							class="text-[1.15rem] font-semibold leading-tight text-link no-underline decoration-link decoration-1 underline-offset-2 transition-all duration-200 hover:underline"
+							href="/WWI_ORG_0602.pdf"
 							target="_blank"
-							rel="noopener noreferrer"
 						>
-							<strong
-								>Regional Identity in Organisations: Vertical
-								Alignment on the Western Front of WW1</strong
-							>
+							Regional Identity in Organisations: Vertical Alignment on the Western Front of WW1
 						</a>
-
-						<!-- COAUTHORS -->
-						<div class="mt-1 text-[1.2rem]">
+						<p class="mt-1 max-h-0 overflow-hidden text-[0.9rem] italic text-zinc-500 transition-all duration-300 group-hover:max-h-24 dark:text-zinc-400">
+							Losing a culturally connected officer reduces soldier effort and decreases mortality, showing that shared identity between leaders and subordinates is a powerful incentive mechanism.
+						</p>
+						<div class="mt-1 text-[0.95rem]">
 							with
-							<a
-								class="cactus-link"
-								href="https://brufalo.github.io/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Oliver Brufal (University of Groningen)
-							</a>
+							<a class="text-link hover:underline" href="https://brufalo.github.io/" target="_blank" rel="noopener noreferrer">Oliver Brufal (University of Groningen)</a>
 						</div>
-
-						<!-- ABSTRACT TOGGLE -->
-						<div class="ml-2 mt-1">
+						<div class="ml-1 mt-1">
 							<button
 								type="button"
-								class="toggle-abstract flex items-center font-sans text-[1.2rem] font-semibold hover:text-link focus:outline-none"
+								class="toggle-abstract flex items-center text-[0.95rem] font-semibold hover:text-link focus:outline-none"
 							>
-								<span
-									class="arrow-icon flex h-3 w-3 items-center justify-center transition-transform duration-500"
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										class="h-3 w-3 text-link"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke="currentColor"
-										stroke-width="6"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M9 5l7 7-7 7"></path>
+								<span class="arrow-icon flex h-3 w-3 items-center justify-center transition-transform duration-300">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="6">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
 									</svg>
 								</span>
-								<span class="ml-2">Abstract</span>
+								<span class="ml-1">Abstract</span>
 							</button>
-
-							<div
-								class="abstract-content hidden overflow-hidden transition-all duration-700"
-							>
-								<p class="mt-2 text-[1.2rem] sm:ml-8">
-									Soldiers in conscripted armies have low
-									incentives to exert effort; the reward for
-									doing so is small, and the potential cost
-									(death) is incalculable. We investigate
-									whether shared regional identity between
-									soldiers and officers can alter the
-									incentive problem. We test this hypothesis
-									using data on all French WW1 fatalities. We
-									use a data-driven approach to infer cultural
-									regions from surnames. Soldiers and officers
-									are considered aligned if they were born in
-									the same region. We estimate the effect of
-									losing alignment in a design-based
-									difference-in-difference setup. Conditional
-									on the regiment and battle, whether a dead
-									officer was regionally connected is
-									quasi-random. Within-regiment variation
-									shows mortality declines among treated
-									soldiers. The effect is concentrated among
-									officers with distinctly regional names,
-									that are non-migrants, supporting a
-									behavioural mechanism. Our results suggest
-									that shared identity with superiors
-									incentivises agents to exert greater effort.
+							<div class="abstract-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+								<p class="mt-2 text-[0.95rem] leading-relaxed sm:ml-6">
+									Soldiers in conscripted armies have low incentives to exert effort; the reward for doing so is small, and the potential cost (death) is incalculable. We investigate whether shared regional identity between soldiers and officers can alter the incentive problem. We test this hypothesis using data on all French WW1 fatalities. We use a data-driven approach to infer cultural regions from surnames. Soldiers and officers are considered aligned if they were born in the same region. We estimate the effect of losing alignment in a design-based difference-in-difference setup. Conditional on the regiment and battle, whether a dead officer was regionally connected is quasi-random. Within-regiment variation shows mortality declines among treated soldiers. The effect is concentrated among officers with distinctly regional names, that are non-migrants, supporting a behavioural mechanism. Our results suggest that shared identity with superiors incentivises agents to exert greater effort.
 								</p>
 							</div>
 						</div>
-
-						<!-- PRESENTATIONS + LINKS (same line) -->
-						<div class="mt-1 text-[1.2rem]">
+						<div class="mt-1 text-[0.95rem]">
 							<span class="italic">Presentations:</span>
-							Cambridge EH Graduate Seminar, LSE SPEECH, University
-							of Mannheim.
-							<!-- <span class="ml-2 text-[1.2rem]">
-								[
-								<a
-									class="cactus-link no-underline hover:underline"
-									href="https://www.dropbox.com/scl/fi/yp1rbztsqu7pfmlho69uz/WWI_ORG_0602.pdf?rlkey=xtknsep5vtzfrft73bbh1n2ba&st=ehsbhwjp&dl=0"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									PDF
-								</a>
-								]
-							</span> -->
+							Cambridge EH Graduate Seminar, LSE SPEECH, University of Mannheim.
 						</div>
 					</li>
 				</ul>
 			</section>
 
-			<section
-				class="mb-32 flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
-				id="WIP"
-			>
-				<h1 class="text-center text-lg font-bold sm:text-left">
-					Selected Work in Progress
-				</h1>
-				<ul class="space-y-15">
+			<!-- WORK IN PROGRESS -->
+			<section class="mb-12 translate-y-4 border-t border-zinc-300 pt-8 opacity-0 transition-all duration-700 ease-out dark:border-zinc-700" data-reveal id="WIP">
+				<h2 class="mb-6 text-[1.6rem] font-bold">Selected Work in Progress</h2>
+				<ul class="space-y-10">
 					<li>
-						<!-- TITLE -->
-						<a
-							class="mt-10 block text-[1.6rem] leading-tight no-underline"
-						>
-							<strong
-								>Geocoding Urban Enumeration Districts from the
-								US Census, 1880-1950</strong
-							>
-						</a>
-
-						<!-- COAUTHORS -->
-						<div class="mt-1 text-[1.2rem]">
+						<span class="text-[1.15rem] font-semibold leading-tight">
+							Geocoding Urban Enumeration Districts from the US Census, 1880-1950
+						</span>
+						<div class="mt-1 text-[0.95rem]">
 							with
-							<a
-								class="cactus-link"
-								href="https://jamesfeigenbaum.github.io/"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								James Feigenbaum (Boston University)
-							</a>
+							<a class="text-link hover:underline" href="https://jamesfeigenbaum.github.io/" target="_blank" rel="noopener noreferrer">James Feigenbaum (Boston University)</a>
 						</div>
-
-						<!-- ABSTRACT TOGGLE -->
-						<div class="ml-2 mt-1">
+						<div class="ml-1 mt-1">
 							<button
 								type="button"
-								class="toggle-abstract flex items-center font-sans text-[1.2rem] font-semibold hover:text-link focus:outline-none"
+								class="toggle-abstract flex items-center text-[0.95rem] font-semibold hover:text-link focus:outline-none"
 							>
-								<span
-									class="arrow-icon flex h-3 w-3 items-center justify-center transition-transform duration-500"
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										class="h-3 w-3 text-link"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke="currentColor"
-										stroke-width="6"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M9 5l7 7-7 7"></path>
+								<span class="arrow-icon flex h-3 w-3 items-center justify-center transition-transform duration-300">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-link" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="6">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
 									</svg>
 								</span>
-								<span class="ml-2">Abstract</span>
+								<span class="ml-1">Abstract</span>
 							</button>
-
-							<div
-								class="abstract-content hidden overflow-hidden transition-all duration-700"
-							>
-								<p class="mt-2 text-[1.2rem] sm:ml-8">
+							<div class="abstract-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+								<p class="mt-2 text-[0.95rem] leading-relaxed sm:ml-6">
 									Studying urban development often requires within-city locations. However, the geographic limitations of census data limit historical studies in terms of granularity and coverage. This project proposes a scalable geocoding procedure to obtain within-city locations for households in U.S. cities for the 1880–1950 census. Using inferred street intersections within enumeration districts (EDs), this approach requires minimal data inputs, rather than detailed historical maps and city directories. ED centroids are assigned to households to obtain approximate locations. We geolocate 80% of all EDs across 133 cities across the six census-waves. The 1950 sample includes approximate location for 28% of the US population. When benchmarking this procedure against ED polygons, we successfully assign locations to 78% of all EDs. This compares favourably to 50% coverage for existing address-based approaches. The resulting crosswalk would enable researchers to use within-city variation to study patterns of urban development, as well as to exploit fine-grained geographic variation to answer causal questions.
 								</p>
 							</div>
 						</div>
-
-						<!-- PRESENTATIONS -->
-						<div class="mt-1 text-[1.2rem]">
+						<div class="mt-1 text-[0.95rem]">
 							<span class="italic">Presentations:</span>
-							UCLA, UC Irvine.
+							UCLA, UC Irvine, LSE.
 						</div>
 					</li>
 
 					<li>
-						<!-- TITLE -->
-						<a
-							class="mt-10 block text-[1.6rem] leading-tight no-underline"
-						>
-							<strong
-								>Fertility and Housing in US Cities, 1900-1950</strong
-							>
-						</a>
-					</li>
-				</ul>
-			</section>
-
-			<section
-				class="mb-10 flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
-				id="Experiences"
-			>
-				<h1 class="text-center text-lg font-bold sm:text-left">
-					Research Experience
-				</h1>
-				<ul>
-					<li class="flex items-start gap-2 py-2">
-						<span
-							class="hidden w-1/4 text-[1rem] text-zinc-600 dark:text-zinc-300 sm:block"
-						>
-							Dec. 2024 – Dec. 2025
+						<span class="text-[1.15rem] font-semibold leading-tight">
+							The Shape of Residential Segregation in US Cities, 1880-2020
 						</span>
-						<div class="w-full leading-tight sm:w-3/4">
-							<strong
-								class="block font-sans text-[1.3rem] font-semibold"
-							>
-								Research Assistant to
-								<a
-									href="https://www.ericbschneider.com"
-									class="text-link">Eric Schneider</a
-								>.
-							</strong>
-
-							<p
-								class="mt-0.5 text-[1.2rem] text-zinc-600 dark:text-zinc-300"
-							>
-								Build OCR pipeline for the automated
-								transcription of handwritten historical tables.
-							</p>
+						<div class="mt-1 text-[0.95rem]">
+							<span class="italic">Presentations:</span>
+							UCLA Anderson.
 						</div>
 					</li>
 
-					<li class="flex items-start gap-2 py-2">
-						<span
-							class="hidden w-1/4 text-[1rem] text-zinc-600 dark:text-zinc-300 sm:block"
-						>
-							Oct. 2023 - June 2024
+					<li>
+						<span class="text-[1.15rem] font-semibold leading-tight">
+							The Transition to Low Fertility: Micro Level Evidence from Germany
 						</span>
-						<div class="w-full leading-tight sm:w-3/4">
-							<strong
-								class="block font-sans text-[1.3rem] font-semibold"
-							>
-								Research Assistant to
-								<a
-									href="https://Ronanlyons.com"
-									class="text-link">Ronan Lyons</a
-								>.
-							</strong>
-
-							<p
-								class="mt-0.5 text-[1.2rem] text-zinc-600 dark:text-zinc-300"
-							>
-								Worked on Urban Economics and Irish Economic
-								History. Used advanced NLP and OCR methods for
-								data transcription.
-							</p>
-						</div>
-					</li>
-
-					<li class="flex items-start gap-2 py-2">
-						<span
-							class="hidden w-1/4 text-[1rem] text-zinc-600 dark:text-zinc-300 sm:block"
-						>
-							Aug. 2021 - Aug. 2022
-						</span>
-						<div class="w-full leading-tight sm:w-3/4">
-							<strong
-								class="block font-sans text-[1.3rem] font-semibold"
-							>
-								Research Assistant to
-								<a
-									href="https://profiles.ucl.ac.uk/44206-tomas-cvrcek"
-									class="text-link">Tomas Cvrcek</a
-								>.
-							</strong>
-
-							<p
-								class="mt-0.5 text-[1.2rem] text-zinc-600 dark:text-zinc-300"
-							>
-								Transcribed historical sources from the
-								Austro-Hungarian empire and worked with ArcGIS
-								to geocode data.
-							</p>
+						<div class="mt-1 text-[0.95rem]">
+							with
+							<a class="text-link hover:underline" href="https://sites.google.com/site/sbauernschuster/home" target="_blank" rel="noopener noreferrer">Stefan Bauernschuster (University of Passau)</a>
 						</div>
 					</li>
 				</ul>
 			</section>
 
-			<section
-				class="mb-32 flex flex-col gap-6 px-10 pt-2 dark:border-zinc-600"
-				id="Teaching Experience"
-			>
-				<h1
-					class="mb-4 mt-4 text-center text-lg font-bold sm:text-left"
-				>
-					Teaching Experience
-				</h1>
+			<!-- TEACHING EXPERIENCE -->
+			<section class="mb-12 translate-y-4 border-t border-zinc-300 pt-8 opacity-0 transition-all duration-700 ease-out dark:border-zinc-700" data-reveal id="Teaching">
+				<h2 class="mb-6 text-[1.6rem] font-bold">Teaching Experience</h2>
 				<ul>
-					<li class="flex items-start gap-2 py-2">
-						<span
-							class="hidden w-1/4 text-[1rem] text-zinc-600 dark:text-zinc-300 sm:block"
-						>
+					<li class="flex items-start gap-4 py-2">
+						<span class="w-24 flex-none font-mono text-[0.85rem] text-zinc-500 dark:text-zinc-400">
 							Autumn 2025
 						</span>
-
-						<div class="w-full leading-tight sm:w-3/4">
-							<div class="text-[1.3rem]">
-								<strong class="font-sans font-semibold">
-									Intermediate Quantitative Methods
-								</strong>
+						<div class="leading-tight">
+							<div class="text-[1rem]">
+								<strong class="font-semibold">Intermediate Quantitative Methods</strong>
 								<em class="ml-1">(Postgraduate)</em>
 							</div>
-
-							<p class="mt-0.5 text-[1.2rem]">
-								London School of Economics – Department of
-								Methodology
+							<p class="mt-0.5 text-[0.9rem] text-zinc-500 dark:text-zinc-400">
+								London School of Economics – Department of Methodology
 							</p>
 						</div>
 					</li>
 				</ul>
 			</section>
 
-			<section
-				class="mb-[25vh] flex scroll-mt-24 flex-col gap-6 border-t border-black px-10 pt-12 dark:border-zinc-600"
-				id="Presentations"
-			>
-				<h1 class="text-center text-lg font-bold sm:text-left">
-					Presentations
-				</h1>
-				<!-- <ul>
-					<li
-						class="mb-0 hidden text-[1.5rem] font-semibold sm:flex sm:text-left"
-					>
-						Upcoming:
-					</li>
-					<li class="flex items-start py-4">
-						<span
-							class="hidden w-1/4 text-[1rem] text-zinc-600 dark:text-zinc-300 sm:block"
-							>February 13rd, 2026</span
-						>
-						<div class="w-2/3">
-							<strong class="mb-0 block font-sans text-[1.3rem]"
-								>Cal Tech</strong
-							>
-							<p class="mt-0 text-[1rem]">
-								Selection and Evolutionary Growth in
-								pre-Industrial Germany
-							</p>
-						</div>
-					</li>
-				</ul> -->
-				<!-- <h1 class="mb-2 hidden text-[2rem] font-semibold sm:flex sm:text-left">Past:</h1> -->
+			<!-- RESEARCH EXPERIENCE -->
+			<section class="mb-12 translate-y-4 border-t border-zinc-300 pt-8 opacity-0 transition-all duration-700 ease-out dark:border-zinc-700" data-reveal id="Experiences">
+				<h2 class="mb-6 text-[1.6rem] font-bold">Research Experience</h2>
 				<ul>
-					<li class="flex items-start py-4 text-[1.4rem]">
-						<div class="w-full">
-							<strong class="mb-0 mt-3 block font-sans"
-								>2026</strong
-							>
-							<p class="mt-0.5 text-[1.2rem]">Cal Tech | UC Irvine.</p>
-							<strong class="mb-0 mt-3 block font-sans"
-								>2025</strong
-							>
-							<p class="mt-0.5 text-[1.2rem]">
-								University of Mannheim | CEPR Public Health
-								Interventions in the Long Run | South Denmark
-								University | LSE SPEECH | CEPR Applied
-								Micro-Economic History Workshop | LSE
-								Demography.
-							</p>
-							<strong class="mb-0 mt-3 block font-sans"
-								>2024</strong
-							>
-							<p class="mt-0.5 text-[1.2rem]">
-								Cambridge Graduate Seminar | IEA Conference |
-								IPECE Workshop.
-							</p>
+					<li class="flex items-start gap-4">
+						<span class="w-24 flex-none font-mono text-[0.85rem] text-zinc-500 dark:text-zinc-400">
+							2024 – 2025
+						</span>
+						<div class="text-[1rem] leading-tight">
+							Research Assistant to
+							<a href="https://www.ericbschneider.com" class="text-link hover:underline">Eric Schneider</a>.
 						</div>
+					</li>
+					<li class="flex items-start gap-4">
+						<span class="w-24 flex-none font-mono text-[0.85rem] text-zinc-500 dark:text-zinc-400">
+							2023 – 2024
+						</span>
+						<div class="text-[1rem] leading-tight">
+							Research Assistant to
+							<a href="https://Ronanlyons.com" class="text-link hover:underline">Ronan Lyons</a>.
+						</div>
+					</li>
+					<li class="flex items-start gap-4">
+						<span class="w-24 flex-none font-mono text-[0.85rem] text-zinc-500 dark:text-zinc-400">
+							2021 – 2022
+						</span>
+						<div class="text-[1rem] leading-tight">
+							Research Assistant to
+							<a href="https://profiles.ucl.ac.uk/44206-tomas-cvrcek" class="text-link hover:underline">Tomas Cvrcek</a>.
+						</div>
+					</li>
+				</ul>
+			</section>
+
+			<!-- PRESENTATIONS -->
+			<section class="mb-12 translate-y-4 border-t border-zinc-300 pt-8 opacity-0 transition-all duration-700 ease-out dark:border-zinc-700" data-reveal id="Presentations">
+				<h2 class="mb-6 text-[1.6rem] font-bold">Presentations</h2>
+				<ul>
+					<li>
+						<strong class="block text-[1.05rem]">2026</strong>
+						<p class="mt-0.5 text-[0.95rem]" data-shuffle>UCLA | Caltech | UC Irvine.</p>
+						<strong class="mt-4 block text-[1.05rem]">2025</strong>
+						<p class="mt-0.5 text-[0.95rem]" data-shuffle>
+							University of Mannheim | CEPR Public Health Interventions in the Long Run | South Denmark University | LSE SPEECH | CEPR Applied Micro-Economic History Workshop | LSE Demography.
+						</p>
+						<strong class="mt-4 block text-[1.05rem]">2024</strong>
+						<p class="mt-0.5 text-[0.95rem]" data-shuffle>
+							Cambridge Graduate Seminar | IEA Conference | IPECE Workshop.
+						</p>
 					</li>
 				</ul>
 			</section>
 		</main>
 	</div>
+
+	<footer class="py-6 text-center text-[0.8rem] text-zinc-400 dark:text-zinc-500">
+		Last updated April 2026 <span class="mx-2 text-zinc-300 dark:text-zinc-600">|</span> Developed with the help of Klaus
+		<span class="mx-2 text-zinc-300 dark:text-zinc-600">|</span> Navigate: 1–5 <span class="mx-2 text-zinc-300 dark:text-zinc-600">|</span> Esc to exit
+	</footer>
 
 	<button
 		aria-label="Back to Top"
@@ -809,143 +389,6 @@ const footerLinks = [
 	</button>
 
 	<script>
-		const mainContent = document.querySelector("[data-main-content]");
-		const sectionNavLinks = Array.from(
-			document.querySelectorAll("[data-section-link]"),
-		);
-		const underlineClasses = [
-			"underline",
-			"decoration-4",
-			"decoration-accent",
-			"underline-offset-4",
-		];
-		const linkById = new Map(
-			sectionNavLinks.map((link) => [link.dataset.target, link]),
-		);
-		let activeSectionId = null;
-
-		const showMainContent = () => {
-			if (!mainContent) {
-				return;
-			}
-
-			mainContent.classList.remove("lg:hidden");
-		};
-
-		const setActiveLink = (link) => {
-			sectionNavLinks.forEach((navLink) => {
-				navLink.classList.remove(...underlineClasses);
-			});
-
-			if (link) {
-				link.classList.add(...underlineClasses);
-			}
-		};
-
-		const scrollToSection = (section) => {
-			if (!section) {
-				return;
-			}
-
-			section.scrollIntoView({ behavior: "smooth", block: "start" });
-		};
-
-		const updateActiveSection = (sectionId) => {
-			if (!sectionId || activeSectionId === sectionId) {
-				return;
-			}
-
-			const link = linkById.get(sectionId);
-
-			if (!link) {
-				return;
-			}
-
-			setActiveLink(link);
-			activeSectionId = sectionId;
-		};
-
-		const createSectionObserver = () => {
-			if (!("IntersectionObserver" in window)) {
-				return null;
-			}
-
-			const observedSections = Array.from(linkById.keys())
-				.map((sectionId) => document.getElementById(sectionId))
-				.filter(Boolean);
-
-			if (!observedSections.length) {
-				return null;
-			}
-
-			const observer = new IntersectionObserver(
-				(entries) => {
-					const visibleEntries = entries
-						.filter((entry) => entry.isIntersecting)
-						.sort(
-							(a, b) => b.intersectionRatio - a.intersectionRatio,
-						);
-
-					if (!visibleEntries.length) {
-						return;
-					}
-
-					updateActiveSection(visibleEntries[0].target.id);
-				},
-				{
-					rootMargin: "-40% 0px -50% 0px",
-					threshold: [0.1, 0.3, 0.6, 0.9],
-				},
-			);
-
-			observedSections.forEach((section) => observer.observe(section));
-
-			return observer;
-		};
-
-		const sectionObserver = createSectionObserver();
-
-		sectionNavLinks.forEach((link) => {
-			link.addEventListener("click", (event) => {
-				event.preventDefault();
-
-				const targetId = link.dataset.target;
-				const targetSection = document.getElementById(targetId);
-
-				if (!targetSection) {
-					return;
-				}
-
-				showMainContent();
-				setActiveLink(link);
-				activeSectionId = targetId;
-				scrollToSection(targetSection);
-				history.replaceState(null, "", `#${targetId}`);
-			});
-		});
-
-		const hashId = window.location.hash.replace("#", "");
-
-		if (hashId) {
-			const initialLink = sectionNavLinks.find(
-				(link) => link.dataset.target === hashId,
-			);
-			const initialSection = document.getElementById(hashId);
-
-			if (initialLink && initialSection) {
-				showMainContent();
-				setActiveLink(initialLink);
-				activeSectionId = hashId;
-				scrollToSection(initialSection);
-			}
-		}
-
-		window.addEventListener("beforeunload", () => {
-			if (sectionObserver) {
-				sectionObserver.disconnect();
-			}
-		});
-
 		const toTopBtn = document.getElementById("to-top-btn");
 
 		window.addEventListener("scroll", () => {
@@ -960,14 +403,256 @@ const footerLinks = [
 			window.scrollTo({ top: 0, behavior: "smooth" });
 		});
 
+		// Section reveal on scroll
+		const revealObserver = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.remove("opacity-0", "translate-y-4");
+						revealObserver.unobserve(entry.target);
+					}
+				});
+			},
+			{ threshold: 0.1 }
+		);
+		document.querySelectorAll("[data-reveal]").forEach((el) => revealObserver.observe(el));
+
+		// JMP easter egg
+		let jmpBuffer = "";
+		document.addEventListener("keydown", (e) => {
+			if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+			jmpBuffer += e.key.toLowerCase();
+			if (jmpBuffer.length > 3) jmpBuffer = jmpBuffer.slice(-3);
+			if (jmpBuffer === "jmp") {
+				jmpBuffer = "";
+				const firstPaper = document.querySelector("#WIP li:nth-child(2)");
+				if (firstPaper) {
+					firstPaper.scrollIntoView({ behavior: "smooth", block: "center" });
+					firstPaper.style.position = "relative";
+					const glow = document.createElement("div");
+					glow.style.cssText = "position:absolute;inset:-30px -40px;border-radius:20px;pointer-events:none;z-index:-1;opacity:0;transition:opacity 1s ease;background:radial-gradient(ellipse at center, hsl(16deg 65% 42% / 0.22) 0%, hsl(16deg 65% 50% / 0.10) 40%, transparent 70%);";
+					firstPaper.appendChild(glow);
+					requestAnimationFrame(() => glow.style.opacity = "1");
+					setTimeout(() => {
+						glow.style.transition = "opacity 3s ease-out";
+						glow.style.opacity = "0";
+						setTimeout(() => glow.remove(), 3000);
+					}, 2500);
+				}
+			}
+		});
+
+		// Keyboard shortcuts
+		const sectionKeys = { "1": "WP", "2": "WIP", "3": "Teaching", "4": "Experiences", "5": "Presentations" };
+		document.addEventListener("keydown", (e) => {
+			if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+			const id = sectionKeys[e.key];
+			if (id) {
+				const el = document.getElementById(id);
+				if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+			}
+		});
+
+		// Magnetic social icons
+		document.querySelectorAll("[data-magnetic]").forEach((icon) => {
+			icon.addEventListener("mousemove", (e) => {
+				const rect = icon.getBoundingClientRect();
+				const x = e.clientX - rect.left - rect.width / 2;
+				const y = e.clientY - rect.top - rect.height / 2;
+				icon.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+			});
+			icon.addEventListener("mouseleave", () => {
+				icon.style.transform = "translate(0, 0)";
+				icon.style.transition = "transform 0.3s ease-out";
+			});
+			icon.addEventListener("mouseenter", () => {
+				icon.style.transition = "none";
+			});
+		});
+
+		// Shuffle presentations animation
+		const shuffleEls = document.querySelectorAll("[data-shuffle]");
+		let shuffling = false;
+		const shuffleObserver = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting && !shuffling) {
+					shuffling = true;
+					shuffleEls.forEach((el) => {
+						const text = el.textContent.trim();
+						const hasPeriod = text.endsWith(".");
+						const raw = hasPeriod ? text.slice(0, -1) : text;
+						const items = raw.split("|").map((s) => s.trim());
+						const final = [...items];
+						let count = 0;
+						const maxShuffles = 10;
+						const interval = setInterval(() => {
+							if (count >= maxShuffles) {
+								el.textContent = final.join(" | ") + (hasPeriod ? "." : "");
+								clearInterval(interval);
+								return;
+							}
+							const shuffledItems = [...items].sort(() => Math.random() - 0.5);
+							el.textContent = shuffledItems.join(" | ") + (hasPeriod ? "." : "");
+							count++;
+						}, 150);
+					});
+				}
+				if (!entry.isIntersecting) {
+					shuffling = false;
+				}
+			});
+		}, { threshold: 0.2 });
+		const presSection = document.getElementById("Presentations");
+		if (presSection) shuffleObserver.observe(presSection);
+
 		document.querySelectorAll(".toggle-abstract").forEach((button) => {
 			button.addEventListener("click", () => {
 				const content = button.nextElementSibling;
 				const arrow = button.querySelector(".arrow-icon");
 
-				content.classList.toggle("hidden");
 				arrow.classList.toggle("rotate-90");
+
+				if (content.style.maxHeight) {
+					content.style.maxHeight = null;
+				} else {
+					content.style.maxHeight = content.scrollHeight + "px";
+				}
 			});
 		});
+
+		// Escape easter egg — everything flies off
+		let escActive = false;
+		document.addEventListener("keydown", (e) => {
+			if (e.key !== "Escape" || escActive) return;
+			escActive = true;
+
+			const pieces = [
+				...document.querySelectorAll("aside, main section, footer"),
+			];
+
+			const directions = [
+				{ x: -120, y: -80, rot: -25 },
+				{ x: 130, y: -90, rot: 20 },
+				{ x: -110, y: 100, rot: 15 },
+				{ x: 140, y: 70, rot: -18 },
+				{ x: -90, y: -120, rot: 30 },
+				{ x: 100, y: 110, rot: -22 },
+				{ x: -130, y: -60, rot: 12 },
+				{ x: 120, y: -100, rot: -28 },
+				{ x: -100, y: 90, rot: 20 },
+			];
+
+			pieces.forEach((el, i) => {
+				const dir = directions[i % directions.length];
+				const delay = i * 70;
+				const duration = 0.8 + Math.random() * 0.3;
+				const spin = dir.rot + (Math.random() - 0.5) * 360;
+				el.style.transition = `transform ${duration}s cubic-bezier(0.3, 0, 0.7, 0.2) ${delay}ms, opacity 0.5s ease ${delay + 300}ms`;
+				el.style.transform = `translate(${dir.x}vw, ${dir.y}vh) rotate(${spin}deg)`;
+				el.style.opacity = "0";
+			});
+
+			// Also hide the scroll progress bar
+			const bar = document.getElementById("scroll-progress");
+			if (bar) {
+				bar.style.transition = "opacity 0.5s ease";
+				bar.style.opacity = "0";
+			}
+		});
+
+		// Nose easter egg — misty cursor trail
+		const portrait = document.getElementById("portrait-wrap");
+		let trailActive = false;
+		let trailPoints = [];
+		const canvas = document.createElement("canvas");
+		canvas.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:9998;";
+		const ctx = canvas.getContext("2d");
+
+		function resizeCanvas() {
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+		}
+
+		if (portrait) {
+			portrait.addEventListener("click", (e) => {
+				const rect = portrait.querySelector("img").getBoundingClientRect();
+				const x = (e.clientX - rect.left) / rect.width;
+				const y = (e.clientY - rect.top) / rect.height;
+				// Nose zone: roughly center of face
+				if (x > 0.35 && x < 0.65 && y > 0.35 && y < 0.55) {
+					trailActive = !trailActive;
+					if (trailActive) {
+						document.body.appendChild(canvas);
+						resizeCanvas();
+						window.addEventListener("resize", resizeCanvas);
+						requestAnimationFrame(drawTrail);
+					} else {
+						// Fade out
+						const fadeOut = () => {
+							if (trailPoints.length > 0) {
+								trailPoints = trailPoints.slice(1);
+								drawFrame();
+								requestAnimationFrame(fadeOut);
+							} else {
+								canvas.remove();
+								window.removeEventListener("resize", resizeCanvas);
+							}
+						};
+						fadeOut();
+					}
+				}
+			});
+		}
+
+		document.addEventListener("mousemove", (e) => {
+			if (!trailActive) return;
+			trailPoints.push({ x: e.clientX, y: e.clientY, life: 1.0 });
+			if (trailPoints.length > 30) trailPoints.shift();
+		});
+
+		function drawFrame() {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			for (let i = 0; i < trailPoints.length; i++) {
+				const p = trailPoints[i];
+				const t = i / trailPoints.length;
+				const size = 4 + t * 14;
+				const alpha = t * t * 0.5;
+				ctx.beginPath();
+				ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
+				ctx.fillStyle = `hsla(16, 65%, 42%, ${alpha})`;
+				ctx.filter = `blur(${(1 - t) * 6}px)`;
+				ctx.fill();
+			}
+			ctx.filter = "none";
+		}
+
+		function drawTrail() {
+			if (!trailActive) return;
+			trailPoints = trailPoints.slice(-30);
+			drawFrame();
+			requestAnimationFrame(drawTrail);
+		}
 	</script>
+
+	<!-- Mobile bottom icon bar -->
+	<div class="fixed bottom-0 left-0 z-50 flex w-full items-center justify-center gap-8 border-t border-zinc-300 bg-bgColor py-3 dark:border-zinc-700 lg:hidden">
+		<div class="absolute left-4 text-[0.9rem]">
+			<ThemeToggle />
+		</div>
+		<a href="https://scholar.google.com/citations?user=GDBDCOAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="text-textColor transition hover:text-link" aria-label="Google Scholar">
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+				<path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+			</svg>
+		</a>
+		<a href="https://x.com/OhlerJohann" target="_blank" rel="noopener noreferrer" class="text-textColor transition hover:text-link" aria-label="Twitter">
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+				<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+			</svg>
+		</a>
+		<a href="https://bsky.app/profile/ohlerjohann.bsky.social" target="_blank" rel="noopener noreferrer" class="text-textColor transition hover:text-link" aria-label="Bluesky">
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 568 501" fill="currentColor">
+				<path d="M123.121 33.664C188.241 82.553 258.281 181.68 284 234.873c25.719-53.192 95.759-152.32 160.879-201.21C491.866-1.611 568-28.906 568 57.947c0 17.346-9.945 145.713-15.778 166.555-20.275 72.453-94.155 90.933-159.875 79.748C507.222 323.8 536.444 388.56 473.333 453.32c-119.86 122.992-172.272-30.859-185.702-70.281-2.462-7.227-3.614-10.608-3.631-7.733-.017-2.875-1.169.506-3.631 7.733-13.43 39.422-65.842 193.273-185.702 70.281-63.111-64.76-33.89-129.52 80.986-149.071-65.72 11.185-139.6-7.295-159.875-79.748C10.945 203.659 1 75.291 1 57.946 1-28.906 76.134-1.612 123.121 33.664z"/>
+			</svg>
+		</a>
+	</div>
 </PageLayout>

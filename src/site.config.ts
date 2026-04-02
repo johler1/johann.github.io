@@ -2,7 +2,7 @@ import type { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
 	author: "Johann Ohler",
-	description: "Johann Ohlers's personal website.",
+	description: "Johann Ohler's personal website.",
 	lang: "en-GB",
 	ogLocale: "en_GB",
 	title: "Johann Ohler - Personal Website",
