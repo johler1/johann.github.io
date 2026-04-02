@@ -16,7 +16,7 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 				/>
 			</div>
 			<div class="text-right lg:text-left">
-				<h1 class="text-[1.8rem] font-bold leading-tight text-textColor"><span class="inline-block" data-magnetic>J</span><span class="inline-block" data-magnetic>o</span><span class="inline-block" data-magnetic>h</span><span class="inline-block" data-magnetic>a</span><span class="inline-block" data-magnetic>n</span><span class="inline-block" data-magnetic>n</span><span class="inline-block">&nbsp;</span><span class="inline-block" data-magnetic>O</span><span class="inline-block" data-magnetic>h</span><span class="inline-block" data-magnetic>l</span><span class="inline-block" data-magnetic>e</span><span class="inline-block" data-magnetic>r</span></h1>
+				<h1 class="text-[1.8rem] font-bold leading-tight text-textColor" id="name-heading"><span data-letter>J</span><span data-letter>o</span><span data-letter>h</span><span data-letter>a</span><span data-letter>n</span><span data-letter>n</span><span>&nbsp;</span><span data-letter>O</span><span data-letter>h</span><span data-letter>l</span><span data-letter>e</span><span data-letter>r</span></h1>
 				<p class="mt-1 text-[0.95rem]">
 					PhD Student, LSE Economic History
 				</p>
@@ -103,15 +103,15 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 			<section class="mb-12 translate-y-4 border-t border-zinc-300 pt-8 opacity-0 transition-all duration-700 ease-out dark:border-zinc-700" data-reveal id="WP">
 				<h2 class="mb-6 text-[1.6rem] font-bold">Working Papers</h2>
 				<ul class="space-y-10">
-					<li class="group">
+					<li>
 						<a
-							class="text-[1.15rem] font-semibold leading-tight text-link no-underline decoration-link decoration-1 underline-offset-2 transition-all duration-200 hover:underline"
+							class="peer text-[1.15rem] font-semibold leading-tight text-link no-underline decoration-link decoration-1 underline-offset-2 transition-all duration-200 hover:underline"
 							href="/BBH_1010.pdf"
 							target="_blank"
 						>
 							Build Better Health: Evidence from Ireland on Housing Quality and Mortality
 						</a>
-						<p class="mt-1 max-h-0 overflow-hidden text-[0.9rem] italic text-zinc-500 transition-all duration-300 group-hover:max-h-24 dark:text-zinc-400">
+						<p class="mt-1 hidden max-h-0 overflow-hidden text-[0.9rem] italic text-zinc-500 transition-all duration-300 sm:block sm:peer-hover:max-h-24 dark:text-zinc-400">
 							Improving housing quality — specifically ventilation — substantially lowered respiratory mortality, making structural housing reform a cost-effective public health intervention.
 						</p>
 						<div class="mt-1 text-[0.95rem]">
@@ -147,15 +147,15 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 						</div>
 					</li>
 
-					<li class="group">
+					<li>
 						<a
-							class="text-[1.15rem] font-semibold leading-tight text-link no-underline decoration-link decoration-1 underline-offset-2 transition-all duration-200 hover:underline"
+							class="peer text-[1.15rem] font-semibold leading-tight text-link no-underline decoration-link decoration-1 underline-offset-2 transition-all duration-200 hover:underline"
 							href="/EGT_1401.pdf"
 							target="_blank"
 						>
 							Selection and Evolutionary Growth in pre-Industrial Germany
 						</a>
-						<p class="mt-1 max-h-0 overflow-hidden text-[0.9rem] italic text-zinc-500 transition-all duration-300 group-hover:max-h-24 dark:text-zinc-400">
+						<p class="mt-1 hidden max-h-0 overflow-hidden text-[0.9rem] italic text-zinc-500 transition-all duration-300 sm:block sm:peer-hover:max-h-24 dark:text-zinc-400">
 							Pre-industrial Germany could sustain Galor-Moav selection on quality but not Clark's survival of the richest, suggesting evolutionary growth theories require stringent and historically contingent conditions.
 						</p>
 						<div class="ml-1 mt-1">
@@ -185,15 +185,15 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 						</div>
 					</li>
 
-					<li class="group">
+					<li>
 						<a
-							class="text-[1.15rem] font-semibold leading-tight text-link no-underline decoration-link decoration-1 underline-offset-2 transition-all duration-200 hover:underline"
+							class="peer text-[1.15rem] font-semibold leading-tight text-link no-underline decoration-link decoration-1 underline-offset-2 transition-all duration-200 hover:underline"
 							href="/WWI_ORG_0602.pdf"
 							target="_blank"
 						>
 							Regional Identity in Organisations: Vertical Alignment on the Western Front of WW1
 						</a>
-						<p class="mt-1 max-h-0 overflow-hidden text-[0.9rem] italic text-zinc-500 transition-all duration-300 group-hover:max-h-24 dark:text-zinc-400">
+						<p class="mt-1 hidden max-h-0 overflow-hidden text-[0.9rem] italic text-zinc-500 transition-all duration-300 sm:block sm:peer-hover:max-h-24 dark:text-zinc-400">
 							Losing a culturally connected officer reduces soldier effort and decreases mortality, showing that shared identity between leaders and subordinates is a powerful incentive mechanism.
 						</p>
 						<div class="mt-1 text-[0.95rem]">
@@ -232,6 +232,16 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 				<ul class="space-y-10">
 					<li>
 						<span class="text-[1.15rem] font-semibold leading-tight">
+							The Shape of Residential Segregation in US Cities, 1880-2020
+						</span>
+						<div class="mt-1 text-[0.95rem]">
+							<span class="italic">Presentations:</span>
+							UCLA Anderson.
+						</div>
+					</li>
+
+					<li>
+						<span class="text-[1.15rem] font-semibold leading-tight">
 							Geocoding Urban Enumeration Districts from the US Census, 1880-1950
 						</span>
 						<div class="mt-1 text-[0.95rem]">
@@ -259,16 +269,6 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 						<div class="mt-1 text-[0.95rem]">
 							<span class="italic">Presentations:</span>
 							UCLA, UC Irvine, LSE.
-						</div>
-					</li>
-
-					<li>
-						<span class="text-[1.15rem] font-semibold leading-tight">
-							The Shape of Residential Segregation in US Cities, 1880-2020
-						</span>
-						<div class="mt-1 text-[0.95rem]">
-							<span class="italic">Presentations:</span>
-							UCLA Anderson.
 						</div>
 					</li>
 
@@ -360,9 +360,15 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 		</main>
 	</div>
 
-	<footer class="py-6 text-center text-[0.8rem] text-zinc-400 dark:text-zinc-500">
+	<footer class="hidden py-6 text-center text-[0.8rem] text-zinc-400 dark:text-zinc-500 lg:block">
 		Last updated April 2026 <span class="mx-2 text-zinc-300 dark:text-zinc-600">|</span> Developed with the help of Klaus
-		<span class="mx-2 text-zinc-300 dark:text-zinc-600">|</span> Navigate: 1–5 <span class="mx-2 text-zinc-300 dark:text-zinc-600">|</span> Esc to exit
+		<span class="mx-2 hidden text-zinc-300 dark:text-zinc-600 lg:inline">|</span>
+		<span class="group relative hidden cursor-default lg:inline">
+			<span class="text-zinc-400 dark:text-zinc-500">?</span>
+			<span class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap rounded bg-zinc-800 px-3 py-2 text-[0.75rem] text-zinc-200 opacity-0 transition-opacity duration-200 group-hover:opacity-100 dark:bg-zinc-200 dark:text-zinc-800">
+				Navigate: 1–5 | Esc to exit
+			</span>
+		</span>
 	</footer>
 
 	<button
@@ -417,8 +423,10 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 		);
 		document.querySelectorAll("[data-reveal]").forEach((el) => revealObserver.observe(el));
 
+		const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+
 		// JMP easter egg
-		let jmpBuffer = "";
+		if (isDesktop) { let jmpBuffer = "";
 		document.addEventListener("keydown", (e) => {
 			if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
 			jmpBuffer += e.key.toLowerCase();
@@ -442,7 +450,10 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 			}
 		});
 
-		// Keyboard shortcuts
+		} // end JMP
+
+		// Desktop-only: keyboard shortcuts, magnetic icons, escape, nose trail
+		if (isDesktop) {
 		const sectionKeys = { "1": "WP", "2": "WIP", "3": "Teaching", "4": "Experiences", "5": "Presentations" };
 		document.addEventListener("keydown", (e) => {
 			if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
@@ -451,73 +462,6 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 				const el = document.getElementById(id);
 				if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 			}
-		});
-
-		// Magnetic social icons
-		document.querySelectorAll("[data-magnetic]").forEach((icon) => {
-			icon.addEventListener("mousemove", (e) => {
-				const rect = icon.getBoundingClientRect();
-				const x = e.clientX - rect.left - rect.width / 2;
-				const y = e.clientY - rect.top - rect.height / 2;
-				icon.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
-			});
-			icon.addEventListener("mouseleave", () => {
-				icon.style.transform = "translate(0, 0)";
-				icon.style.transition = "transform 0.3s ease-out";
-			});
-			icon.addEventListener("mouseenter", () => {
-				icon.style.transition = "none";
-			});
-		});
-
-		// Shuffle presentations animation
-		const shuffleEls = document.querySelectorAll("[data-shuffle]");
-		let shuffling = false;
-		const shuffleObserver = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting && !shuffling) {
-					shuffling = true;
-					shuffleEls.forEach((el) => {
-						const text = el.textContent.trim();
-						const hasPeriod = text.endsWith(".");
-						const raw = hasPeriod ? text.slice(0, -1) : text;
-						const items = raw.split("|").map((s) => s.trim());
-						const final = [...items];
-						let count = 0;
-						const maxShuffles = 10;
-						const interval = setInterval(() => {
-							if (count >= maxShuffles) {
-								el.textContent = final.join(" | ") + (hasPeriod ? "." : "");
-								clearInterval(interval);
-								return;
-							}
-							const shuffledItems = [...items].sort(() => Math.random() - 0.5);
-							el.textContent = shuffledItems.join(" | ") + (hasPeriod ? "." : "");
-							count++;
-						}, 150);
-					});
-				}
-				if (!entry.isIntersecting) {
-					shuffling = false;
-				}
-			});
-		}, { threshold: 0.2 });
-		const presSection = document.getElementById("Presentations");
-		if (presSection) shuffleObserver.observe(presSection);
-
-		document.querySelectorAll(".toggle-abstract").forEach((button) => {
-			button.addEventListener("click", () => {
-				const content = button.nextElementSibling;
-				const arrow = button.querySelector(".arrow-icon");
-
-				arrow.classList.toggle("rotate-90");
-
-				if (content.style.maxHeight) {
-					content.style.maxHeight = null;
-				} else {
-					content.style.maxHeight = content.scrollHeight + "px";
-				}
-			});
 		});
 
 		// Escape easter egg — everything flies off
@@ -633,9 +577,90 @@ import ThemeToggle from "@/components/ThemeToggle.astro";
 			drawFrame();
 			requestAnimationFrame(drawTrail);
 		}
+		} // end isDesktop
+
+		// Name letter hover — accent color
+		document.querySelectorAll("[data-letter]").forEach((span) => {
+			span.style.transition = "color 0.2s ease";
+			span.addEventListener("mouseenter", () => {
+				span.style.color = "hsl(var(--theme-link))";
+			});
+			span.addEventListener("mouseleave", () => {
+				span.style.color = "";
+			});
+		});
+
+		// Magnetic social icons
+		document.querySelectorAll("[data-magnetic]").forEach((icon) => {
+			icon.addEventListener("mousemove", (e) => {
+				const rect = icon.getBoundingClientRect();
+				const x = e.clientX - rect.left - rect.width / 2;
+				const y = e.clientY - rect.top - rect.height / 2;
+				icon.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+			});
+			icon.addEventListener("mouseleave", () => {
+				icon.style.transform = "translate(0, 0)";
+				icon.style.transition = "transform 0.3s ease-out";
+			});
+			icon.addEventListener("mouseenter", () => {
+				icon.style.transition = "none";
+			});
+		});
+
+		// Shuffle presentations animation
+		const shuffleEls = document.querySelectorAll("[data-shuffle]");
+		let shuffling = false;
+		const shuffleObserver = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting && !shuffling) {
+					shuffling = true;
+					shuffleEls.forEach((el) => {
+						const text = el.textContent.trim();
+						const hasPeriod = text.endsWith(".");
+						const raw = hasPeriod ? text.slice(0, -1) : text;
+						const items = raw.split("|").map((s) => s.trim());
+						const final = [...items];
+						let count = 0;
+						const maxShuffles = 10;
+						const interval = setInterval(() => {
+							if (count >= maxShuffles) {
+								el.textContent = final.join(" | ") + (hasPeriod ? "." : "");
+								clearInterval(interval);
+								return;
+							}
+							const shuffledItems = [...items].sort(() => Math.random() - 0.5);
+							el.textContent = shuffledItems.join(" | ") + (hasPeriod ? "." : "");
+							count++;
+						}, 150);
+					});
+				}
+				if (!entry.isIntersecting) {
+					shuffling = false;
+				}
+			});
+		}, { threshold: 0.2 });
+		const presSection = document.getElementById("Presentations");
+		if (presSection) shuffleObserver.observe(presSection);
+
+		// Toggle abstracts
+		document.querySelectorAll(".toggle-abstract").forEach((button) => {
+			button.addEventListener("click", () => {
+				const content = button.nextElementSibling;
+				const arrow = button.querySelector(".arrow-icon");
+
+				arrow.classList.toggle("rotate-90");
+
+				if (content.style.maxHeight) {
+					content.style.maxHeight = null;
+				} else {
+					content.style.maxHeight = content.scrollHeight + "px";
+				}
+			});
+		});
 	</script>
 
 	<!-- Mobile bottom icon bar -->
+	<div class="pointer-events-none fixed bottom-[44px] left-0 z-40 h-16 w-full bg-gradient-to-t from-bgColor to-transparent lg:hidden"></div>
 	<div class="fixed bottom-0 left-0 z-50 flex w-full items-center justify-center gap-8 border-t border-zinc-300 bg-bgColor py-3 dark:border-zinc-700 lg:hidden">
 		<div class="absolute left-4 text-[0.9rem]">
 			<ThemeToggle />
