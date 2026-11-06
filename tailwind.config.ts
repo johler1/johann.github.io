@@ -50,9 +50,14 @@ export default {
       },
       fontFamily: {
         sans: [
-          '"Source Sans 3"',
+          '"Inter"',
           'Arial',
           'Helvetica',
+          'sans-serif',
+        ],
+        title: [
+          '"Bricolage Grotesque"',
+          '"Inter"',
           'sans-serif',
         ],
         serif: [...fontFamily.serif],

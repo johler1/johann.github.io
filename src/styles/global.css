@@ -49,26 +49,26 @@
 	h4,
 	h5,
 	h6 {
-		@apply font-sans tracking-tight;
+		@apply font-title tracking-tight;
 	}
 
 	:root,
 	:root[data-theme="light"] {
-		--theme-bg: 0deg 0% 92%;
-		--theme-link: 16deg 65% 42%;
-		--theme-text: 0deg 0% 10%;
-		--theme-accent: 0deg 0% 25%;
-		--theme-accent-2: 0deg 0% 30%;
-		--theme-quote: 0deg 0% 40%;
+		--theme-bg: 40deg 30% 96%;
+		--theme-link: 215deg 60% 35%;
+		--theme-text: 220deg 25% 15%;
+		--theme-accent: 220deg 15% 28%;
+		--theme-accent-2: 220deg 12% 32%;
+		--theme-quote: 220deg 10% 42%;
 	}
 
 	:root[data-theme="dark"] {
-		--theme-bg: 0deg 0% 8%;
-		--theme-link: 215deg 70% 72%;
-		--theme-text: 0deg 0% 88%;
-		--theme-accent: 0deg 0% 75%;
-		--theme-accent-2: 0deg 0% 70%;
-		--theme-quote: 0deg 0% 60%;
+		--theme-bg: 225deg 8% 10%;
+		--theme-link: 18deg 80% 60%;
+		--theme-text: 40deg 20% 90%;
+		--theme-accent: 30deg 10% 78%;
+		--theme-accent-2: 30deg 8% 72%;
+		--theme-quote: 30deg 6% 60%;
 	}
 }
 
